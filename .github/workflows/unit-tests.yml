@@ -7,30 +7,6 @@ on:
     branches: [ master ]
 
 jobs:
-  test_python_3_7:
-    runs-on: ubuntu-latest
-    steps:
-    - name: GitHub Checkout
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.7
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install -r test-requirements.txt
-        pip install coveralls
-
-    - name: Run Unittest
-      env:
-        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
-        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
-      run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
-
   test_python_3_8:
     runs-on: ubuntu-latest
     steps:
@@ -137,6 +113,30 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.12"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install -r test-requirements.txt
+        pip install coveralls
+
+    - name: Run Unittest
+      env:
+        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
+        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
+      run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
+
+  test_python_3_13:
+    runs-on: ubuntu-latest
+    steps:
+    - name: GitHub Checkout
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.13"
 
     - name: Install dependencies
       run: |
