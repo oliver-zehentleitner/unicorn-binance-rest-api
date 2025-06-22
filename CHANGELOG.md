@@ -9,7 +9,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
-## 2.6.1.dev (development stage/unreleased/unstable)
+## 2.7.0.dev (development stage/unreleased/unstable)
+
+## 2.7.0
+Moved from https://github.com/LUCIT-Systems-and-Development/ to https://github.com/oliver-zehentleitner
 
 ## 2.6.1
 ### Fixed

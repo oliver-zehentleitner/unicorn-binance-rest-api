@@ -76,7 +76,7 @@ with open("README.md", "r") as fh:
 
 setup(
      name=name,
-     version="2.6.1",
+     version="2.6.2",
      author="LUCIT Systems and Development",
      author_email='info@lucit.tech',
      url="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api",
