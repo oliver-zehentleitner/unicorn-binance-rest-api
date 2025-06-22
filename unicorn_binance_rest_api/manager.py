@@ -65,7 +65,7 @@ logger = __logger__
 
 class BinanceRestApiManager(object):
     """
-    A Python SDK  to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet,
+    A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet,
     com-futures+testnet, us, "tr") in a simple, fast, flexible, robust and fully-featured way.
 
     Binance.com rest API documentation:
@@ -106,17 +106,6 @@ class BinanceRestApiManager(object):
     :type socks5_proxy_pass:  str
     :param socks5_proxy_ssl_verification: Set to `False` to disable SSL server verification. Default is `True`.
     :type socks5_proxy_ssl_verification:  bool
-    :param lucit_api_secret: The `api_secret` of your UNICORN Binance Suite license from
-                             https://shop.lucit.services/software/unicorn-binance-suite
-    :type lucit_api_secret:  str
-    :param lucit_license_ini: Specify the path including filename to the config file (ex: `~/license_a.ini`). If not
-                              provided lucitlicmgr tries to load a `lucit_license.ini` from `/home/oliver/.lucit/`.
-    :type lucit_license_ini:  str
-    :param lucit_license_profile: The license profile to use. Default is 'LUCIT'.
-    :type lucit_license_profile:  str
-    :param lucit_license_token: The `license_token` of your UNICORN Binance Suite license from
-                                https://shop.lucit.services/software/unicorn-binance-suite
-    :type lucit_license_token:  str
     """
 
     API_URL = 'https://api.binance.{}/api'
@@ -219,11 +208,7 @@ class BinanceRestApiManager(object):
                  socks5_proxy_server: Optional[str] = None,
                  socks5_proxy_user: Optional[str] = None,
                  socks5_proxy_pass: Optional[str] = None,
-                 socks5_proxy_ssl_verification: Optional[bool] = True,
-                 lucit_api_secret: Optional[str] = None,
-                 lucit_license_ini: Optional[str] = None,
-                 lucit_license_profile: Optional[str] = None,
-                 lucit_license_token: Optional[str] = None):
+                 socks5_proxy_ssl_verification: Optional[bool] = True):
 
         self.name: Optional[str] = __app_name__
         self.version: Optional[str] = __version__
@@ -231,23 +216,6 @@ class BinanceRestApiManager(object):
                     f"{str(platform.system())} {str(platform.release())} for exchange {exchange} started ...")
         self.sigterm = False
         self.session = None
-        self.lucit_api_secret: Optional[str] = lucit_api_secret
-        self.lucit_license_token: Optional[str] = lucit_license_token
-        self.lucit_license_ini: Optional[str] = lucit_license_ini
-        self.lucit_license_profile: Optional[str] = lucit_license_profile
-        self.lucit_license_token: Optional[str] = lucit_license_token
-        license_type: Optional[str] = "UNICORN-BINANCE-SUITE"
-        self.llm = LucitLicensingManager(api_secret=self.lucit_api_secret,
-                                         license_ini=self.lucit_license_ini,
-                                         license_profile=self.lucit_license_profile,
-                                         license_token=self.lucit_license_token,
-                                         parent_shutdown_function=self.stop_manager,
-                                         program_used=self.name,
-                                         needed_license_type=license_type,
-                                         start=True)
-        licensing_exception = self.llm.get_license_exception()
-        if licensing_exception is not None:
-            raise NoValidatedLucitLicense(licensing_exception)
 
         if self.sigterm is False:
             if disable_colorama is not True:
@@ -7248,7 +7216,4 @@ class BinanceRestApiManager(object):
                 self.session.close()
         except AttributeError as error_msg:
             logger.debug(f"BinanceRestApiManager.stop_manager() - AttributeError: {error_msg}")
-        # close lucit license manger and the api session
-        if close_api_session is True:
-            self.llm.close()
         return True
