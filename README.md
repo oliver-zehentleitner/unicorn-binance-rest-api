@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/oliver-zehentleitner/unicorn-binance-rest-api.svg?color=blue)](https://oliver-zehentleitner.github.io/unicorn-binance-rest-apilicense.html)
 [![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_binance_rest_api.svg)](https://www.python.org/downloads/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_binance_rest_api.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues)
-[![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-binance-rest-api/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-binance-rest-api)
+[![codecov](https://codecov.io/gh/oliver-zehentleitner/unicorn-binance-rest-api/graph/badge.svg?token=P7XILPPSLU)](https://codecov.io/gh/oliver-zehentleitner/unicorn-binance-rest-api)
 [![CodeQL](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml)
 [![Unittests](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml)
 [![Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml)
@@ -237,7 +237,7 @@ conda install -c lucit unicorn-binance-rest-api
 #### Linux, macOS, ...
 Run in bash:
 
-`pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-binance-rest-api/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn-binance-rest-api/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
 Use the below command with the version (such as 2.7.0) you determined 
