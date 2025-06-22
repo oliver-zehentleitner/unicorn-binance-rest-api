@@ -11,7 +11,7 @@
 # PyPI: https://pypi.org/project/unicorn-binance-rest-api
 #
 # License: MIT
-# https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/LICENSE
+# https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/LICENSE
 #
 # Author: Oliver Zehentleitner
 #

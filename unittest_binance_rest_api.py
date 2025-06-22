@@ -9,10 +9,9 @@
 # Github: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
 # Documentation: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/
 # PyPI: https://pypi.org/project/lucit-licensing-python
-https://github.com/oliver-zehentleitner
 #
-# License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/oliver-zehentleitner/lucit-licensing-python/blob/master/LICENSE
+# License: MIT
+# https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/LICENSE
 #
 # Author: Oliver Zehentleitner
 #
@@ -49,9 +48,6 @@ import unittest
 import tracemalloc
 tracemalloc.start(25)
 
-# os.environ["LUCIT_API_SECRET"] = ""
-# os.environ["LUCIT_LICENSE_TOKEN"] = ""
-
 logging.getLogger("unicorn_binance_rest_api")
 logging.basicConfig(level=logging.DEBUG,
                     filename=os.path.basename(__file__) + '.log',
@@ -60,7 +56,6 @@ logging.basicConfig(level=logging.DEBUG,
 
 def is_github_action_env():
     try:
-        print(f"{os.environ[f'LUCIT_LICENSE_TOKEN']}")
         return True
     except KeyError:
         return False
