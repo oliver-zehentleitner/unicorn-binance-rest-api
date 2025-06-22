@@ -4,16 +4,15 @@
 # File: example_buy_and_sell_oco_order_isolated_margin.py
 #
 # Part of ‘UNICORN Binance REST API’
-# Project website: https://www.lucit.tech/unicorn-binance-rest-api.html
-# Github: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api
-# Documentation: https://unicorn-binance-rest-api.docs.lucit.tech/
+# Project website: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+# Github: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/
 # PyPI: https://pypi.org/project/lucit-licensing-python
-# LUCIT Online Shop: https://shop.lucit.services/software
 #
 # License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/LUCIT-Systems-and-Development/lucit-licensing-python/blob/master/LICENSE
+# https://github.com/oliver-zehentleitner/lucit-licensing-python/blob/master/LICENSE
 #
-# Author: LUCIT Systems and Development
+# Author: Oliver Zehentleitner
 #
 # Copyright (c) 2021-2023, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.
@@ -71,7 +70,7 @@ STOP_LOSS_TRIGGER_GAP_USDT = 0.01
 TAKE_PROFIT_GAP_TO_BUY_PRICE_IN_PERCENT = 2
 
 # Create a BinanceRestApiManager instance with the exchange and API credentials
-# To use this library you need a valid UNICORN Binance Suite License: https://medium.lucit.tech/87b0088124a8
+# To use this library you need a valid UNICORN Binance Suite License: https://technopathy.club/87b0088124a8
 ubra = BinanceRestApiManager(exchange="binance.com-isolated_margin", api_key=API_KEY, api_secret=API_SECRET)
 
 # Buy BTC with a market order using the specified USDT quantity

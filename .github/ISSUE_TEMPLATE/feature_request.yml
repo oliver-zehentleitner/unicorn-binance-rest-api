@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please post here only issues concerning this repository and follow the [Issue-Guidelines](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/wiki/Issue-Guidelines). 
+        Please post here only issues concerning this repository and follow the [Issue-Guidelines](https://github.com/oliver-zehentleitner/unicorn-binance-suite/wiki/Issue-Guidelines). 
         
         Most of these fields are not mandatory, but please provide as much information as possible.
   - type: textarea

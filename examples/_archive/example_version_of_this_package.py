@@ -4,16 +4,15 @@
 # File: example_version_of_this_package.py
 #
 # Part of ‘UNICORN Binance REST API’
-# Project website: https://www.lucit.tech/unicorn-binance-rest-api.html
-# Github: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api
-# Documentation: https://unicorn-binance-rest-api.docs.lucit.tech
+# Project website: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+# Github: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api
 # PyPI: https://pypi.org/project/unicorn-binance-rest-api
-# LUCIT Online Shop: https://shop.lucit.services/software
 #
-# License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/blob/master/LICENSE
+# License: MIT
+# https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/LICENSE
 #
-# Author: LUCIT Systems and Development
+# Author: Oliver Zehentleitner
 #
 # Copyright (c) 2022-2024, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.

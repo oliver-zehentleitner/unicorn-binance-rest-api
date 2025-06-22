@@ -1,29 +1,26 @@
 [tool.poetry]
 name = "unicorn-binance-rest-api"
 version = "2.6.1"
-description = "A Python SDK by LUCIT to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, com-futures+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way."
-authors = ["LUCIT Systems and Development <info@lucit.tech>"]
-license = "LSOSL - LUCIT Synergetic Open Source License"
+description = "A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, com-futures+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way."
+authors = ["Oliver Zehentleitner"]
+license = "MIT"
 readme = "README.md"
-homepage = "https://www.lucit.tech/unicorn-binance-rest-api.html"
-documentation = "https://unicorn-binance-rest-api.docs.lucit.tech"
-repository = "https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api"
+homepage = "https://github.com/oliver-zehentleitner/unicorn-binance-rest-api"
+documentation = "https://oliver-zehentleitner.github.io/unicorn-binance-rest-api"
+repository = "https://github.com/oliver-zehentleitner/unicorn-binance-rest-api"
 
 [tool.poetry.urls]
-'Howto' = 'https://www.lucit.tech/unicorn-binance-rest-api.html#howto'
-'Documentation' = 'https://unicorn-binance-rest-api.docs.lucit.tech'
-'Wiki' = 'https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/wiki'
-'Author' = 'https://www.lucit.tech'
-'Changes' = 'https://unicorn-binance-rest-api.docs.lucit.tech/changelog.html'
-'License' = 'https://unicorn-binance-rest-api.docs.lucit.tech/license.html'
-'Issue Tracker' = 'https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues'
+'Howto' = 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api#howto'
+'Documentation' = 'https://oliver-zehentleitner.github.io/unicorn-binance-rest-api'
+'Wiki' = 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/wiki'
+'Author' = 'https://www.linkedin.com/in/oliver-zehentleitner'
+'Changes' = 'https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/changelog.html'
+'License' = 'https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/license.html'
+'Issue Tracker' = 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues'
 'Telegram' = 'https://t.me/unicorndevs'
-'Chat' = 'https://app.gitter.im/#/room/#unicorn-binance-rest-api:gitter.im'
-'Get Support' = 'https://www.lucit.tech/get-support.html'
-'LUCIT Online Shop' = 'https://shop.lucit.services/software/unicorn-binance-suite'
 
 [tool.poetry.dependencies]
-python = ">=3.7.0"
+python = ">=3.8.0"
 Cython = "*"
 requests = ">=2.31.0"
 simplejson = "*"

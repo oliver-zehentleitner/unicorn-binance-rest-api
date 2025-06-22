@@ -4,18 +4,19 @@
 # File: pypi/remove_files.sh
 #
 # Part of ‘UNICORN Binance WebSocket API’
-# Project website: https://www.lucit.tech/unicorn-binance-websocket-api.html
-# Github: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api
+# Project website: https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api
+# Github: https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api
 # Documentation: https://unicorn-binance-websocket-api.docs.lucit.tech
 # PyPI: https://pypi.org/project/unicorn-binance-websocket-api
 #
-# License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/blob/master/LICENSE
+# License: MIT
+# https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/LICENSE
 #
-# Author: LUCIT Systems and Development
+# Author: Oliver Zehentleitner
 #
 # Copyright (c) 2017-2021, MIT License, Sam McHardy (https://github.com/sammchardy)
-# Copyright (c) 2021-2023, LSOSL License, LUCIT Systems and Development (https://www.lucit.tech)
+# Copyright (c) 2021-2025, Oliver Zehentleitner (https://about.me/oliver-zehentleitner)
+#
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a

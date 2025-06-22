@@ -19,15 +19,15 @@ Version 1.0, November 2023
 1. INTRODUCTION
 
 The "LUCIT Synergetic Open Source License" oversees the utilization and distribution of the UNICORN Binance REST
-API, a part of the UNICORN Binance Suite by LUCIT IT-Management GmbH. This API enables the effortless integration of
+API, a part of the UNICORN Binance Suite  IT-Management GmbH. This API enables the effortless integration of
 Binance features into diverse applications.
 
 
 2. PROJECT INFORMATION
 
 - Project name: UNICORN Binance REST API
-- Project page: https://www.lucit.tech/unicorn-binance-rest-api.html
-- GitHub repository: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api
+- Project page: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+- GitHub repository: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
 - PyPI repository: https://pypi.org/project/unicorn-binance-rest-api
 - Get a license: https://shop.lucit.services/software
 
@@ -43,7 +43,7 @@ The software may be used and distributed without restriction, the only condition
 license from LUCIT (https://shop.lucit.services/software) and must be operated with such a license.
 
 For transparency, our licensing client module is available on GitHub:
-https://github.com/LUCIT-Systems-and-Development/lucit-licensing-python
+https://github.com/oliver-zehentleitner/lucit-licensing-python
 
 
 4. LICENSE PURCHASE

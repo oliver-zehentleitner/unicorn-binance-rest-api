@@ -4,16 +4,15 @@
 # File: example_exchange_info.py
 #
 # Part of ‘UNICORN Binance REST API’
-# Project website: https://www.lucit.tech/unicorn-binance-rest-api.html
-# Github: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api
-# Documentation: https://unicorn-binance-rest-api.docs.lucit.tech/
+# Project website: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+# Github: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/
 # PyPI: https://pypi.org/project/lucit-licensing-python
-# LUCIT Online Shop: https://shop.lucit.services/software
 #
 # License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/LUCIT-Systems-and-Development/lucit-licensing-python/blob/master/LICENSE
+# https://github.com/oliver-zehentleitner/lucit-licensing-python/blob/master/LICENSE
 #
-# Author: LUCIT Systems and Development
+# Author: Oliver Zehentleitner
 #
 # Copyright (c) 2021-2023, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.
@@ -51,7 +50,7 @@ logging.basicConfig(level=logging.DEBUG,
 api_key = ""
 api_secret = ""
 
-# To use this library you need a valid UNICORN Binance Suite License: https://medium.lucit.tech/87b0088124a8
+# To use this library you need a valid UNICORN Binance Suite License: https://technopathy.club/87b0088124a8
 with BinanceRestApiManager(api_key=api_key, api_secret=api_secret, exchange="binance.com") as ubra:
     get_exchange_info = ubra.get_exchange_info(**{'symbol': 'ETHUSDT'})
     print(f"get_exchange_info: {get_exchange_info}")

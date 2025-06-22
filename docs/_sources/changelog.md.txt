@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to 
 [Semantic Versioning](http://semver.org/).
 
-[Discussions about unicorn-binance-rest-api releases!](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/discussions/categories/releases)
+[Discussions about unicorn-binance-rest-api releases!](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/discussions/categories/releases)
 
-[How to upgrade to the latest version!](https://unicorn-binance-rest-api.docs.lucit.tech/readme.html#installation-and-upgrade)
+[How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
 ## 2.6.1.dev (development stage/unreleased/unstable)
 
@@ -97,7 +97,7 @@ Exclude known security vulnerabilities in dependencies by increasing the minimum
 ### Changed
 - Renamed `binance.com-coin-futures` to `binance.com-coin_futures`.
 ### Fixed
-- `futures_account()`, `futures_account_balance()` and `futures_position_information()`  [issue#65](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues/65)
+- `futures_account()`, `futures_account_balance()` and `futures_position_information()`  [issue#65](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/65)
 - Projects `__init__.py` - did not correct import.
 
 ## 2.2.1
@@ -174,7 +174,7 @@ anything special, please note that this process takes some time!
 - Integration of the `lucit-licensing-python` library for verifying the UNICORN Binance Suite license. A license can be 
   purchased in the LUCIT Online Shop: https://shop.lucit.services/software/unicorn-binance-suite
 - License change from MIT to LSOSL - LUCIT Synergetic Open Source License:
-  https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/blob/master/LICENSE
+  https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/blob/master/LICENSE
 - Conversion to a C++ compiled Cython package with precompiled as well as PyPy and source code wheels.
 - Setup of a "Trusted Publisher" deployment chain. The source code is transparently packaged into wheels directly from
   the GitHub repository by a GitHub action for all possible platforms and published directly as a new release on GitHub
@@ -208,14 +208,14 @@ anything special, please note that this process takes some time!
 
 ## 1.7.0
 ### Added
-- SOCKS5 proxy support to [`BinanceRestApiManager()`](https://unicorn-binance-rest-api.docs.lucit.tech/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager) - 
+- SOCKS5 proxy support to [`BinanceRestApiManager()`](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager) -
   New parameter: `socks5_proxy_server`, `socks5_proxy_user`, `socks5_proxy_pass`, `socks5_proxy_ssl_verification`
 
 ## 1.6.0
 ### Added
 - New kline interval: 1s `KLINE_INTERVAL_1SECOND`
 - `futures_place_batch_order()` - Placing batch orders for USD-M API. Thx [@hawkeye-bot](https://github.com/hawkeye-bot) 
-[PR#42](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/pull/42)
+[PR#42](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/42)
 ### Changed
 - Dependency regex no specific version anymore
 
@@ -229,21 +229,21 @@ Codebase equal to 1.4.2, testing azure pipe
 
 ## 1.4.2
 ### Changed 
-- Dependency regex to <= 2022.3.2 [issue#24](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues/24)
+- Dependency regex to <= 2022.3.2 [issue#24](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/24)
 
 ## 1.4.1
 ### Fixed
-- Binance Futures Testnet URL [issue#20](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues/20)
+- Binance Futures Testnet URL [issue#20](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/20)
 
 ## 1.4.0
 ### Adding
-- `futures_commission_rate()` [issue#18](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues/18)
+- `futures_commission_rate()` [issue#18](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/18)
 ### Changed
-- Moved from https://github.com/oliver-zehentleitner to https://github.com/LUCIT-Systems-and-Development/
-- removed "unicorn_binance_rest_api_"-part of the module file names (more info: [Discussions](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/discussions/19))
-- Correctly scope loggers so that it plays nicely with others. [PR#17](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/pull/17)
+- Moved from https://github.com/oliver-zehentleitner to https://github.com/oliver-zehentleitner/
+- removed "unicorn_binance_rest_api_"-part of the module file names (more info: [Discussions](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/discussions/19))
+- Correctly scope loggers so that it plays nicely with others. [PR#17](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/17)
 - renamed logger name of all modules to "unicorn_binance_rest_api", in the implementation of 
-[PR#17](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/pull/17) every module has had 
+[PR#17](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/17) every module has had
 its own logger name.
 
 ## 1.3.0
@@ -252,7 +252,7 @@ its own logger name.
 - support for new endpoints: trbinance.com 
 - `disable_colorama` parameter to manager class
 - `cancel_all_open_orders()` to cancel all orders of a symbol with one request. Thx @mfurlend 
-[issue#3](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues/3)
+[issue#3](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/3)
 ### Changed
 - `tld` is now obsolete
 ### Fixed
@@ -267,12 +267,12 @@ its own logger name.
 - get_used_weight()
 - futures_coin_place_batch_order() 
 ### Changed
-- Migrate from WAPI to SAPI [issue#7](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues/7)
+- Migrate from WAPI to SAPI [issue#7](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/7)
 - URLs to Biannce Docs
 
 ## 1.1.1
 ### Fixed
-- changed FUTURES_COIN_URL [PR#5](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/pull/5) - 
+- changed FUTURES_COIN_URL [PR#5](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/5) -
 Thanks to [flo-rian](https://github.com/flo-rian)
 
 ## 1.1.0

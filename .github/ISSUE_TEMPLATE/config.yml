@@ -4,14 +4,9 @@ contact_links:
     url: https://t.me/unicorndevs
     about: Chat to us about the UNICORN Binance REST API and ask general questions.
   - name: UNICORN Binance REST API Discussions
-    url: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/discussions
+    url: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/discussions
     about: Ask general questions.
   - name: UNICORN Binance REST API documentation
-    url: https://unicorn-binance-rest-api.docs.lucit.tech/
+    url: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/
     about: The complete UNICORN Binance REST API documentation.
-  - name: Get Professional and Fast Support
-    url: https://www.lucit.tech/get-support.html
-    about: Contact the LUCIT Development Team.
-  - name: Get a UNICORN Binance Suite License
-    url: https://shop.lucit.services/software/unicorn-binance-suite
-    about: LUCIT Online Shop
+

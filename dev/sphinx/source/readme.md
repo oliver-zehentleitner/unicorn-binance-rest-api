@@ -1,27 +1,27 @@
-[![Get a UNICORN Binance Suite License](https://raw.githubusercontent.com/LUCIT-Systems-and-Development/unicorn-binance-suite/master/images/logo/LUCIT-UBS-License-Offer.png)](https://shop.lucit.services)
+[![Get a UNICORN Binance Suite License](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/master/images/logo/LUCIT-UBS-License-Offer.png)](https://shop.lucit.services)
 
 [![Anaconda Release](https://img.shields.io/conda/v/lucit/unicorn-binance-rest-api?color=blue)](https://anaconda.org/lucit/unicorn-binance-rest-api)
-[![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-binance-rest-api.svg?label=github)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/releases)
+[![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-binance-rest-api.svg?label=github)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases)
 [![PyPi Release](https://img.shields.io/pypi/v/unicorn-binance-rest-api?color=blue)](https://pypi.org/project/unicorn-binance-rest-api/)
 [![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_binance_rest_api.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-LSOSL-blue)](https://unicorn-binance-rest-api.docs.lucit.tech/license.html)
+[![License](https://img.shields.io/badge/license-LSOSL-blue)](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/license.html)
 [![PyPi Downloads](https://pepy.tech/badge/unicorn-binance-rest-api)](https://pepy.tech/project/unicorn-binance-rest-api)
 [![PyPi Downloads](https://pepy.tech/badge/unicorn-binance-rest_api/month)](https://pepy.tech/project/unicorn-binance-rest-api)
 [![PyPi Downloads](https://pepy.tech/badge/unicorn-binance-rest_api/week)](https://pepy.tech/project/unicorn-binance-rest-api)
-[![PyPI - Status](https://img.shields.io/pypi/status/unicorn_binance_rest_api.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues)
+[![PyPI - Status](https://img.shields.io/pypi/status/unicorn_binance_rest_api.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues)
 [![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-binance-rest-api/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-binance-rest-api)
-[![CodeQL](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml)
-[![Unittests](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/unit-tests.yml)
-[![Build and Publish GH+PyPi](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/build_wheels.yml)
-[![Build and Publish Anaconda](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/build_conda.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/build_conda.yml)
-[![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://unicorn-binance-rest-api.docs.lucit.tech/)
-[![Read How To`s](https://img.shields.io/badge/read-%20howto-yellow)](https://medium.lucit.tech)
-[![Github](https://img.shields.io/badge/source-github-cbc2c8)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api)
+[![CodeQL](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml)
+[![Unittests](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml)
+[![Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml)
+[![Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_conda.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_conda.yml)
+[![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/)
+[![Read How To`s](https://img.shields.io/badge/read-%20howto-yellow)](https://technopathy.club)
+[![Github](https://img.shields.io/badge/source-github-cbc2c8)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 [![Telegram](https://img.shields.io/badge/community-telegram-41ab8c)](https://t.me/unicorndevs)
 [![Gitter](https://img.shields.io/badge/community-gitter-41ab8c)](https://gitter.im/unicorn-binance-suite/unicorn-binance-rest-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Get Free Professional Support](https://img.shields.io/badge/chat-lucit%20support-004166)](https://www.lucit.tech/get-support.html)
 
-[![LUCIT-UBRA-Banner](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-binance-rest-api/master/images/logo/LUCIT-UBRA-Banner-Readme.png)](https://www.lucit.tech/unicorn-binance-rest-api.html)
+[![LUCIT-UBRA-Banner](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-rest-api/master/images/logo/LUCIT-UBRA-Banner-Readme.png)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 
 # UNICORN Binance REST API
 
@@ -33,13 +33,13 @@
 A Python SDK by [LUCIT](https://www.lucit.tech) to use the Binance REST API`s (com+testnet, com-margin+testnet, 
 com-isolated_margin+testnet, com-futures+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way. 
 
-Part of ['UNICORN Binance Suite'](https://www.lucit.tech/unicorn-binance-suite.html).
+Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
 
 [Get help](https://www.lucit.tech/get-support.html) with the integration of the `UNICORN Binance Suite` modules!
 
 ## Get a UNICORN Binance Suite License
 
-To run modules of the *UNICORN Binance Suite* you need a [valid license](https://medium.lucit.tech/how-to-obtain-and-use-a-unicorn-binance-suite-license-key-and-run-the-ubs-module-according-to-best-87b0088124a8#4ca4)!
+To run modules of the *UNICORN Binance Suite* you need a [valid license](https://technopathy.club/how-to-obtain-and-use-a-unicorn-binance-suite-license-key-and-run-the-ubs-module-according-to-best-87b0088124a8#4ca4)!
 
 ## Receive Data from Binance REST API Endpoints
 
@@ -105,11 +105,11 @@ ubra.stop_manager()
 ```
 
 ## More?
-[Discover even more possibilities](https://unicorn-binance-rest-api.docs.lucit.tech/unicorn_binance_rest_api.html) 
+[Discover even more possibilities](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html) 
 or try our [examples](#examples)!
 
 ## Description
-The Python module [UNICORN Binance REST API](https://www.lucit.tech/unicorn-binance-rest-api.html) 
+The Python module [UNICORN Binance REST API](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api) 
 provides an API to the Binance REST API`s of 
 [Binance](https://github.com/binance-exchange/binance-official-api-docs) 
 ([+Testnet](https://testnet.binance.vision/)), 
@@ -122,14 +122,14 @@ provides an API to the Binance REST API`s of
 [Binance COIN-M Futures](https://binance-docs.github.io/apidocs/delivery/en/#change-log),
 [Binance US](https://github.com/binance-us/binance-official-api-docs) and
 [Binance TR](https://www.trbinance.com/apidocs) and needs to be used with a valid 
-[api_key and api_secret](https://medium.lucit.tech/how-to-create-a-binance-api-key-and-api-secret-3bb5f47e360d)
+[api_key and api_secret](https://technopathy.club/how-to-create-a-binance-api-key-and-api-secret-3bb5f47e360d)
 from the Binance Exchange 
 [www.binance.com](https://www.binance.com/userCenter/createApi.html), 
 [testnet.binance.vision](https://testnet.binance.vision/) or
 [www.binance.us](https://www.binance.us/userCenter/createApi.html).
 
 Be aware that the Binance REST API is request based. if you want to send and receive high frequency and high volume 
-data, you can use the [UNICORN Binance Websocket API](https://www.lucit.tech/unicorn-binance-websocket-api.html) in 
+data, you can use the [UNICORN Binance Websocket API](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api) in 
 combination. 
 
 ### What are the benefits of the UNICORN Binance REST API?
@@ -150,12 +150,12 @@ combination.
 | [Binance TR](https://www.trbinance.com)                            | `trbinance.com`                       |
 
 - Helpful management features like 
-[`get_used_weight()`](https://unicorn-binance-rest-api.docs.lucit.tech/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.get_used_weight), 
+[`get_used_weight()`](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.get_used_weight), 
 
 - Available as a package via `pip` and `conda` as precompiled C extension with stub files for improved Intellisense 
   functions and source code for easier debugging of the source code. [To the installation.](#installation-and-upgrade)
 
-- Integration of [test cases](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/unit-tests.yml) and [examples](#examples).
+- Integration of [test cases](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml) and [examples](#examples).
 
 - Customizable base URL and request timeout.
 
@@ -163,15 +163,15 @@ combination.
   ```
   ubra = BinanceRestApiManager(exchange="binance.com", socks5_proxy_server="127.0.0.1:9050") 
   ```
-  Read the [docs](https://unicorn-binance-rest-api.docs.lucit.tech/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager)
+  Read the [docs](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager)
   or this [how to](https://medium.com/@oliverzehentleitner/how-to-connect-to-binance-com-rest-api-using-python-via-a-socks5-proxy-638dbbecacfd) 
   for more information or try 
-  [example_socks5_proxy.py](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/blob/master/examples/_archive/example_socks5_proxy.py).
+  [example_socks5_proxy.py](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/examples/_archive/example_socks5_proxy.py).
 
 - Excessively tested on Linux, Mac and Windows
 
-If you like the project, please [![star](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-binance-rest-api/master/images/misc/star.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/stargazers) it on 
-[GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api)!
+If you like the project, please [![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-rest-api/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/stargazers) it on 
+[GitHub](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)!
 
 ## Installation and Upgrade
 The module requires Python 3.7 and runs smoothly up to and including Python 3.12.
@@ -181,15 +181,15 @@ Anaconda packages are available from Python version 3.8 and higher, but only in 
 For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
 
 The current dependencies are listed 
-[here](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/blob/master/requirements.txt).
+[here](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/requirements.txt).
 
-If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/wiki/Installation).
+If you run into errors during the installation take a look [here](https://github.com/oliver-zehentleitner/unicorn-binance-suite/wiki/Installation).
 
 ### Packages are created automatically with GitHub Actions
 When a new release is to be created, we start two GitHubActions: 
 
-- [Build and Publish Anaconda](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/build_conda.yml)
-- [Build and Publish GH+PyPi](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/actions/workflows/build_wheels.yml) 
+- [Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_conda.yml)
+- [Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml) 
 
 Both start virtual Windows/Linux/Mac servers provided by GitHub in the cloud with preconfigured environments and 
 create the respective compilations and stub files, pack them into wheels and conda packages and then publish them on 
@@ -240,26 +240,26 @@ conda install -c lucit unicorn-binance-rest-api
 #### Update
 `conda update -c lucit unicorn-binance-rest-api`
 
-### From source of the latest release with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api)
+### From source of the latest release with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 #### Linux, macOS, ...
 Run in bash:
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-binance-rest-api/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-binance-rest-api/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
 Use the below command with the version (such as 2.6.1) you determined 
-[here](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/releases/latest):
+[here](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases/latest):
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/archive/2.6.1.tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/2.6.1.tar.gz --upgrade`
 
-### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api)
+### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 This is not a release version and can not be considered to be stable!
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/tarball/master --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/tarball/master --upgrade`
 
 ### [Conda environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), [Virtualenv](https://virtualenv.pypa.io/en/latest/) or plain [Python](https://www.python.org)
-Download the [latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/releases/latest) 
-or the [current master branch](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/archive/master.zip)
+Download the [latest release](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases/latest) 
+or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/master.zip)
  and use:
  
 - ./environment.yml
@@ -269,43 +269,43 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 - ./setup.py
 
 ## Change Log
-[https://unicorn-binance-rest-api.docs.lucit.tech/changelog.html](https://unicorn-binance-rest-api.docs.lucit.tech/changelog.html)
+[https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/changelog.html](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/changelog.html)
 
 ## Documentation
-- [General](https://unicorn-binance-rest-api.docs.lucit.tech/)
-- [Modules](https://unicorn-binance-rest-api.docs.lucit.tech/modules.html)
+- [General](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/)
+- [Modules](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/modules.html)
 
 ## Examples
-- [Look here!](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/tree/master/examples/)
+- [Look here!](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/tree/master/examples/)
 
 ## Howto
-- [How to Obtain and Use a Unicorn Binance Suite License Key and Run the UBS Module According to Best Practice](https://medium.lucit.tech/how-to-obtain-and-use-a-unicorn-binance-suite-license-key-and-run-the-ubs-module-according-to-best-87b0088124a8)
-- [Restful Binance Requests in Python with UNICORN Binance REST API](https://medium.lucit.tech/restful-binance-requests-in-python-with-unicorn-binance-rest-api-288f364e92a8)
-- [How to Download Klines from Binance using Python?](https://medium.lucit.tech/how-to-download-data-from-binance-using-python-8f1b6e8f19f3)
-- [How to Connect to binance.com REST API using Python via a SOCKS5 Proxy](https://medium.lucit.tech/how-to-connect-to-binance-com-rest-api-using-python-via-a-socks5-proxy-638dbbecacfd)
-- [Buy an Asset and instantly create a Take Profit and Stop Loss OCO Sell Order using Python in Binance Isolated Margin](https://medium.lucit.tech/buy-an-asset-and-instantly-create-a-take-profit-and-stop-loss-oco-sell-order-using-python-in-5d68a5d22a9b)
+- [How to Obtain and Use a Unicorn Binance Suite License Key and Run the UBS Module According to Best Practice](https://technopathy.club/how-to-obtain-and-use-a-unicorn-binance-suite-license-key-and-run-the-ubs-module-according-to-best-87b0088124a8)
+- [Restful Binance Requests in Python with UNICORN Binance REST API](https://technopathy.club/restful-binance-requests-in-python-with-unicorn-binance-rest-api-288f364e92a8)
+- [How to Download Klines from Binance using Python?](https://technopathy.club/how-to-download-data-from-binance-using-python-8f1b6e8f19f3)
+- [How to Connect to binance.com REST API using Python via a SOCKS5 Proxy](https://technopathy.club/how-to-connect-to-binance-com-rest-api-using-python-via-a-socks5-proxy-638dbbecacfd)
+- [Buy an Asset and instantly create a Take Profit and Stop Loss OCO Sell Order using Python in Binance Isolated Margin](https://technopathy.club/buy-an-asset-and-instantly-create-a-take-profit-and-stop-loss-oco-sell-order-using-python-in-5d68a5d22a9b)
 
 ## Project Homepage
-[https://www.lucit.tech/unicorn-binance-rest-api.html](https://www.lucit.tech/unicorn-binance-rest-api.html)
+[https://github.com/oliver-zehentleitner/unicorn-binance-rest-api](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 
 ## Wiki
-[https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/wiki](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/wiki)
+[https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/wiki](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/wiki)
 
 ## Social
-- [Discussions](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/discussions)
+- [Discussions](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/discussions)
 - [https://t.me/unicorndevs](https://t.me/unicorndevs)
 - [https://dev.binance.vision](https://dev.binance.vision)
 - [https://community.binance.org](https://community.binance.org)
 
 ## Receive Notifications
 To receive notifications on available updates you can 
-[![watch](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-binance-rest-api/master/images/misc/watch.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/watchers) 
-the repository on [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api), write your 
-[own script](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/blob/master/examples/_archive/example_version_of_this_package.py) 
+[![watch](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-rest-api/master/images/misc/watch.png)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/watchers) 
+the repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api), write your 
+[own script](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/examples/_archive/example_version_of_this_package.py) 
 with using 
-[`is_update_availabe()`](https://unicorn-binance-rest-api.docs.lucit.tech/unicorn_binance_rest_api.html?highlight=is_update_availabe#unicorn_binance_rest_api.manager.BinanceRestApiManager.is_update_availabe).
+[`is_update_availabe()`](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html?highlight=is_update_availabe#unicorn_binance_rest_api.manager.BinanceRestApiManager.is_update_availabe).
 
-Follow us on [GitHub](https://github.com/LUCIT-Systems-and-Development), [Medium](https://medium.lucit.tech/),
+Follow us on [GitHub](https://github.com/oliver-zehentleitner), [Medium](https://technopathy.club/),
 [YouTube](https://www.youtube.com/@LUCIT_Systems_and_Development), 
 [LinkedIn](https://www.linkedin.com/company/lucit-systems-and-development), 
 [X](https://twitter.com/LUCIT_SysDev) or [Facebook](https://www.facebook.com/lucit.systems.and.development)!
@@ -320,26 +320,26 @@ To receive news (like inspection windows/maintenance) about the Binance API`s su
 - [https://t.me/BinanceExchange](https://t.me/BinanceExchange)
 
 ## How to report Bugs or suggest Improvements?
-[List of planned features](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
-click ![thumbs-up](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-binance-rest-api/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
+[List of planned features](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
+click ![thumbs-up](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-rest-api/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
 
-Before you report a bug, [try the latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api#installation-and-upgrade). If the issue still exists, provide the error trace, OS 
+Before you report a bug, [try the latest release](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api#installation-and-upgrade). If the issue still exists, provide the error trace, OS 
 and Python version and explain how to reproduce the error. A demo script is appreciated.
 
-If you don't find an issue related to your topic, please open a new [issue](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues)!
+If you don't find an issue related to your topic, please open a new [issue](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues)!
 
-[Report a security bug!](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/security/policy)
+[Report a security bug!](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/security/policy)
 
 ## Contributing
-[UNICORN Binance REST API](https://www.lucit.tech/unicorn-binance-rest-api.html) is an open 
+[UNICORN Binance REST API](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api) is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes and reporting dead links to new features. To 
 contribute follow 
-[this guide](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/blob/master/CONTRIBUTING.md).
+[this guide](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/CONTRIBUTING.md).
  
 ### Contributors
-[![Contributors](https://contributors-img.web.app/image?repo=lucit-systems-and-development/unicorn-binance-rest-api)](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/graphs/contributors)
+[![Contributors](https://contributors-img.web.app/image?repo=lucit-systems-and-development/unicorn-binance-rest-api)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/graphs/contributors)
 
-We ![love](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-binance-rest-api/master/images/misc/heart.png) open source!
+We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-rest-api/master/images/misc/heart.png) open source!
 
 ## Disclaimer
 This project is for informational purposes only. You should not construe this information or any other material as 
@@ -364,6 +364,6 @@ companies from the US analyze binance.com market data - as long as they do not t
 
 ## Commercial Support
 
-[![Get professional and fast support](https://raw.githubusercontent.com/LUCIT-Systems-and-Development/unicorn-binance-suite/master/images/support/LUCIT-get-professional-and-fast-support.png)](https://www.lucit.tech/get-support.html)
+[![Get professional and fast support](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/master/images/support/LUCIT-get-professional-and-fast-support.png)](https://www.lucit.tech/get-support.html)
 
 ***Do you need a developer, operator or consultant?*** [Contact us](https://www.lucit.tech/contact.html) for a non-binding initial consultation!
