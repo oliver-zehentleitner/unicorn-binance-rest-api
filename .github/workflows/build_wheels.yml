@@ -24,6 +24,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
+          name: artifact-${{ matrix.os }}
           path: ./wheelhouse/*.whl
 
   build_sdist:
@@ -53,8 +54,14 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
         with:
-          name: artifact
           path: dist
+
+      - name: Move all artifacts into dist_upload/
+        run: |
+          rm -rf dist_upload
+          mkdir -p dist_upload
+          find dist -name '*.whl' -exec cp {} dist_upload/ \;
+          find dist -name '*.tar.gz' -exec cp {} dist_upload/ \;
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
@@ -64,8 +71,8 @@ jobs:
           discussion_category_name: releases
           draft: false
           files: | 
-            dist/*.tar.gz
-            dist/*.whl
+            dist_upload/*.tar.gz
+            dist_upload/*.whl
           generate_release_notes: true
           name: unicorn-binance-rest-api
           prerelease: false
