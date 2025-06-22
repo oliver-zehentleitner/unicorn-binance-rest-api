@@ -77,18 +77,16 @@ with open("README.md", "r") as fh:
 setup(
      name=name,
      version="2.6.2",
-     author="LUCIT Systems and Development",
-     author_email='info@lucit.tech',
+     author="Oliver Zehentleitner",
      url="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api",
-     description="A Python SDK  to use the Binance REST API`s (com+testnet, com-margin+testnet, "
+     description="A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, "
                  "com-isolated_margin+testnet, com-futures+testnet, us, tr) in a simple, fast, flexible, robust and "
                  "fully-featured way.",
      long_description=long_description,
      long_description_content_type="text/markdown",
      license='MIT',
      install_requires=['certifi>=2023.7.22', 'colorama', 'cryptography>=42.0.4', 'dateparser', 'pyOpenSSL',
-                       'requests>=2.31.0', 'service-identity', 'ujson', 'regex', 'PySocks', 'Cython',
-                       'lucit-licensing-python>=1.8.2'],
+                       'requests>=2.31.0', 'service-identity', 'ujson', 'regex', 'PySocks', 'Cython'],
      keywords='',
      project_urls={
          'Howto': 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api#howto',

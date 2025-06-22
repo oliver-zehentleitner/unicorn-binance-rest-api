@@ -12,7 +12,6 @@ dependencies:
   - cryptography>=42.0.4
   - cython
   - dateparser
-  - lucit::lucit-licensing-python>=1.8.2
   - importlib-metadata  # [py<38]
   - pyopenssl
   - pysocks

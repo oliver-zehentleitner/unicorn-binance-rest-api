@@ -27,7 +27,6 @@ requirements:
     - cryptography >=42.0.4
     - cython
     - dateparser
-    - lucit::lucit-licensing-python >=1.8.2
     - importlib-metadata  # [py<38]
     - pyopenssl
     - PySocks
@@ -42,7 +41,6 @@ requirements:
     - cryptography >=42.0.4
     - cython
     - dateparser
-    - lucit::lucit-licensing-python >=1.8.2
     - importlib-metadata  # [py<38]
     - pyopenssl
     - PySocks
@@ -70,7 +68,7 @@ test:
 
 about:
   summary: | 
-    A Python SDK  to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, 
+    A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, 
     com-futures+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way.
   description: |
     [![Get a UNICORN Binance Suite License](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/master/images/logo/LUCIT-UBS-License-Offer.png)](https://shop.lucit.services)
