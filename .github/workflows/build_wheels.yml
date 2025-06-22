@@ -81,3 +81,5 @@ jobs:
 
       - name: Create PyPi Release
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist_upload
