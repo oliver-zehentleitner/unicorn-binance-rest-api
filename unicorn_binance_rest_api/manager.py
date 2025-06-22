@@ -7204,7 +7204,7 @@ class BinanceRestApiManager(object):
         """
         return self._request_margin_api('post', 'enableFastWithdrawSwitch', True, data=params)
 
-    def stop_manager(self, close_api_session=True):
+    def stop_manager(self):
         """
         Stop the BinanceRestApiManager
         """
