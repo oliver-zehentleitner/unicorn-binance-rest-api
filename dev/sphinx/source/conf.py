@@ -21,13 +21,13 @@ sys.path.insert(0, os.path.abspath('../../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'unicorn-binance-rest-api'
-copyright = '2023-2023, LUCIT Systems and Development. All Rights Reserved.'
-author = 'LUCIT Systems and Development'
+copyright = '2021-2025, Oliver Zehentleitner All Rights Reserved.'
+author = 'Oliver Zehentleitner'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '2.7.0'
+release = '2.8.0'
 
 html_last_updated_fmt = "%b %d %Y at %H:%M (CET)"
 
@@ -84,11 +84,9 @@ pygments_style = None
 # a list of builtin themes.
 
 html_theme = 'python_docs_theme_lucit'
-html_context = {'github_user_name': 'LUCIT-Systems-and-Development',
+html_context = {'github_user_name': 'oliver-zehentleitner',
                 'github_repo_name': 'unicorn-binance-rest-api',
                 'project_name': project,
-                'matomo_url': "https://webmon.lucit.services/matomo.php?idsite=8&amp;rec=1",
-                'freshchat_src': "//eu.fw-cdn.com/10659511/361973.js",
                 'lucit': True}
 
 myst_heading_anchors = 3
@@ -146,7 +144,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'unicorn-binance-rest-api.tex', 'unicorn-binance-rest-api Documentation',
-     'LUCIT Systems and Development', 'manual'),
+     'Oliver Zehentleitner', 'manual'),
 ]
 
 

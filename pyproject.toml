@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "unicorn-binance-rest-api"
-version = "2.7.0"
+version = "2.8.0"
 description = "A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, com-futures+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way."
 authors = ["Oliver Zehentleitner"]
 license = "MIT"

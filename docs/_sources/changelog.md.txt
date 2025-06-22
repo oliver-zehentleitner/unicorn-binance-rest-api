@@ -9,7 +9,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
-## 2.6.1.dev (development stage/unreleased/unstable)
+## 2.8.0.dev (development stage/unreleased/unstable)
+
+## 2.8.0
+### Changed
+- Moved from https://github.com/LUCIT-Systems-and-Development/ to https://github.com/oliver-zehentleitner
+### Removed
+- LUCIT Licensing Manager
 
 ## 2.6.1
 ### Fixed
@@ -208,7 +214,7 @@ anything special, please note that this process takes some time!
 
 ## 1.7.0
 ### Added
-- SOCKS5 proxy support to [`BinanceRestApiManager()`](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager) -
+- SOCKS5 proxy support to [`BinanceRestApiManager()`](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager) - 
   New parameter: `socks5_proxy_server`, `socks5_proxy_user`, `socks5_proxy_pass`, `socks5_proxy_ssl_verification`
 
 ## 1.6.0
@@ -243,7 +249,7 @@ Codebase equal to 1.4.2, testing azure pipe
 - removed "unicorn_binance_rest_api_"-part of the module file names (more info: [Discussions](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/discussions/19))
 - Correctly scope loggers so that it plays nicely with others. [PR#17](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/17)
 - renamed logger name of all modules to "unicorn_binance_rest_api", in the implementation of 
-[PR#17](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/17) every module has had
+[PR#17](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/17) every module has had 
 its own logger name.
 
 ## 1.3.0
@@ -272,7 +278,7 @@ its own logger name.
 
 ## 1.1.1
 ### Fixed
-- changed FUTURES_COIN_URL [PR#5](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/5) -
+- changed FUTURES_COIN_URL [PR#5](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/5) - 
 Thanks to [flo-rian](https://github.com/flo-rian)
 
 ## 1.1.0

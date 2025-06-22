@@ -1,2 +1,2 @@
-2.7.0
+2.8.0
 meta.yaml,pyproject.toml,setup.py,README.md,.github/workflows/build_wheels.yml,dev/sphinx/source/conf.py,unicorn_binance_rest_api/manager.py
