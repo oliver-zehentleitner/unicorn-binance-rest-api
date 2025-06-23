@@ -1,4 +1,5 @@
 .idea
+.buildinfo.bak
 
 dev/unicorn_binance_rest_api
 
