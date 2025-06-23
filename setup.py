@@ -111,7 +111,6 @@ setup(
          "Programming Language :: Python :: 3.11",
          "Programming Language :: Python :: 3.12",
          "Programming Language :: Python :: 3.13",
-         "License :: Other/Proprietary License",
          'Intended Audience :: Developers',
          "Intended Audience :: Financial and Insurance Industry",
          "Intended Audience :: Information Technology",
