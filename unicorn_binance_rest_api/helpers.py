@@ -40,9 +40,8 @@
 # IN THE SOFTWARE.
 
 import dateparser
-import pytz
 
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def date_to_milliseconds(date_str):
@@ -56,12 +55,12 @@ def date_to_milliseconds(date_str):
     :type date_str: str
     """
     # get epoch value in UTC
-    epoch = datetime.utcfromtimestamp(0).replace(tzinfo=pytz.utc)
+    epoch = datetime(1970, 1, 1, tzinfo=timezone.utc)
     # parse our date string
     d = dateparser.parse(date_str)
     # if the date is not timezone aware apply UTC timezone
     if d.tzinfo is None or d.tzinfo.utcoffset(d) is None:
-        d = d.replace(tzinfo=pytz.utc)
+        d = d.replace(tzinfo=timezone.utc)
 
     # return the difference in time
     return int((d - epoch).total_seconds() * 1000.0)
