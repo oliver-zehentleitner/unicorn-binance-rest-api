@@ -9,8 +9,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
-## 2.8.1.dev (development stage/unreleased/unstable)
+## 2.9.0.dev (development stage/unreleased/unstable)
 
+## 2.9.0
 ## next
 ### Added
 - `futures_create_algo_order()` — POST `/fapi/v1/algo/orders` (VP, TWAP, CONDITIONAL); fixes #93

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; unicorn-binance-rest-api 2.8.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index &#8212; unicorn-binance-rest-api 2.9.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -300,6 +300,8 @@
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_auto_cancel_all_open_orders">futures_auto_cancel_all_open_orders() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
+      <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_algo_order">futures_cancel_algo_order() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
+</li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_all_open_orders">futures_cancel_all_open_orders() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_order">futures_cancel_order() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
@@ -370,12 +372,12 @@
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_mark_price_klines">futures_coin_mark_price_klines() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_open_interest">futures_coin_open_interest() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_open_interest_hist">futures_coin_open_interest_hist() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_order_book">futures_coin_order_book() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_orderbook_ticker">futures_coin_orderbook_ticker() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
@@ -406,6 +408,8 @@
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_commission_rate">futures_commission_rate() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
+      <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_algo_order">futures_create_algo_order() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
+</li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_order">futures_create_order() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_DATA_URL">FUTURES_DATA_URL (unicorn_binance_rest_api.manager.BinanceRestApiManager attribute)</a>
@@ -414,7 +418,13 @@
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_funding_rate">futures_funding_rate() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
+      <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_order_history">futures_get_algo_order_history() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
+</li>
+      <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_sub_orders">futures_get_algo_sub_orders() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
+</li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_all_orders">futures_get_all_orders() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
+</li>
+      <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_algo_orders">futures_get_open_algo_orders() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
       <li><a href="unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_orders">futures_get_open_orders() (unicorn_binance_rest_api.manager.BinanceRestApiManager method)</a>
 </li>
@@ -1081,10 +1091,10 @@
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Jun 23 2025 at 08:57 (CET).
+    Last updated on Apr 08 2026 at 20:27 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
         with <a href="https://github.com/LUCIT-Systems-and-Development/python-docs-theme-lucit">python-docs-theme-lucit</a>.
     </div>
 

@@ -76,7 +76,7 @@ with open("README.md", "r") as fh:
 
 setup(
      name=name,
-     version="2.8.1",
+     version="2.9.0",
      author="Oliver Zehentleitner",
      url="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api",
      description="A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, "

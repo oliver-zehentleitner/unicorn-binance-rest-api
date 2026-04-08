@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>unicorn_binance_rest_api package &#8212; unicorn-binance-rest-api 2.8.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicorn_binance_rest_api package &#8212; unicorn-binance-rest-api 2.9.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -175,6 +175,7 @@
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_account_transfer"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_account_transfer()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_aggregate_trades"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_aggregate_trades()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_auto_cancel_all_open_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_auto_cancel_all_open_orders()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_algo_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_algo_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_all_open_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_all_open_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_orders()</span></code></a></li>
@@ -225,10 +226,14 @@
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_ticker"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_coin_ticker()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_time"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_coin_time()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_commission_rate"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_commission_rate()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_algo_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_create_algo_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_create_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_exchange_info"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_exchange_info()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_funding_rate"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_funding_rate()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_order_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_algo_order_history()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_sub_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_algo_sub_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_all_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_all_orders()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_algo_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_open_algo_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_open_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_position_mode"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_position_mode()</span></code></a></li>
@@ -506,68 +511,68 @@
 <span id="unicorn-binance-rest-api-exceptions-module"></span><h2>unicorn_binance_rest_api.exceptions module<a class="headerlink" href="#module-unicorn_binance_rest_api.exceptions" title="Link to this heading">¶</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.AlreadyStoppedError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">AlreadyStoppedError</span></span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#AlreadyStoppedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.AlreadyStoppedError" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">AlreadyStoppedError</span></span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#AlreadyStoppedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.AlreadyStoppedError" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 <p>Exception raised when an attempt is made to use an instance that has already been stopped.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceAPIException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceAPIException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceAPIException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceAPIException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceAPIException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceAPIException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceAPIException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceOrderException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceOrderInactiveSymbolException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderInactiveSymbolException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderInactiveSymbolException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderInactiveSymbolException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderInactiveSymbolException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderInactiveSymbolException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderInactiveSymbolException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#unicorn_binance_rest_api.exceptions.BinanceOrderException" title="unicorn_binance_rest_api.exceptions.BinanceOrderException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinanceOrderException</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceOrderMinAmountException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderMinAmountException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderMinAmountException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderMinAmountException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderMinAmountException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderMinAmountException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderMinAmountException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#unicorn_binance_rest_api.exceptions.BinanceOrderException" title="unicorn_binance_rest_api.exceptions.BinanceOrderException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinanceOrderException</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceOrderMinPriceException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderMinPriceException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderMinPriceException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderMinPriceException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderMinPriceException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderMinPriceException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderMinPriceException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#unicorn_binance_rest_api.exceptions.BinanceOrderException" title="unicorn_binance_rest_api.exceptions.BinanceOrderException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinanceOrderException</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceOrderMinTotalException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderMinTotalException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderMinTotalException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderMinTotalException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderMinTotalException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderMinTotalException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderMinTotalException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#unicorn_binance_rest_api.exceptions.BinanceOrderException" title="unicorn_binance_rest_api.exceptions.BinanceOrderException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinanceOrderException</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceOrderUnknownSymbolException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderUnknownSymbolException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderUnknownSymbolException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderUnknownSymbolException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceOrderUnknownSymbolException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceOrderUnknownSymbolException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceOrderUnknownSymbolException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#unicorn_binance_rest_api.exceptions.BinanceOrderException" title="unicorn_binance_rest_api.exceptions.BinanceOrderException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinanceOrderException</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceRequestException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceRequestException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceRequestException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceRequestException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceRequestException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceRequestException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceRequestException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.BinanceWithdrawException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceWithdrawException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceWithdrawException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceWithdrawException" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">BinanceWithdrawException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#BinanceWithdrawException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.BinanceWithdrawException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.exceptions.UnknownExchange">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">UnknownExchange</span></span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#UnknownExchange"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.UnknownExchange" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">UnknownExchange</span></span><a class="reference internal" href="_modules/unicorn_binance_rest_api/exceptions.html#UnknownExchange"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.exceptions.UnknownExchange" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 <p>Exception for if the manager class is started with an unkown exchange.</p>
 </dd></dl>
@@ -609,7 +614,7 @@ None if interval suffix is not one of m, h, d, w</p>
 <span id="unicorn-binance-rest-api-manager-module"></span><h2>unicorn_binance_rest_api.manager module<a class="headerlink" href="#module-unicorn_binance_rest_api.manager" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.manager.</span></span><span class="sig-name descname"><span class="pre">BinanceRestApiManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requests_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tld</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warn_on_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exchange</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_colorama</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_server</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_pass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_ssl_verification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">unicorn_binance_rest_api.manager.</span></span><span class="sig-name descname"><span class="pre">BinanceRestApiManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requests_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tld</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warn_on_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exchange</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_colorama</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_server</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_pass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socks5_proxy_ssl_verification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet,
 com-futures+testnet, us, “tr”) in a simple, fast, flexible, robust and fully-featured way.</p>
@@ -655,382 +660,382 @@ This overrules parameter <cite>tld</cite>.</p></li>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_BEST_MATCH">
-<span class="sig-name descname"><span class="pre">AGG_BEST_MATCH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'M'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_BEST_MATCH" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_BEST_MATCH</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'M'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_BEST_MATCH" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_BUYER_MAKES">
-<span class="sig-name descname"><span class="pre">AGG_BUYER_MAKES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'m'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_BUYER_MAKES" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_BUYER_MAKES</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'m'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_BUYER_MAKES" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_FIRST_TRADE_ID">
-<span class="sig-name descname"><span class="pre">AGG_FIRST_TRADE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'f'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_FIRST_TRADE_ID" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_FIRST_TRADE_ID</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'f'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_FIRST_TRADE_ID" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_ID">
-<span class="sig-name descname"><span class="pre">AGG_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'a'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_ID" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_ID</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'a'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_ID" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_LAST_TRADE_ID">
-<span class="sig-name descname"><span class="pre">AGG_LAST_TRADE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'l'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_LAST_TRADE_ID" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_LAST_TRADE_ID</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'l'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_LAST_TRADE_ID" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_PRICE">
-<span class="sig-name descname"><span class="pre">AGG_PRICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'p'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_PRICE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_PRICE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'p'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_PRICE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_QUANTITY">
-<span class="sig-name descname"><span class="pre">AGG_QUANTITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'q'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_QUANTITY" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_QUANTITY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'q'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_QUANTITY" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_TIME">
-<span class="sig-name descname"><span class="pre">AGG_TIME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'T'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_TIME" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AGG_TIME</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'T'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.AGG_TIME" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.API_URL">
-<span class="sig-name descname"><span class="pre">API_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://api.binance.{}/api'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.API_URL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">API_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://api.binance.{}/api'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.API_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.COIN_FUTURE_TO_SPOT">
-<span class="sig-name descname"><span class="pre">COIN_FUTURE_TO_SPOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CMFUTURE_MAIN'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.COIN_FUTURE_TO_SPOT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">COIN_FUTURE_TO_SPOT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CMFUTURE_MAIN'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.COIN_FUTURE_TO_SPOT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_MINING">
-<span class="sig-name descname"><span class="pre">FIAT_TO_MINING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C2C_MINING'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_MINING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FIAT_TO_MINING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C2C_MINING'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_MINING" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_SPOT">
-<span class="sig-name descname"><span class="pre">FIAT_TO_SPOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C2C_MAIN'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_SPOT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FIAT_TO_SPOT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C2C_MAIN'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_SPOT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_USDT_FUTURE">
-<span class="sig-name descname"><span class="pre">FIAT_TO_USDT_FUTURE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C2C_UMFUTURE'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FIAT_TO_USDT_FUTURE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C2C_UMFUTURE'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FIAT_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_API_VERSION">
-<span class="sig-name descname"><span class="pre">FUTURES_API_VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_API_VERSION" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FUTURES_API_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_API_VERSION" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_API_VERSION2">
-<span class="sig-name descname"><span class="pre">FUTURES_API_VERSION2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v2'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_API_VERSION2" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FUTURES_API_VERSION2</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v2'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_API_VERSION2" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_COIN_DATA_URL">
-<span class="sig-name descname"><span class="pre">FUTURES_COIN_DATA_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://dapi.binance.{}/futures/data'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_COIN_DATA_URL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FUTURES_COIN_DATA_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://dapi.binance.{}/futures/data'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_COIN_DATA_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_COIN_URL">
-<span class="sig-name descname"><span class="pre">FUTURES_COIN_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fapi.binance.{}/fapi'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_COIN_URL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FUTURES_COIN_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fapi.binance.{}/fapi'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_COIN_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_DATA_URL">
-<span class="sig-name descname"><span class="pre">FUTURES_DATA_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fapi.binance.{}/futures/data'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_DATA_URL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FUTURES_DATA_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fapi.binance.{}/futures/data'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_DATA_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_URL">
-<span class="sig-name descname"><span class="pre">FUTURES_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fapi.binance.{}/fapi'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_URL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FUTURES_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fapi.binance.{}/fapi'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.FUTURES_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_12HOUR">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_12HOUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'12h'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_12HOUR" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_12HOUR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'12h'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_12HOUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_15MINUTE">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_15MINUTE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'15m'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_15MINUTE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_15MINUTE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'15m'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_15MINUTE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1DAY">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1DAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1d'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1DAY" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1DAY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1d'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1DAY" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1HOUR">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1HOUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1h'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1HOUR" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1HOUR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1h'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1HOUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1MINUTE">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1MINUTE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1m'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1MINUTE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1MINUTE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1m'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1MINUTE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1MONTH">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1MONTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1M'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1MONTH" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1MONTH</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1M'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1MONTH" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1SECOND">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1SECOND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1s'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1SECOND" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1SECOND</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1s'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1SECOND" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1WEEK">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1WEEK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1w'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1WEEK" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_1WEEK</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1w'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_1WEEK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_2HOUR">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_2HOUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'2h'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_2HOUR" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_2HOUR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'2h'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_2HOUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_30MINUTE">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_30MINUTE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'30m'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_30MINUTE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_30MINUTE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'30m'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_30MINUTE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_3DAY">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_3DAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'3d'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_3DAY" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_3DAY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'3d'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_3DAY" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_3MINUTE">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_3MINUTE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'3m'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_3MINUTE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_3MINUTE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'3m'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_3MINUTE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_4HOUR">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_4HOUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'4h'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_4HOUR" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_4HOUR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'4h'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_4HOUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_5MINUTE">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_5MINUTE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'5m'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_5MINUTE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_5MINUTE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'5m'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_5MINUTE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_6HOUR">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_6HOUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'6h'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_6HOUR" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_6HOUR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'6h'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_6HOUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_8HOUR">
-<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_8HOUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'8h'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_8HOUR" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">KLINE_INTERVAL_8HOUR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'8h'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.KLINE_INTERVAL_8HOUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_API_URL">
-<span class="sig-name descname"><span class="pre">MARGIN_API_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://api.binance.{}/sapi'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_API_URL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MARGIN_API_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://api.binance.{}/sapi'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_API_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_API_VERSION">
-<span class="sig-name descname"><span class="pre">MARGIN_API_VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_API_VERSION" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MARGIN_API_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_API_VERSION" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_CROSS_TO_SPOT">
-<span class="sig-name descname"><span class="pre">MARGIN_CROSS_TO_SPOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MARGIN_MAIN'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_CROSS_TO_SPOT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MARGIN_CROSS_TO_SPOT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MARGIN_MAIN'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_CROSS_TO_SPOT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_CROSS_TO_USDT_FUTURE">
-<span class="sig-name descname"><span class="pre">MARGIN_CROSS_TO_USDT_FUTURE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MARGIN_UMFUTURE'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_CROSS_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MARGIN_CROSS_TO_USDT_FUTURE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MARGIN_UMFUTURE'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MARGIN_CROSS_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_FIAT">
-<span class="sig-name descname"><span class="pre">MINING_TO_FIAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MINING_C2C'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_FIAT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MINING_TO_FIAT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MINING_C2C'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_FIAT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_SPOT">
-<span class="sig-name descname"><span class="pre">MINING_TO_SPOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MINING_MAIN'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_SPOT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MINING_TO_SPOT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MINING_MAIN'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_SPOT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_USDT_FUTURE">
-<span class="sig-name descname"><span class="pre">MINING_TO_USDT_FUTURE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MINING_UMFUTURE'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MINING_TO_USDT_FUTURE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MINING_UMFUTURE'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_ACK">
-<span class="sig-name descname"><span class="pre">ORDER_RESP_TYPE_ACK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ACK'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_ACK" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_RESP_TYPE_ACK</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ACK'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_ACK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_FULL">
-<span class="sig-name descname"><span class="pre">ORDER_RESP_TYPE_FULL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FULL'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_FULL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_RESP_TYPE_FULL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FULL'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_FULL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_RESULT">
-<span class="sig-name descname"><span class="pre">ORDER_RESP_TYPE_RESULT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RESULT'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_RESULT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_RESP_TYPE_RESULT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RESULT'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_RESULT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_CANCELED">
-<span class="sig-name descname"><span class="pre">ORDER_STATUS_CANCELED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CANCELED'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_CANCELED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_STATUS_CANCELED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CANCELED'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_CANCELED" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_EXPIRED">
-<span class="sig-name descname"><span class="pre">ORDER_STATUS_EXPIRED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EXPIRED'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_EXPIRED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_STATUS_EXPIRED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EXPIRED'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_EXPIRED" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_FILLED">
-<span class="sig-name descname"><span class="pre">ORDER_STATUS_FILLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FILLED'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_FILLED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_STATUS_FILLED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FILLED'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_FILLED" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_NEW">
-<span class="sig-name descname"><span class="pre">ORDER_STATUS_NEW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NEW'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_NEW" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_STATUS_NEW</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NEW'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_NEW" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_PARTIALLY_FILLED">
-<span class="sig-name descname"><span class="pre">ORDER_STATUS_PARTIALLY_FILLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PARTIALLY_FILLED'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_PARTIALLY_FILLED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_STATUS_PARTIALLY_FILLED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PARTIALLY_FILLED'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_PARTIALLY_FILLED" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_PENDING_CANCEL">
-<span class="sig-name descname"><span class="pre">ORDER_STATUS_PENDING_CANCEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PENDING_CANCEL'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_PENDING_CANCEL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_STATUS_PENDING_CANCEL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PENDING_CANCEL'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_PENDING_CANCEL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_REJECTED">
-<span class="sig-name descname"><span class="pre">ORDER_STATUS_REJECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'REJECTED'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_REJECTED" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_STATUS_REJECTED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'REJECTED'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_STATUS_REJECTED" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_LIMIT">
-<span class="sig-name descname"><span class="pre">ORDER_TYPE_LIMIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LIMIT'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_LIMIT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_TYPE_LIMIT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LIMIT'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_LIMIT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_LIMIT_MAKER">
-<span class="sig-name descname"><span class="pre">ORDER_TYPE_LIMIT_MAKER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LIMIT_MAKER'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_LIMIT_MAKER" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_TYPE_LIMIT_MAKER</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LIMIT_MAKER'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_LIMIT_MAKER" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_MARKET">
-<span class="sig-name descname"><span class="pre">ORDER_TYPE_MARKET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MARKET'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_MARKET" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_TYPE_MARKET</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MARKET'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_MARKET" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS">
-<span class="sig-name descname"><span class="pre">ORDER_TYPE_STOP_LOSS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STOP_LOSS'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_TYPE_STOP_LOSS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STOP_LOSS'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS_LIMIT">
-<span class="sig-name descname"><span class="pre">ORDER_TYPE_STOP_LOSS_LIMIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STOP_LOSS_LIMIT'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS_LIMIT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_TYPE_STOP_LOSS_LIMIT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STOP_LOSS_LIMIT'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS_LIMIT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT">
-<span class="sig-name descname"><span class="pre">ORDER_TYPE_TAKE_PROFIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TAKE_PROFIT'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_TYPE_TAKE_PROFIT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TAKE_PROFIT'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT">
-<span class="sig-name descname"><span class="pre">ORDER_TYPE_TAKE_PROFIT_LIMIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TAKE_PROFIT_LIMIT'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ORDER_TYPE_TAKE_PROFIT_LIMIT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TAKE_PROFIT_LIMIT'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.PRIVATE_API_VERSION">
-<span class="sig-name descname"><span class="pre">PRIVATE_API_VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v3'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PRIVATE_API_VERSION" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PRIVATE_API_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v3'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PRIVATE_API_VERSION" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.PUBLIC_API_VERSION">
-<span class="sig-name descname"><span class="pre">PUBLIC_API_VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PUBLIC_API_VERSION" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PUBLIC_API_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PUBLIC_API_VERSION" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_BUY">
-<span class="sig-name descname"><span class="pre">SIDE_BUY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BUY'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_BUY" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SIDE_BUY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BUY'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_BUY" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_SELL">
-<span class="sig-name descname"><span class="pre">SIDE_SELL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SELL'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_SELL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SIDE_SELL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SELL'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_SELL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_COIN_FUTURE">
-<span class="sig-name descname"><span class="pre">SPOT_TO_COIN_FUTURE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_CMFUTURE'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_COIN_FUTURE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SPOT_TO_COIN_FUTURE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_CMFUTURE'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_COIN_FUTURE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_FIAT">
-<span class="sig-name descname"><span class="pre">SPOT_TO_FIAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_C2C'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_FIAT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SPOT_TO_FIAT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_C2C'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_FIAT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_MARGIN_CROSS">
-<span class="sig-name descname"><span class="pre">SPOT_TO_MARGIN_CROSS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_MARGIN'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_MARGIN_CROSS" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SPOT_TO_MARGIN_CROSS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_MARGIN'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_MARGIN_CROSS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_MINING">
-<span class="sig-name descname"><span class="pre">SPOT_TO_MINING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_MINING'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_MINING" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SPOT_TO_MINING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_MINING'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_MINING" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_USDT_FUTURE">
-<span class="sig-name descname"><span class="pre">SPOT_TO_USDT_FUTURE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_UMFUTURE'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SPOT_TO_USDT_FUTURE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAIN_UMFUTURE'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SPOT_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.SYMBOL_TYPE_SPOT">
-<span class="sig-name descname"><span class="pre">SYMBOL_TYPE_SPOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SPOT'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SYMBOL_TYPE_SPOT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SYMBOL_TYPE_SPOT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SPOT'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SYMBOL_TYPE_SPOT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_FOK">
-<span class="sig-name descname"><span class="pre">TIME_IN_FORCE_FOK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FOK'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_FOK" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TIME_IN_FORCE_FOK</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FOK'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_FOK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_GTC">
-<span class="sig-name descname"><span class="pre">TIME_IN_FORCE_GTC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GTC'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_GTC" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TIME_IN_FORCE_GTC</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GTC'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_GTC" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_IOC">
-<span class="sig-name descname"><span class="pre">TIME_IN_FORCE_IOC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IOC'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_IOC" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TIME_IN_FORCE_IOC</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IOC'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.TIME_IN_FORCE_IOC" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_FIAT">
-<span class="sig-name descname"><span class="pre">USDT_FUTURE_TO_FIAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UMFUTURE_C2C'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_FIAT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">USDT_FUTURE_TO_FIAT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UMFUTURE_C2C'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_FIAT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_MARGIN_CROSS">
-<span class="sig-name descname"><span class="pre">USDT_FUTURE_TO_MARGIN_CROSS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UMFUTURE_MARGIN'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_MARGIN_CROSS" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">USDT_FUTURE_TO_MARGIN_CROSS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UMFUTURE_MARGIN'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_MARGIN_CROSS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_SPOT">
-<span class="sig-name descname"><span class="pre">USDT_FUTURE_TO_SPOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UMFUTURE_MAIN'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_SPOT" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">USDT_FUTURE_TO_SPOT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UMFUTURE_MAIN'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.USDT_FUTURE_TO_SPOT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.WEBSITE_URL">
-<span class="sig-name descname"><span class="pre">WEBSITE_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://www.binance.{}'</span></em><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.WEBSITE_URL" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">WEBSITE_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://www.binance.{}'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.WEBSITE_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -2140,6 +2145,18 @@ price will have the quantity aggregated.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_algo_order">
+<span class="sig-name descname"><span class="pre">futures_cancel_algo_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_cancel_algo_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_algo_order" title="Link to this definition">¶</a></dt>
+<dd><p>Cancel an active algo order.</p>
+<p><a class="reference external" href="https://binance-docs.github.io/apidocs/futures/en/#cancel-algo-order-trade">https://binance-docs.github.io/apidocs/futures/en/#cancel-algo-order-trade</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>algoId</strong> (<em>int</em>) – required</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_all_open_orders">
 <span class="sig-name descname"><span class="pre">futures_cancel_all_open_orders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_cancel_all_open_orders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_all_open_orders" title="Link to this definition">¶</a></dt>
 <dd><p>Cancel all open futures orders</p>
@@ -2556,6 +2573,32 @@ the plain listenKey.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_algo_order">
+<span class="sig-name descname"><span class="pre">futures_create_algo_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_create_algo_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_algo_order" title="Link to this definition">¶</a></dt>
+<dd><p>Send in a new algo order (VP, TWAP or CONDITIONAL).</p>
+<p><a class="reference external" href="https://binance-docs.github.io/apidocs/futures/en/#new-order-trade-2">https://binance-docs.github.io/apidocs/futures/en/#new-order-trade-2</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<em>str</em>) – required</p></li>
+<li><p><strong>side</strong> (<em>str</em>) – required - BUY or SELL</p></li>
+<li><p><strong>algoType</strong> (<em>str</em>) – required - VP, TWAP or CONDITIONAL</p></li>
+<li><p><strong>quantity</strong> (<em>float</em>) – required</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – required for CONDITIONAL - STOP_MARKET, TAKE_PROFIT_MARKET, STOP, TAKE_PROFIT or
+TRAILING_STOP_MARKET</p></li>
+<li><p><strong>positionSide</strong> (<em>str</em>) – optional - BOTH, LONG or SHORT (Hedge Mode only)</p></li>
+<li><p><strong>reduceOnly</strong> (<em>bool</em>) – optional</p></li>
+<li><p><strong>stopPrice</strong> (<em>float</em>) – optional - used with STOP / TAKE_PROFIT types</p></li>
+<li><p><strong>activationPrice</strong> (<em>float</em>) – optional</p></li>
+<li><p><strong>callbackRate</strong> (<em>float</em>) – optional - used with TRAILING_STOP_MARKET</p></li>
+<li><p><strong>urgency</strong> (<em>str</em>) – optional - VP only: LOW, MEDIUM, HIGH</p></li>
+<li><p><strong>duration</strong> (<em>int</em>) – optional - TWAP only, in seconds</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_order">
 <span class="sig-name descname"><span class="pre">futures_create_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_create_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_order" title="Link to this definition">¶</a></dt>
 <dd><p>Send in a new order.</p>
@@ -2577,10 +2620,52 @@ the plain listenKey.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_order_history">
+<span class="sig-name descname"><span class="pre">futures_get_algo_order_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_get_algo_order_history"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_order_history" title="Link to this definition">¶</a></dt>
+<dd><p>Get historical algo orders.</p>
+<p><a class="reference external" href="https://binance-docs.github.io/apidocs/futures/en/#query-historical-algo-orders-user_data">https://binance-docs.github.io/apidocs/futures/en/#query-historical-algo-orders-user_data</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<em>str</em>) – optional</p></li>
+<li><p><strong>side</strong> (<em>str</em>) – optional - BUY or SELL</p></li>
+<li><p><strong>startTime</strong> (<em>int</em>) – optional</p></li>
+<li><p><strong>endTime</strong> (<em>int</em>) – optional</p></li>
+<li><p><strong>page</strong> (<em>int</em>) – optional - default 1</p></li>
+<li><p><strong>pageSize</strong> (<em>int</em>) – optional - default 100, max 100</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_sub_orders">
+<span class="sig-name descname"><span class="pre">futures_get_algo_sub_orders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_get_algo_sub_orders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_sub_orders" title="Link to this definition">¶</a></dt>
+<dd><p>Get sub orders of a specific algo order.</p>
+<p><a class="reference external" href="https://binance-docs.github.io/apidocs/futures/en/#query-sub-orders-user_data">https://binance-docs.github.io/apidocs/futures/en/#query-sub-orders-user_data</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algoId</strong> (<em>int</em>) – required</p></li>
+<li><p><strong>page</strong> (<em>int</em>) – optional - default 1</p></li>
+<li><p><strong>pageSize</strong> (<em>int</em>) – optional - default 100, max 100</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_all_orders">
 <span class="sig-name descname"><span class="pre">futures_get_all_orders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_get_all_orders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_all_orders" title="Link to this definition">¶</a></dt>
 <dd><p>Get all futures account orders; active, canceled, or filled.</p>
 <p><a class="reference external" href="https://binance-docs.github.io/apidocs/futures/en/#all-orders-user_data">https://binance-docs.github.io/apidocs/futures/en/#all-orders-user_data</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_algo_orders">
+<span class="sig-name descname"><span class="pre">futures_get_open_algo_orders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.futures_get_open_algo_orders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_algo_orders" title="Link to this definition">¶</a></dt>
+<dd><p>Get all open algo orders.</p>
+<p><a class="reference external" href="https://binance-docs.github.io/apidocs/futures/en/#query-current-algo-open-orders-user_data">https://binance-docs.github.io/apidocs/futures/en/#query-current-algo-open-orders-user_data</a></p>
 </dd></dl>
 
 <dl class="py method">
@@ -7451,6 +7536,7 @@ Default false.</p></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_account_transfer"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_account_transfer()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_aggregate_trades"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_aggregate_trades()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_auto_cancel_all_open_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_auto_cancel_all_open_orders()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_algo_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_algo_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_all_open_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_all_open_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_cancel_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_cancel_orders()</span></code></a></li>
@@ -7501,10 +7587,14 @@ Default false.</p></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_ticker"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_coin_ticker()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_time"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_coin_time()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_commission_rate"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_commission_rate()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_algo_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_create_algo_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_create_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_create_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_exchange_info"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_exchange_info()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_funding_rate"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_funding_rate()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_order_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_algo_order_history()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_algo_sub_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_algo_sub_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_all_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_all_orders()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_algo_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_open_algo_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_open_orders"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_open_orders()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_order"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_order()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_get_position_mode"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.futures_get_position_mode()</span></code></a></li>
@@ -7768,10 +7858,10 @@ Default false.</p></li>
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Jun 23 2025 at 08:57 (CET).
+    Last updated on Apr 08 2026 at 20:27 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
         with <a href="https://github.com/LUCIT-Systems-and-Development/python-docs-theme-lucit">python-docs-theme-lucit</a>.
     </div>
 
