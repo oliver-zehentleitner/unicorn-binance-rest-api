@@ -11,6 +11,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 2.8.1.dev (development stage/unreleased/unstable)
 
+## next
+### Added
+- `futures_create_algo_order()` — POST `/fapi/v1/algo/orders` (VP, TWAP, CONDITIONAL); fixes #93
+- `futures_cancel_algo_order()` — DELETE `/fapi/v1/algo/orders`
+- `futures_get_open_algo_orders()` — GET `/fapi/v1/algo/orders/open`
+- `futures_get_algo_order_history()` — GET `/fapi/v1/algo/orders/historical`
+- `futures_get_algo_sub_orders()` — GET `/fapi/v1/algo/orders/subOrders`
+- Python 3.14 support
+### Changed
+- `colorama.init()` → `colorama.init(wrap=False)` to prevent `RecursionError` when `BinanceRestApiManager` is instantiated multiple times in the same process; fixes #92
+- cibuildwheel upgraded from v3.0.0 to v3.4.1
+### Fixed
+- `helpers.py`: `datetime.utcfromtimestamp()` replaced with `datetime(1970, 1, 1, tzinfo=timezone.utc)` — eliminates `DeprecationWarning` on Python 3.12+
+### Removed
+- Python 3.8 support (EOL Oct 2024); minimum is now 3.9
+- `simplejson` dependency (was listed in `pyproject.toml` only, not used in code)
+- `pytz` dependency (replaced by stdlib `datetime.timezone.utc`)
+
 ## 2.8.1
 ### Added
 - Python 3.13 support
