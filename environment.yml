@@ -6,13 +6,12 @@ channels:
   - defaults
 
 dependencies:
-  - python>=3.7
+  - python>=3.9
   - certifi>=2023.7.22
   - colorama
   - cryptography>=42.0.4
   - cython
   - dateparser
-  - importlib-metadata  # [py<38]
   - pyopenssl
   - pysocks
   - requests>=2.31.0
