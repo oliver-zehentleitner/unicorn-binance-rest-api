@@ -161,7 +161,7 @@ If you like the project, please [![star](https://raw.githubusercontent.com/olive
 [GitHub](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)!
 
 ## Installation and Upgrade
-The module requires Python 3.8 and runs smoothly up to and including Python 3.13.
+The module requires Python 3.9 and runs smoothly up to and including Python 3.14.
 
 [There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 
