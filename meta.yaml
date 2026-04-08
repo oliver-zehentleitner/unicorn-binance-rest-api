@@ -27,7 +27,6 @@ requirements:
     - cryptography >=42.0.4
     - cython
     - dateparser
-    - importlib-metadata  # [py<38]
     - pyopenssl
     - PySocks
     - regex
@@ -41,7 +40,6 @@ requirements:
     - cryptography >=42.0.4
     - cython
     - dateparser
-    - importlib-metadata  # [py<38]
     - pyopenssl
     - PySocks
     - regex
