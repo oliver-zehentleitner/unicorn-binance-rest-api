@@ -6270,6 +6270,95 @@ class BinanceRestApiManager(object):
         params['batchOrders'] = query_string[12:]
         return self._request_futures_api('post', 'batchOrders', True, data=params)
 
+    def futures_create_algo_order(self, **params):
+        """Send in a new algo order (VP, TWAP or CONDITIONAL).
+
+        https://binance-docs.github.io/apidocs/futures/en/#new-order-trade-2
+
+        :param symbol: required
+        :type symbol: str
+        :param side: required - BUY or SELL
+        :type side: str
+        :param algoType: required - VP, TWAP or CONDITIONAL
+        :type algoType: str
+        :param quantity: required
+        :type quantity: float
+        :param type: required for CONDITIONAL - STOP_MARKET, TAKE_PROFIT_MARKET, STOP, TAKE_PROFIT or
+            TRAILING_STOP_MARKET
+        :type type: str
+        :param positionSide: optional - BOTH, LONG or SHORT (Hedge Mode only)
+        :type positionSide: str
+        :param reduceOnly: optional
+        :type reduceOnly: bool
+        :param stopPrice: optional - used with STOP / TAKE_PROFIT types
+        :type stopPrice: float
+        :param activationPrice: optional
+        :type activationPrice: float
+        :param callbackRate: optional - used with TRAILING_STOP_MARKET
+        :type callbackRate: float
+        :param urgency: optional - VP only: LOW, MEDIUM, HIGH
+        :type urgency: str
+        :param duration: optional - TWAP only, in seconds
+        :type duration: int
+
+        """
+        return self._request_futures_api('post', 'algo/orders', True, data=params)
+
+    def futures_cancel_algo_order(self, **params):
+        """Cancel an active algo order.
+
+        https://binance-docs.github.io/apidocs/futures/en/#cancel-algo-order-trade
+
+        :param algoId: required
+        :type algoId: int
+
+        """
+        return self._request_futures_api('delete', 'algo/orders', True, data=params)
+
+    def futures_get_open_algo_orders(self, **params):
+        """Get all open algo orders.
+
+        https://binance-docs.github.io/apidocs/futures/en/#query-current-algo-open-orders-user_data
+
+        """
+        return self._request_futures_api('get', 'algo/orders/open', True, data=params)
+
+    def futures_get_algo_order_history(self, **params):
+        """Get historical algo orders.
+
+        https://binance-docs.github.io/apidocs/futures/en/#query-historical-algo-orders-user_data
+
+        :param symbol: optional
+        :type symbol: str
+        :param side: optional - BUY or SELL
+        :type side: str
+        :param startTime: optional
+        :type startTime: int
+        :param endTime: optional
+        :type endTime: int
+        :param page: optional - default 1
+        :type page: int
+        :param pageSize: optional - default 100, max 100
+        :type pageSize: int
+
+        """
+        return self._request_futures_api('get', 'algo/orders/historical', True, data=params)
+
+    def futures_get_algo_sub_orders(self, **params):
+        """Get sub orders of a specific algo order.
+
+        https://binance-docs.github.io/apidocs/futures/en/#query-sub-orders-user_data
+
+        :param algoId: required
+        :type algoId: int
+        :param page: optional - default 1
+        :type page: int
+        :param pageSize: optional - default 100, max 100
+        :type pageSize: int
+
+        """
+        return self._request_futures_api('get', 'algo/orders/subOrders', True, data=params)
+
     def futures_get_order(self, **params):
         """
         Check an order's status.
