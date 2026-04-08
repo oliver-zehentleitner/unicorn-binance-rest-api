@@ -220,7 +220,7 @@ class BinanceRestApiManager(object):
         if self.sigterm is False:
             if disable_colorama is not True:
                 logger.info(f"Initiating `colorama_{colorama.__version__}`")
-                colorama.init()
+                colorama.init(wrap=False)
             self.exchange = exchange
             self.debug = debug
 
