@@ -664,12 +664,12 @@ class BinanceRestApiManager(object):
         """
         try:
             if self.socks5_proxy_address is not None and self.socks5_proxy_port is not None:
-                respond = requests.get('https://api.github.com/repos/LUCIT-Systems-and-Development/'
+                respond = requests.get('https://api.github.com/repos/oliver-zehentleitner/'
                                        'unicorn-binance-rest-api/releases/latest',
                                        proxies=self.request_socks5_proxies,
                                        verify=self.socks5_proxy_ssl_verification)
             else:
-                respond = requests.get('https://api.github.com/repos/LUCIT-Systems-and-Development/'
+                respond = requests.get('https://api.github.com/repos/oliver-zehentleitner/'
                                        'unicorn-binance-rest-api/releases/latest')
             latest_release_info = respond.json()
             return latest_release_info
