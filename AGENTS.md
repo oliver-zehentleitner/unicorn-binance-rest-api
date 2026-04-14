@@ -10,8 +10,8 @@ Open development tasks and decisions are tracked in **[TASKS.md](TASKS.md)**.
 
 Python SDK (MIT License) for the Binance REST APIs. Covers Spot, Margin, Isolated Margin, Futures (USDT-M & Coin-M), Testnet variants, Binance.US and TRBinance.com. Forked from python-binance (Sam McHardy), heavily extended and maintained by Oliver Zehentleitner.
 
-**Current Version:** 2.9.0.dev  
-**Next Release:** 2.9.0  
+**Current Version:** 2.9.1.dev  
+**Next Release:** 2.9.1  
 **Python Compatibility:** 3.8 – 3.13  
 **Author:** Oliver Zehentleitner  
 **PyPI:** `unicorn-binance-rest-api`  

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>unicorn_binance_rest_api.manager &#8212; unicorn-binance-rest-api 2.9.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicorn_binance_rest_api.manager &#8212; unicorn-binance-rest-api 2.9.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="../../_static/pydoctheme.css?v=fdf8e9ae" />
@@ -189,7 +189,7 @@
 
 
 <span class="n">__app_name__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;unicorn-binance-rest-api&quot;</span>
-<span class="n">__version__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;2.9.0&quot;</span>
+<span class="n">__version__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;2.9.1.dev&quot;</span>
 <span class="n">__logger__</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;unicorn_binance_rest_api&quot;</span><span class="p">)</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">__logger__</span>
@@ -787,8 +787,9 @@
 <span class="sd">        Get the version of the latest available release (cache time 1 hour)</span>
 <span class="sd">        :return: str or False</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># Do a fresh request if status is None or last timestamp is older 1 hour</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_update_check_github</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tag_name&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> \
+        <span class="c1"># Do a fresh request if status is not a dict, has no tag_name, or last timestamp is older 1 hour</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">last_update_check_github</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">or</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">last_update_check_github</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tag_name&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> \
                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">last_update_check_github</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">last_update_check_github</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_latest_release_info</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_update_check_github</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]:</span>
@@ -809,12 +810,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">socks5_proxy_address</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">socks5_proxy_port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">respond</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/repos/LUCIT-Systems-and-Development/&#39;</span>
+                <span class="n">respond</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/repos/oliver-zehentleitner/&#39;</span>
                                        <span class="s1">&#39;unicorn-binance-rest-api/releases/latest&#39;</span><span class="p">,</span>
                                        <span class="n">proxies</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request_socks5_proxies</span><span class="p">,</span>
                                        <span class="n">verify</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">socks5_proxy_ssl_verification</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">respond</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/repos/LUCIT-Systems-and-Development/&#39;</span>
+                <span class="n">respond</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/repos/oliver-zehentleitner/&#39;</span>
                                        <span class="s1">&#39;unicorn-binance-rest-api/releases/latest&#39;</span><span class="p">)</span>
             <span class="n">latest_release_info</span> <span class="o">=</span> <span class="n">respond</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
             <span class="k">return</span> <span class="n">latest_release_info</span>
@@ -8231,7 +8232,7 @@
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Apr 08 2026 at 20:27 (CET).
+    Last updated on Apr 14 2026 at 15:17 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
