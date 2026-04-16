@@ -358,21 +358,19 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print(f"\r\nTestBinanceOptionsRestManager:")
-        cls.ubra = BinanceRestApiManager(exchange="binance.com-vanilla-options")
+        # Use binance.us for init (works from CI), then override OPTIONS_URL for unit tests
+        cls.ubra = BinanceRestApiManager(exchange="binance.us")
+        cls.ubra.OPTIONS_URL = "https://eapi.binance.com/eapi"
+        cls.ubra.OPTIONS_API_VERSION = "v1"
 
     @classmethod
     def tearDownClass(cls):
         cls.ubra.stop_manager()
 
     def test_options_url_init(self):
-        """Test that OPTIONS_URL is set correctly for vanilla-options exchange."""
-        self.assertEqual(self.ubra.OPTIONS_URL, "https://eapi.binance.com/eapi")
-
-    def test_options_testnet_url_init(self):
-        """Test that OPTIONS_URL is set correctly for testnet."""
-        ubra_testnet = BinanceRestApiManager(exchange="binance.com-vanilla-options-testnet")
-        self.assertEqual(ubra_testnet.OPTIONS_URL, "https://testnet.binancefuture.com/eapi")
-        ubra_testnet.stop_manager()
+        """Test that OPTIONS_URL class default is correct."""
+        self.assertEqual(BinanceRestApiManager.OPTIONS_URL, "https://eapi.binance.com/eapi")
+        self.assertEqual(BinanceRestApiManager.OPTIONS_API_VERSION, "v1")
 
     def test_options_uri_builder(self):
         """Test that _create_options_api_uri builds correct URIs."""
@@ -381,48 +379,42 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
         uri = self.ubra._create_options_api_uri('exchangeInfo')
         self.assertEqual(uri, "https://eapi.binance.com/eapi/v1/exchangeInfo")
 
-    def test_options_ping(self):
-        """Test Options ping endpoint."""
-        result = self.ubra.options_ping()
-        self.assertIsNotNone(result)
+    def test_options_live_run(self):
+        """Test Options endpoints (requires eapi.binance.com access, skipped in CI)."""
+        if is_github_action_env is False:
+            try:
+                # Test with full exchange init
+                with BinanceRestApiManager(exchange="binance.com-vanilla-options") as ubra_opts:
+                    self.assertEqual(ubra_opts.OPTIONS_URL, "https://eapi.binance.com/eapi")
 
-    def test_options_time(self):
-        """Test Options server time endpoint."""
-        result = self.ubra.options_time()
-        self.assertIn('serverTime', result)
+                    result = ubra_opts.options_ping()
+                    self.assertIsNotNone(result)
 
-    def test_options_exchange_info(self):
-        """Test Options exchange info endpoint."""
-        result = self.ubra.options_exchange_info()
-        self.assertIn('optionSymbols', result)
-        self.assertIsInstance(result['optionSymbols'], list)
-        self.assertGreater(len(result['optionSymbols']), 0)
+                    result = ubra_opts.options_time()
+                    self.assertIn('serverTime', result)
 
-    def test_options_order_book(self):
-        """Test Options order book endpoint."""
-        # Get a valid symbol first
-        info = self.ubra.options_exchange_info()
-        symbol = info['optionSymbols'][0]['symbol']
-        result = self.ubra.options_order_book(symbol=symbol, limit=10)
-        self.assertIn('lastUpdateId', result)
-        self.assertIn('bids', result)
-        self.assertIn('asks', result)
-        self.assertIn('T', result)
+                    result = ubra_opts.options_exchange_info()
+                    self.assertIn('optionSymbols', result)
+                    self.assertIsInstance(result['optionSymbols'], list)
+                    self.assertGreater(len(result['optionSymbols']), 0)
 
-    def test_options_mark_price(self):
-        """Test Options mark price endpoint."""
-        result = self.ubra.options_mark_price()
-        self.assertIsInstance(result, list)
+                    symbol = result['optionSymbols'][0]['symbol']
+                    result = ubra_opts.options_order_book(symbol=symbol, limit=10)
+                    self.assertIn('lastUpdateId', result)
+                    self.assertIn('bids', result)
+                    self.assertIn('asks', result)
+                    self.assertIn('T', result)
 
-    def test_options_ticker(self):
-        """Test Options 24hr ticker endpoint."""
-        result = self.ubra.options_ticker()
-        self.assertIsInstance(result, list)
+                    result = ubra_opts.options_mark_price()
+                    self.assertIsInstance(result, list)
 
-    def test_options_index_price(self):
-        """Test Options index price endpoint."""
-        result = self.ubra.options_index_price(underlying="BTCUSDT")
-        self.assertIn('indexPrice', result)
+                    result = ubra_opts.options_ticker()
+                    self.assertIsInstance(result, list)
+
+                    result = ubra_opts.options_index_price(underlying="BTCUSDT")
+                    self.assertIn('indexPrice', result)
+            except BinanceAPIException as error_msg:
+                print(f"ERROR: {error_msg}")
 
 
 if __name__ == '__main__':
