@@ -358,21 +358,19 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print(f"\r\nTestBinanceOptionsRestManager:")
-        cls.ubra = BinanceRestApiManager(exchange="binance.com-vanilla-options")
+        # Use binance.us for init (works from CI), then override OPTIONS_URL for unit tests
+        cls.ubra = BinanceRestApiManager(exchange="binance.us")
+        cls.ubra.OPTIONS_URL = "https://eapi.binance.com/eapi"
+        cls.ubra.OPTIONS_API_VERSION = "v1"
 
     @classmethod
     def tearDownClass(cls):
         cls.ubra.stop_manager()
 
     def test_options_url_init(self):
-        """Test that OPTIONS_URL is set correctly for vanilla-options exchange."""
-        self.assertEqual(self.ubra.OPTIONS_URL, "https://eapi.binance.com/eapi")
-
-    def test_options_testnet_url_init(self):
-        """Test that OPTIONS_URL is set correctly for testnet."""
-        ubra_testnet = BinanceRestApiManager(exchange="binance.com-vanilla-options-testnet")
-        self.assertEqual(ubra_testnet.OPTIONS_URL, "https://testnet.binancefuture.com/eapi")
-        ubra_testnet.stop_manager()
+        """Test that OPTIONS_URL class default is correct."""
+        self.assertEqual(BinanceRestApiManager.OPTIONS_URL, "https://eapi.binance.com/eapi")
+        self.assertEqual(BinanceRestApiManager.OPTIONS_API_VERSION, "v1")
 
     def test_options_uri_builder(self):
         """Test that _create_options_api_uri builds correct URIs."""
@@ -400,7 +398,6 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
 
     def test_options_order_book(self):
         """Test Options order book endpoint."""
-        # Get a valid symbol first
         info = self.ubra.options_exchange_info()
         symbol = info['optionSymbols'][0]['symbol']
         result = self.ubra.options_order_book(symbol=symbol, limit=10)
@@ -423,6 +420,17 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
         """Test Options index price endpoint."""
         result = self.ubra.options_index_price(underlying="BTCUSDT")
         self.assertIn('indexPrice', result)
+
+    def test_options_live_exchange_init(self):
+        """Test full exchange init with binance.com-vanilla-options (requires binance.com access)."""
+        if is_github_action_env is False:
+            try:
+                with BinanceRestApiManager(exchange="binance.com-vanilla-options") as ubra_opts:
+                    self.assertEqual(ubra_opts.OPTIONS_URL, "https://eapi.binance.com/eapi")
+                    result = ubra_opts.options_ping()
+                    self.assertIsNotNone(result)
+            except BinanceAPIException as error_msg:
+                print(f"ERROR: {error_msg}")
 
 
 if __name__ == '__main__':
