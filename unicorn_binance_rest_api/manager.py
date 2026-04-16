@@ -120,6 +120,8 @@ class BinanceRestApiManager(object):
     MARGIN_API_VERSION = 'v1'
     FUTURES_API_VERSION = 'v1'
     FUTURES_API_VERSION2 = "v2"
+    OPTIONS_URL = 'https://eapi.binance.com/eapi'
+    OPTIONS_API_VERSION = 'v1'
 
     SYMBOL_TYPE_SPOT = 'SPOT'
 
@@ -344,6 +346,24 @@ class BinanceRestApiManager(object):
                 self.FUTURES_DATA_URL = "https://fapi.trbinance.com/futures/data"
                 self.FUTURES_COIN_URL = "https://fapi.trbinance.com/fapi"
                 self.FUTURES_COIN_DATA_URL = "https://dapi.trbinance.com/futures/data"
+            elif self.exchange == "binance.com-vanilla-options":
+                self.API_URL = "https://api.binance.com/api"
+                self.MARGIN_API_URL = " https://api.binance.com/sapi"
+                self.WEBSITE_URL = "https://www.binance.com"
+                self.FUTURES_URL = "https://fapi.binance.com/fapi"
+                self.FUTURES_DATA_URL = "https://fapi.binance.com/futures/data"
+                self.FUTURES_COIN_URL = "https://fapi.binance.com/fapi"
+                self.FUTURES_COIN_DATA_URL = "https://dapi.binance.com/futures/data"
+                self.OPTIONS_URL = "https://eapi.binance.com/eapi"
+            elif self.exchange == "binance.com-vanilla-options-testnet":
+                self.API_URL = "https://testnet.binance.vision/api"
+                self.MARGIN_API_URL = " https://api.binance.com/sapi"
+                self.WEBSITE_URL = "https://testnet.binance.vision"
+                self.FUTURES_URL = "https://testnet.binancefuture.com/fapi"
+                self.FUTURES_DATA_URL = "https://testnet.binancefuture.com/futures/data"
+                self.FUTURES_COIN_URL = "https://testnet.binancefuture.com/dapi"
+                self.FUTURES_COIN_DATA_URL = "https://testnet.binancefuture.com/futures/data"
+                self.OPTIONS_URL = "https://testnet.binancefuture.com/eapi"
             elif self.exchange:
                 # Unknown Exchange
                 error_msg = f"Unknown exchange '{str(self.exchange)}'! Read the docs to see a list of supported " \
@@ -572,6 +592,13 @@ class BinanceRestApiManager(object):
     def _request_futures_coin_data_api(self, method, path, signed=False, version=1, throw_exception=True, **kwargs):
         uri = self._create_futures_coin_data_api_url(path, version=version)
 
+        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+
+    def _create_options_api_uri(self, path: str) -> str:
+        return self.OPTIONS_URL + '/' + self.OPTIONS_API_VERSION + '/' + path
+
+    def _request_options_api(self, method, path, signed=False, throw_exception=True, **kwargs):
+        uri = self._create_options_api_uri(path)
         return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
 
     def _save_used_weight(self) -> bool:
@@ -7068,6 +7095,154 @@ class BinanceRestApiManager(object):
         }
         return self._request_futures_coin_api('delete', 'listenKey', signed=False, data=params,
                                               throw_exception=throw_exception, **kwargs)
+
+    # European Options Market Data endpoints
+    # https://developers.binance.com/docs/derivatives/option/market-data
+
+    def options_ping(self):
+        """Test connectivity to the Options REST API.
+
+        https://developers.binance.com/docs/derivatives/option/market-data
+
+        """
+        return self._request_options_api('get', 'ping')
+
+    def options_time(self):
+        """Check server time for Options API.
+
+        https://developers.binance.com/docs/derivatives/option/market-data
+
+        """
+        return self._request_options_api('get', 'time')
+
+    def options_exchange_info(self):
+        """Get current Options exchange trading rules and symbol information.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Exchange-Information
+
+        """
+        return self._request_options_api('get', 'exchangeInfo')
+
+    def options_order_book(self, **params):
+        """Get the Options order book.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Order-Book
+
+        :param symbol: required - e.g. BTC-260626-120000-C
+        :type symbol: str
+        :param limit: optional - Default 100, max 1000. Valid: [10, 20, 50, 100, 500, 1000]
+        :type limit: int
+
+        """
+        return self._request_options_api('get', 'depth', data=params)
+
+    def options_recent_trades(self, **params):
+        """Get recent Options trades.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Recent-Trades-List
+
+        :param symbol: required - e.g. BTC-260626-120000-C
+        :type symbol: str
+        :param limit: optional - Default 100, max 500
+        :type limit: int
+
+        """
+        return self._request_options_api('get', 'trades', data=params)
+
+    def options_block_trades(self, **params):
+        """Get recent Options block trades.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Recent-Block-Trades-List
+
+        :param symbol: optional - e.g. BTC-260626-120000-C
+        :type symbol: str
+        :param limit: optional - Default 100, max 500
+        :type limit: int
+
+        """
+        return self._request_options_api('get', 'blockTrades', data=params)
+
+    def options_klines(self, **params):
+        """Get Options kline/candlestick data.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Kline-Candlestick-Data
+
+        :param symbol: required - e.g. BTC-260626-120000-C
+        :type symbol: str
+        :param interval: required - e.g. 1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d, 3d, 1w
+        :type interval: str
+        :param startTime: optional
+        :type startTime: long
+        :param endTime: optional
+        :type endTime: long
+        :param limit: optional - Default 500, max 1500
+        :type limit: int
+
+        """
+        return self._request_options_api('get', 'klines', data=params)
+
+    def options_mark_price(self, **params):
+        """Get Options mark price and greek info.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Option-Mark-Price
+
+        :param symbol: optional - e.g. BTC-260626-120000-C
+        :type symbol: str
+
+        """
+        return self._request_options_api('get', 'mark', data=params)
+
+    def options_ticker(self, **params):
+        """Get 24hr Options ticker price change statistics.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/24hr-Ticker-Price-Change-Statistics
+
+        :param symbol: optional - e.g. BTC-260626-120000-C
+        :type symbol: str
+
+        """
+        return self._request_options_api('get', 'ticker', data=params)
+
+    def options_index_price(self, **params):
+        """Get spot index price for option underlying asset.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Symbol-Price-Ticker
+
+        :param underlying: required - e.g. BTCUSDT
+        :type underlying: str
+
+        """
+        return self._request_options_api('get', 'index', data=params)
+
+    def options_exercise_history(self, **params):
+        """Get historical exercise records.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Historical-Exercise-Records
+
+        :param underlying: optional - e.g. BTCUSDT
+        :type underlying: str
+        :param startTime: optional
+        :type startTime: long
+        :param endTime: optional
+        :type endTime: long
+        :param limit: optional - Default 100, max 100
+        :type limit: int
+
+        """
+        return self._request_options_api('get', 'exerciseHistory', data=params)
+
+    def options_open_interest(self, **params):
+        """Get open interest for specific underlying asset on specific expiration date.
+
+        https://developers.binance.com/docs/derivatives/option/market-data/Open-Interest
+
+        :param underlyingAsset: required - e.g. BTC
+        :type underlyingAsset: str
+        :param expiration: required - e.g. 221225
+        :type expiration: str
+
+        """
+        return self._request_options_api('get', 'openInterest', data=params)
 
     def get_all_coins_info(self, **params):
         """
