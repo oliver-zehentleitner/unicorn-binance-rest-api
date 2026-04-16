@@ -83,7 +83,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-html_theme = 'python_docs_theme_lucit'
+html_theme = 'python_docs_theme_ubs'
 html_context = {'github_user_name': 'oliver-zehentleitner',
                 'github_repo_name': 'unicorn-binance-rest-api',
                 'project_name': project,
