@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>UNICORN Binance REST API &#8212; unicorn-binance-rest-api 2.9.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNICORN Binance REST API &#8212; unicorn-binance-rest-api 2.10.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -243,7 +243,7 @@
 <a class="reference internal" href="#receive-notifications">Notifications</a> | <a class="reference internal" href="#how-to-report-bugs-or-suggest-improvements">Bugs</a> |
 <a class="reference internal" href="#contributing">Contributing</a> | <a class="reference internal" href="#disclaimer">Disclaimer</a></p>
 <p>A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet,
-com-futures+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way.</p>
+com-futures+testnet, com-vanilla-options+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way.</p>
 <p>Part of <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-suite">‘UNICORN Binance Suite’</a>.</p>
 <section id="receive-data-from-binance-rest-api-endpoints">
 <h2>Receive Data from Binance REST API Endpoints<a class="headerlink" href="#receive-data-from-binance-rest-api-endpoints" title="Link to this heading">¶</a></h2>
@@ -330,6 +330,8 @@ provides an API to the Binance REST API`s of
 <a class="reference external" href="https://binance-docs.github.io/apidocs/futures/en/#websocket-market-streams">Binance Futures</a>
 (<a class="reference external" href="https://testnet.binancefuture.com">+Testnet</a>),
 <a class="reference external" href="https://binance-docs.github.io/apidocs/delivery/en/#change-log">Binance COIN-M Futures</a>,
+<a class="reference external" href="https://developers.binance.com/docs/derivatives/option/general-info">Binance European Options</a>
+(<a class="reference external" href="https://testnet.binancefuture.com">+Testnet</a>),
 <a class="reference external" href="https://github.com/binance-us/binance-official-api-docs">Binance US</a> and
 <a class="reference external" href="https://www.trbinance.com/apidocs">Binance TR</a> and needs to be used with a valid
 <a class="reference external" href="https://technopathy.club/how-to-create-a-binance-api-key-and-api-secret-3bb5f47e360d">api_key and api_secret</a>
@@ -388,6 +390,14 @@ combination.</p>
 <tr>
 <td><a href="https://www.binance.com">Binance Coin-M Futures</a></td>
 <td><code>binance.com-coin_futures</code></td>
+</tr>
+<tr>
+<td><a href="https://www.binance.com">Binance European Options</a></td>
+<td><code>binance.com-vanilla-options</code></td>
+</tr>
+<tr>
+<td><a href="https://testnet.binancefuture.com">Binance European Options Testnet</a></td>
+<td><code>binance.com-vanilla-options-testnet</code></td>
 </tr>
 <tr>
 <td><a href="https://www.binance.us">Binance US</a></td>
@@ -500,9 +510,9 @@ and <code class="docutils literal notranslate"><span class="pre">win-64</span></
 </section>
 <section id="windows">
 <h4>Windows<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h4>
-<p>Use the below command with the version (such as 2.9.1) you determined
+<p>Use the below command with the version (such as 2.10.0) you determined
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases/latest">here</a>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/2.9.1.tar.gz</span> <span class="pre">--upgrade</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/2.10.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
 </section>
 </section>
 <section id="from-the-latest-source-dev-stage-with-pip-from-github">
@@ -814,7 +824,7 @@ companies from the US analyze binance.com market data - as long as they do not t
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Apr 14 2026 at 15:17 (CET).
+    Last updated on Apr 16 2026 at 12:28 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.

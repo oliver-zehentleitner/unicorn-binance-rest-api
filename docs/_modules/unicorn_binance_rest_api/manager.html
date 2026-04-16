@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>unicorn_binance_rest_api.manager &#8212; unicorn-binance-rest-api 2.9.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicorn_binance_rest_api.manager &#8212; unicorn-binance-rest-api 2.10.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="../../_static/pydoctheme.css?v=fdf8e9ae" />
@@ -189,7 +189,7 @@
 
 
 <span class="n">__app_name__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;unicorn-binance-rest-api&quot;</span>
-<span class="n">__version__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;2.9.1.dev&quot;</span>
+<span class="n">__version__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;2.10.0&quot;</span>
 <span class="n">__logger__</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;unicorn_binance_rest_api&quot;</span><span class="p">)</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">__logger__</span>
@@ -254,6 +254,8 @@
     <span class="n">MARGIN_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;v1&#39;</span>
     <span class="n">FUTURES_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;v1&#39;</span>
     <span class="n">FUTURES_API_VERSION2</span> <span class="o">=</span> <span class="s2">&quot;v2&quot;</span>
+    <span class="n">OPTIONS_URL</span> <span class="o">=</span> <span class="s1">&#39;https://eapi.binance.com/eapi&#39;</span>
+    <span class="n">OPTIONS_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;v1&#39;</span>
 
     <span class="n">SYMBOL_TYPE_SPOT</span> <span class="o">=</span> <span class="s1">&#39;SPOT&#39;</span>
 
@@ -478,6 +480,24 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.trbinance.com/futures/data&quot;</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.trbinance.com/fapi&quot;</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://dapi.trbinance.com/futures/data&quot;</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">exchange</span> <span class="o">==</span> <span class="s2">&quot;binance.com-vanilla-options&quot;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;https://api.binance.com/api&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">MARGIN_API_URL</span> <span class="o">=</span> <span class="s2">&quot; https://api.binance.com/sapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">WEBSITE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.binance.com&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.binance.com/fapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.binance.com/futures/data&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.binance.com/fapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://dapi.binance.com/futures/data&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">OPTIONS_URL</span> <span class="o">=</span> <span class="s2">&quot;https://eapi.binance.com/eapi&quot;</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">exchange</span> <span class="o">==</span> <span class="s2">&quot;binance.com-vanilla-options-testnet&quot;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;https://testnet.binance.vision/api&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">MARGIN_API_URL</span> <span class="o">=</span> <span class="s2">&quot; https://api.binance.com/sapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">WEBSITE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://testnet.binance.vision&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_URL</span> <span class="o">=</span> <span class="s2">&quot;https://testnet.binancefuture.com/fapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://testnet.binancefuture.com/futures/data&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_URL</span> <span class="o">=</span> <span class="s2">&quot;https://testnet.binancefuture.com/dapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://testnet.binancefuture.com/futures/data&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">OPTIONS_URL</span> <span class="o">=</span> <span class="s2">&quot;https://testnet.binancefuture.com/eapi&quot;</span>
             <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">exchange</span><span class="p">:</span>
                 <span class="c1"># Unknown Exchange</span>
                 <span class="n">error_msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Unknown exchange &#39;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exchange</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;! Read the docs to see a list of supported &quot;</span> \
@@ -706,6 +726,13 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">_request_futures_coin_data_api</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_futures_coin_data_api_url</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">)</span>
 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">signed</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_create_options_api_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">OPTIONS_URL</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">OPTIONS_API_VERSION</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">path</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_request_options_api</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_options_api_uri</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">signed</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_save_used_weight</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -7881,6 +7908,190 @@
                                               <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
+    <span class="c1"># European Options Market Data endpoints</span>
+    <span class="c1"># https://developers.binance.com/docs/derivatives/option/market-data</span>
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_ping">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ping">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_ping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Test connectivity to the Options REST API.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;ping&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_time">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_time">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check server time for Options API.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_exchange_info">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exchange_info">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_exchange_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get current Options exchange trading rules and symbol information.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Exchange-Information</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;exchangeInfo&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_order_book">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_order_book">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_order_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the Options order book.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Order-Book</span>
+
+<span class="sd">        :param symbol: required - e.g. BTC-260626-120000-C</span>
+<span class="sd">        :type symbol: str</span>
+<span class="sd">        :param limit: optional - Default 100, max 1000. Valid: [10, 20, 50, 100, 500, 1000]</span>
+<span class="sd">        :type limit: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;depth&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_recent_trades">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_recent_trades">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_recent_trades</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get recent Options trades.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Recent-Trades-List</span>
+
+<span class="sd">        :param symbol: required - e.g. BTC-260626-120000-C</span>
+<span class="sd">        :type symbol: str</span>
+<span class="sd">        :param limit: optional - Default 100, max 500</span>
+<span class="sd">        :type limit: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;trades&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_block_trades">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_block_trades">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_block_trades</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get recent Options block trades.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Recent-Block-Trades-List</span>
+
+<span class="sd">        :param symbol: optional - e.g. BTC-260626-120000-C</span>
+<span class="sd">        :type symbol: str</span>
+<span class="sd">        :param limit: optional - Default 100, max 500</span>
+<span class="sd">        :type limit: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;blockTrades&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_klines">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_klines">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_klines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Options kline/candlestick data.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Kline-Candlestick-Data</span>
+
+<span class="sd">        :param symbol: required - e.g. BTC-260626-120000-C</span>
+<span class="sd">        :type symbol: str</span>
+<span class="sd">        :param interval: required - e.g. 1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d, 3d, 1w</span>
+<span class="sd">        :type interval: str</span>
+<span class="sd">        :param startTime: optional</span>
+<span class="sd">        :type startTime: long</span>
+<span class="sd">        :param endTime: optional</span>
+<span class="sd">        :type endTime: long</span>
+<span class="sd">        :param limit: optional - Default 500, max 1500</span>
+<span class="sd">        :type limit: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;klines&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_mark_price">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_mark_price">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_mark_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Options mark price and greek info.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Option-Mark-Price</span>
+
+<span class="sd">        :param symbol: optional - e.g. BTC-260626-120000-C</span>
+<span class="sd">        :type symbol: str</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;mark&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_ticker">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ticker">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_ticker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get 24hr Options ticker price change statistics.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/24hr-Ticker-Price-Change-Statistics</span>
+
+<span class="sd">        :param symbol: optional - e.g. BTC-260626-120000-C</span>
+<span class="sd">        :type symbol: str</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;ticker&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_index_price">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_index_price">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_index_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get spot index price for option underlying asset.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Symbol-Price-Ticker</span>
+
+<span class="sd">        :param underlying: required - e.g. BTCUSDT</span>
+<span class="sd">        :type underlying: str</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_exercise_history">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exercise_history">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_exercise_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get historical exercise records.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Historical-Exercise-Records</span>
+
+<span class="sd">        :param underlying: optional - e.g. BTCUSDT</span>
+<span class="sd">        :type underlying: str</span>
+<span class="sd">        :param startTime: optional</span>
+<span class="sd">        :type startTime: long</span>
+<span class="sd">        :param endTime: optional</span>
+<span class="sd">        :type endTime: long</span>
+<span class="sd">        :param limit: optional - Default 100, max 100</span>
+<span class="sd">        :type limit: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;exerciseHistory&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.options_open_interest">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_open_interest">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options_open_interest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get open interest for specific underlying asset on specific expiration date.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/option/market-data/Open-Interest</span>
+
+<span class="sd">        :param underlyingAsset: required - e.g. BTC</span>
+<span class="sd">        :type underlyingAsset: str</span>
+<span class="sd">        :param expiration: required - e.g. 221225</span>
+<span class="sd">        :type expiration: str</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_options_api</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;openInterest&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="BinanceRestApiManager.get_all_coins_info">
 <a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.get_all_coins_info">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_all_coins_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
@@ -8232,7 +8443,7 @@
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Apr 14 2026 at 15:17 (CET).
+    Last updated on Apr 16 2026 at 12:28 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.

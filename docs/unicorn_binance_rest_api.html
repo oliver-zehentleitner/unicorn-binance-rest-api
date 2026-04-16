@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>unicorn_binance_rest_api package &#8212; unicorn-binance-rest-api 2.9.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicorn_binance_rest_api package &#8212; unicorn-binance-rest-api 2.10.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -116,6 +116,8 @@
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_FIAT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.MINING_TO_FIAT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_SPOT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.MINING_TO_SPOT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_USDT_FUTURE"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.MINING_TO_USDT_FUTURE</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.OPTIONS_API_VERSION</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_URL"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.OPTIONS_URL</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_ACK"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_RESP_TYPE_ACK</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_FULL"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_RESP_TYPE_FULL</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_RESULT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_RESP_TYPE_RESULT</span></code></a></li>
@@ -354,6 +356,18 @@
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.margin_stream_get_listen_key"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.margin_stream_get_listen_key()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.margin_stream_keepalive"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.margin_stream_keepalive()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.new_transfer_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.new_transfer_history()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_block_trades"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_block_trades()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exchange_info"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_exchange_info()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exercise_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_exercise_history()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_index_price"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_index_price()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_klines"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_klines()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_mark_price"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_mark_price()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_open_interest"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_open_interest()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_order_book"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_order_book()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ping"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_ping()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_recent_trades"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_recent_trades()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ticker"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_ticker()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_time"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_time()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_limit()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit_buy"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_limit_buy()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit_sell"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_limit_sell()</span></code></a></li>
@@ -866,6 +880,16 @@ This overrules parameter <cite>tld</cite>.</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_USDT_FUTURE">
 <span class="sig-name descname"><span class="pre">MINING_TO_USDT_FUTURE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MINING_UMFUTURE'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_USDT_FUTURE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_API_VERSION">
+<span class="sig-name descname"><span class="pre">OPTIONS_API_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_API_VERSION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_URL">
+<span class="sig-name descname"><span class="pre">OPTIONS_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://eapi.binance.com/eapi'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -6596,6 +6620,158 @@ the plain listenKey.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_block_trades">
+<span class="sig-name descname"><span class="pre">options_block_trades</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_block_trades"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_block_trades" title="Link to this definition">¶</a></dt>
+<dd><p>Get recent Options block trades.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Recent-Block-Trades-List">https://developers.binance.com/docs/derivatives/option/market-data/Recent-Block-Trades-List</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<em>str</em>) – optional - e.g. BTC-260626-120000-C</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – optional - Default 100, max 500</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exchange_info">
+<span class="sig-name descname"><span class="pre">options_exchange_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_exchange_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exchange_info" title="Link to this definition">¶</a></dt>
+<dd><p>Get current Options exchange trading rules and symbol information.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Exchange-Information">https://developers.binance.com/docs/derivatives/option/market-data/Exchange-Information</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exercise_history">
+<span class="sig-name descname"><span class="pre">options_exercise_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_exercise_history"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exercise_history" title="Link to this definition">¶</a></dt>
+<dd><p>Get historical exercise records.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Historical-Exercise-Records">https://developers.binance.com/docs/derivatives/option/market-data/Historical-Exercise-Records</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>underlying</strong> (<em>str</em>) – optional - e.g. BTCUSDT</p></li>
+<li><p><strong>startTime</strong> (<em>long</em>) – optional</p></li>
+<li><p><strong>endTime</strong> (<em>long</em>) – optional</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – optional - Default 100, max 100</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_index_price">
+<span class="sig-name descname"><span class="pre">options_index_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_index_price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_index_price" title="Link to this definition">¶</a></dt>
+<dd><p>Get spot index price for option underlying asset.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Symbol-Price-Ticker">https://developers.binance.com/docs/derivatives/option/market-data/Symbol-Price-Ticker</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>underlying</strong> (<em>str</em>) – required - e.g. BTCUSDT</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_klines">
+<span class="sig-name descname"><span class="pre">options_klines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_klines"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_klines" title="Link to this definition">¶</a></dt>
+<dd><p>Get Options kline/candlestick data.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Kline-Candlestick-Data">https://developers.binance.com/docs/derivatives/option/market-data/Kline-Candlestick-Data</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<em>str</em>) – required - e.g. BTC-260626-120000-C</p></li>
+<li><p><strong>interval</strong> (<em>str</em>) – required - e.g. 1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d, 3d, 1w</p></li>
+<li><p><strong>startTime</strong> (<em>long</em>) – optional</p></li>
+<li><p><strong>endTime</strong> (<em>long</em>) – optional</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – optional - Default 500, max 1500</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_mark_price">
+<span class="sig-name descname"><span class="pre">options_mark_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_mark_price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_mark_price" title="Link to this definition">¶</a></dt>
+<dd><p>Get Options mark price and greek info.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Option-Mark-Price">https://developers.binance.com/docs/derivatives/option/market-data/Option-Mark-Price</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>symbol</strong> (<em>str</em>) – optional - e.g. BTC-260626-120000-C</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_open_interest">
+<span class="sig-name descname"><span class="pre">options_open_interest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_open_interest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_open_interest" title="Link to this definition">¶</a></dt>
+<dd><p>Get open interest for specific underlying asset on specific expiration date.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Open-Interest">https://developers.binance.com/docs/derivatives/option/market-data/Open-Interest</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>underlyingAsset</strong> (<em>str</em>) – required - e.g. BTC</p></li>
+<li><p><strong>expiration</strong> (<em>str</em>) – required - e.g. 221225</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_order_book">
+<span class="sig-name descname"><span class="pre">options_order_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_order_book"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_order_book" title="Link to this definition">¶</a></dt>
+<dd><p>Get the Options order book.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Order-Book">https://developers.binance.com/docs/derivatives/option/market-data/Order-Book</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<em>str</em>) – required - e.g. BTC-260626-120000-C</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – optional - Default 100, max 1000. Valid: [10, 20, 50, 100, 500, 1000]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ping">
+<span class="sig-name descname"><span class="pre">options_ping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_ping"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ping" title="Link to this definition">¶</a></dt>
+<dd><p>Test connectivity to the Options REST API.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data">https://developers.binance.com/docs/derivatives/option/market-data</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_recent_trades">
+<span class="sig-name descname"><span class="pre">options_recent_trades</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_recent_trades"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_recent_trades" title="Link to this definition">¶</a></dt>
+<dd><p>Get recent Options trades.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/Recent-Trades-List">https://developers.binance.com/docs/derivatives/option/market-data/Recent-Trades-List</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<em>str</em>) – required - e.g. BTC-260626-120000-C</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – optional - Default 100, max 500</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ticker">
+<span class="sig-name descname"><span class="pre">options_ticker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_ticker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ticker" title="Link to this definition">¶</a></dt>
+<dd><p>Get 24hr Options ticker price change statistics.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data/24hr-Ticker-Price-Change-Statistics">https://developers.binance.com/docs/derivatives/option/market-data/24hr-Ticker-Price-Change-Statistics</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>symbol</strong> (<em>str</em>) – optional - e.g. BTC-260626-120000-C</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.options_time">
+<span class="sig-name descname"><span class="pre">options_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.options_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_time" title="Link to this definition">¶</a></dt>
+<dd><p>Check server time for Options API.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/option/market-data">https://developers.binance.com/docs/derivatives/option/market-data</a></p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit">
 <span class="sig-name descname"><span class="pre">order_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeInForce</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'GTC'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.order_limit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit" title="Link to this definition">¶</a></dt>
 <dd><p>Send in a new limit order</p>
@@ -7477,6 +7653,8 @@ Default false.</p></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_FIAT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.MINING_TO_FIAT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_SPOT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.MINING_TO_SPOT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.MINING_TO_USDT_FUTURE"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.MINING_TO_USDT_FUTURE</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.OPTIONS_API_VERSION</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.OPTIONS_URL"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.OPTIONS_URL</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_ACK"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_RESP_TYPE_ACK</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_FULL"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_RESP_TYPE_FULL</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_RESP_TYPE_RESULT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_RESP_TYPE_RESULT</span></code></a></li>
@@ -7715,6 +7893,18 @@ Default false.</p></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.margin_stream_get_listen_key"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.margin_stream_get_listen_key()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.margin_stream_keepalive"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.margin_stream_keepalive()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.new_transfer_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.new_transfer_history()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_block_trades"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_block_trades()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exchange_info"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_exchange_info()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_exercise_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_exercise_history()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_index_price"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_index_price()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_klines"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_klines()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_mark_price"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_mark_price()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_open_interest"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_open_interest()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_order_book"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_order_book()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ping"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_ping()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_recent_trades"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_recent_trades()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_ticker"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_ticker()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.options_time"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.options_time()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_limit()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit_buy"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_limit_buy()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_limit_sell"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_limit_sell()</span></code></a></li>
@@ -7858,7 +8048,7 @@ Default false.</p></li>
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Apr 14 2026 at 15:17 (CET).
+    Last updated on Apr 16 2026 at 12:28 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
