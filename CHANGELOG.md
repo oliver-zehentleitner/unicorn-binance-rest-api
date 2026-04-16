@@ -10,6 +10,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
 ## 2.9.1.dev (development stage/unreleased/unstable)
+### Added
+- Support for Binance European Options (Vanilla Options) Market Data API via `exchange="binance.com-vanilla-options"`
+- New exchange strings: `binance.com-vanilla-options`, `binance.com-vanilla-options-testnet`
+- Infrastructure: `OPTIONS_URL`, `OPTIONS_API_VERSION`, `_create_options_api_uri()`, `_request_options_api()`
+- `options_ping()` — `GET /eapi/v1/ping`
+- `options_time()` — `GET /eapi/v1/time`
+- `options_exchange_info()` — `GET /eapi/v1/exchangeInfo`
+- `options_order_book()` — `GET /eapi/v1/depth`
+- `options_recent_trades()` — `GET /eapi/v1/trades`
+- `options_block_trades()` — `GET /eapi/v1/blockTrades`
+- `options_klines()` — `GET /eapi/v1/klines`
+- `options_mark_price()` — `GET /eapi/v1/mark`
+- `options_ticker()` — `GET /eapi/v1/ticker`
+- `options_index_price()` — `GET /eapi/v1/index`
+- `options_exercise_history()` — `GET /eapi/v1/exerciseHistory`
+- `options_open_interest()` — `GET /eapi/v1/openInterest`
 
 ## 2.9.1
 ### Fixed

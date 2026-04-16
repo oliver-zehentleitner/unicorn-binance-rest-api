@@ -24,7 +24,7 @@
 [Contributing](#contributing) | [Disclaimer](#disclaimer)
 
 A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, 
-com-futures+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way. 
+com-futures+testnet, com-vanilla-options+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way. 
 
 Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
 
@@ -107,6 +107,8 @@ provides an API to the Binance REST API`s of
 [Binance Futures](https://binance-docs.github.io/apidocs/futures/en/#websocket-market-streams) 
 ([+Testnet](https://testnet.binancefuture.com)), 
 [Binance COIN-M Futures](https://binance-docs.github.io/apidocs/delivery/en/#change-log),
+[Binance European Options](https://developers.binance.com/docs/derivatives/option/general-info)
+([+Testnet](https://testnet.binancefuture.com)),
 [Binance US](https://github.com/binance-us/binance-official-api-docs) and
 [Binance TR](https://www.trbinance.com/apidocs) and needs to be used with a valid 
 [api_key and api_secret](https://technopathy.club/how-to-create-a-binance-api-key-and-api-secret-3bb5f47e360d)
@@ -133,6 +135,8 @@ combination.
 | [Binance USD-M Futures](https://www.binance.com)                   | `binance.com-futures`                 |
 | [Binance USD-M Futures Testnet](https://testnet.binancefuture.com) | `binance.com-futures-testnet`         |
 | [Binance Coin-M Futures](https://www.binance.com)                  | `binance.com-coin_futures`            |
+| [Binance European Options](https://www.binance.com)                | `binance.com-vanilla-options`         |
+| [Binance European Options Testnet](https://testnet.binancefuture.com) | `binance.com-vanilla-options-testnet` |
 | [Binance US](https://www.binance.us)                               | `binance.us`                          |
 | [Binance TR](https://www.trbinance.com)                            | `trbinance.com`                       |
 
