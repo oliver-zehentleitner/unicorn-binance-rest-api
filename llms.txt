@@ -1,0 +1,102 @@
+# UNICORN Binance REST API (UBRA)
+
+> Full-coverage Python SDK for all Binance REST API endpoints.
+> Part of [UNICORN Binance Suite](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
+
+Install: `pip install unicorn-binance-rest-api`
+Import: `from unicorn_binance_rest_api import BinanceRestApiManager`
+
+## Quick Start
+
+```python
+# use case: place a market buy order
+from unicorn_binance_rest_api import BinanceRestApiManager
+
+with BinanceRestApiManager(api_key="...", api_secret="...") as ubra:
+    order = ubra.create_order(symbol="BTCUSDT", side="BUY", type="MARKET", quoteOrderQty=100)
+    print(order)
+```
+
+## Common Use Cases
+
+### Get account info
+```python
+account = ubra.get_account()
+balances = [b for b in account['balances'] if float(b['free']) > 0]
+```
+
+### Place a limit order
+```python
+order = ubra.create_order(symbol="BTCUSDT", side="BUY", type="LIMIT",
+                          timeInForce="GTC", quantity=0.001, price=50000)
+```
+
+### Cancel an order
+```python
+result = ubra.cancel_order(symbol="BTCUSDT", orderId=12345)
+```
+
+### Get open orders
+```python
+orders = ubra.get_open_orders(symbol="BTCUSDT")
+```
+
+### Futures order
+```python
+ubra_futures = BinanceRestApiManager(api_key="...", api_secret="...",
+                                     exchange="binance.com-futures")
+order = ubra_futures.futures_create_order(symbol="BTCUSDT", side="BUY",
+                                          type="MARKET", quantity=0.01)
+```
+
+### Get symbol info
+```python
+info = ubra.get_symbol_info(symbol="BTCUSDT")
+```
+
+### Get klines/candlesticks
+```python
+klines = ubra.get_klines(symbol="BTCUSDT", interval="1h", limit=100)
+```
+
+## Key Parameters
+
+### BinanceRestApiManager()
+| Parameter | Type | Default | Purpose |
+|-----------|------|---------|---------|
+| api_key | str | None | Binance API key |
+| api_secret | str | None | Binance API secret |
+| exchange | str | "binance.com" | Exchange endpoint |
+| socks5_proxy_server | str | None | SOCKS5 proxy address:port |
+
+## Order Constants
+
+```python
+from unicorn_binance_rest_api import BinanceRestApiManager
+# Sides: "BUY", "SELL"
+# Order types: "LIMIT", "MARKET", "STOP_LOSS_LIMIT", "TAKE_PROFIT_LIMIT"
+# Time in force: "GTC" (good till cancelled), "IOC" (immediate or cancel), "FOK" (fill or kill)
+# Intervals: "1m", "3m", "5m", "15m", "30m", "1h", "2h", "4h", "6h", "8h", "12h", "1d", "3d", "1w", "1M"
+```
+
+## Error Handling
+
+```python
+from unicorn_binance_rest_api import BinanceRestApiManager, BinanceAPIException
+
+try:
+    order = ubra.create_order(symbol="BTCUSDT", side="BUY", type="MARKET", quantity=0.001)
+except BinanceAPIException as e:
+    print(f"Error {e.code}: {e.message}")
+```
+
+## Supported Exchanges
+
+`binance.com`, `binance.com-testnet`, `binance.com-margin`, `binance.com-margin-testnet`, `binance.com-isolated_margin`, `binance.com-isolated_margin-testnet`, `binance.com-futures`, `binance.com-futures-testnet`, `binance.com-coin_futures`, `binance.com-vanilla-options`, `binance.com-vanilla-options-testnet`, `binance.us`, `trbinance.com`
+
+## Common Mistakes
+
+- Do NOT forget `type="MARKET"` or `type="LIMIT"` — the parameter name is `type`, not `order_type`
+- For futures, use `futures_create_order()`, NOT `create_order()`
+- Always use `with` context or call `ubra.stop_manager()` when done
+- `quoteOrderQty` (spend X USDT) vs `quantity` (buy X BTC) — know the difference

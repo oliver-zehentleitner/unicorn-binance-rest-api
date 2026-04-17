@@ -65,12 +65,12 @@ body:
       description: |
         In which Python version is the code executed?
       options:
-        - Python3.7
-        - Python3.8
         - Python3.9
         - Python3.10
         - Python3.11
         - Python3.12
+        - Python3.13
+        - Python3.14
     validations:
       required: true
       
@@ -116,16 +116,16 @@ body:
       options:
         - concerns all
         - binance.com
-        - binance.com-coin_futures
-        - binance.com-futures
-        - binance.com-futures-testnet
-        - binance.com-isolated_margin
-        - binance.com-isolated_margin-testnet
+        - binance.com-testnet
         - binance.com-margin
         - binance.com-margin-testnet
-        - binance.com-testnet
-        - binance.org
-        - binance.org-testnet 
+        - binance.com-isolated_margin
+        - binance.com-isolated_margin-testnet
+        - binance.com-futures
+        - binance.com-futures-testnet
+        - binance.com-coin_futures
+        - binance.com-vanilla-options
+        - binance.com-vanilla-options-testnet
         - binance.us
         - trbinance.com
     validations:
