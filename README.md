@@ -332,6 +332,15 @@ contribute follow
 
 We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-rest-api/master/images/misc/heart.png) open source!
 
+---
+
+## AI Integration
+
+This project provides a [`llms.txt`](llms.txt) file for AI tools (ChatGPT, Claude, Copilot, etc.) with structured 
+usage instructions, code examples and module routing.
+
+---
+
 ## Disclaimer
 This project is for informational purposes only. You should not construe this information or any other material as 
 legal, tax, investment, financial or other advice. Nothing contained herein constitutes a solicitation, recommendation, 
