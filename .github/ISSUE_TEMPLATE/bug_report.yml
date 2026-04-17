@@ -124,6 +124,8 @@ body:
         - binance.com-futures
         - binance.com-futures-testnet
         - binance.com-coin_futures
+        - binance.com-vanilla-options
+        - binance.com-vanilla-options-testnet
         - binance.us
         - trbinance.com
     validations:
