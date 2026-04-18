@@ -1,7 +1,10 @@
 # UNICORN Binance REST API (UBRA)
 
-> Full-coverage Python SDK for all Binance REST API endpoints.
+> Full-coverage Python SDK for all Binance REST API endpoints. 270+ methods covering
+> Spot, Margin, Isolated Margin, Futures, COIN-M Futures, European Options, US and TR.
 > Part of [UNICORN Binance Suite](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
+
+Version: 2.10.x. Python 3.9 – 3.14.
 
 Install: `pip install unicorn-binance-rest-api`
 Import: `from unicorn_binance_rest_api import BinanceRestApiManager`
@@ -100,3 +103,20 @@ except BinanceAPIException as e:
 - For futures, use `futures_create_order()`, NOT `create_order()`
 - Always use `with` context or call `ubra.stop_manager()` when done
 - `quoteOrderQty` (spend X USDT) vs `quantity` (buy X BTC) — know the difference
+
+## Related Modules
+
+- [UBWA](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api) — for real-time data and user data streams (much lower latency than polling REST).
+- [UBLDC](https://github.com/oliver-zehentleitner/unicorn-binance-local-depth-cache) — for synchronized local order books (uses UBRA internally for depth snapshots).
+- [UBTSL](https://github.com/oliver-zehentleitner/unicorn-binance-trailing-stop-loss) — trailing stop loss engine (uses UBRA internally for order placement).
+
+Each of these can be given an existing `BinanceRestApiManager` via `ubra_manager=...` to share a single instance across the suite.
+
+## Docs
+
+- Repo: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+- Docs: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/
+- Full method reference: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html
+- PyPI: https://pypi.org/project/unicorn-binance-rest-api/
+- conda-forge: https://anaconda.org/conda-forge/unicorn-binance-rest-api
+- Changelog: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/CHANGELOG.md
