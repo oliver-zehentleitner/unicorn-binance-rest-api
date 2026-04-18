@@ -2,7 +2,6 @@ name: unicorn_binance_rest_api
 
 channels:
   - conda-forge
-  - defaults
 
 dependencies:
   - python>=3.9
@@ -15,5 +14,4 @@ dependencies:
   - pysocks
   - requests>=2.32.4
   - regex
-  - pip:
-    - service-identity
+  - service_identity

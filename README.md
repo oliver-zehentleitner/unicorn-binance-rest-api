@@ -170,7 +170,7 @@ If you like the project, please [![star](https://raw.githubusercontent.com/olive
 ## Installation and Upgrade
 The module requires Python 3.9 and runs smoothly up to and including Python 3.14.
 
-For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
+PyPy wheels are available for all supported Python versions.
 
 The current dependencies are listed 
 [here](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/requirements.txt).
