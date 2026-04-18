@@ -11,6 +11,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 2.10.0.dev (development stage/unreleased/unstable)
 ### Changed
+- `environment.yml`: dropped the `defaults` channel (conda-forge docs
+  recommend not mixing channels; Anaconda `defaults` requires a paid
+  license for enterprise use since 2024). Moved `service-identity` out
+  of the pip block into the main conda deps (now available on
+  conda-forge as `service_identity`), so the file is pure conda.
+- README: reworded the PyPy paragraph. The old sentence ("For the PyPy
+  interpreter we offer packages only from Python version 3.9 and
+  higher") made sense when we still shipped wheels for pre-3.9 CPython;
+  now that 3.9 is already the minimum for everything, it's just
+  noise. Replaced with a short "PyPy wheels are available for all
+  supported Python versions."
+
+### Changed
 - README: switched all conda references from the legacy `lucit` channel
   to `conda-forge`. Added conda-forge version / downloads / feedstock
   build badges. Removed the "There is no conda support until migration"
