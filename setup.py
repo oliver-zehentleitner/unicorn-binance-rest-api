@@ -86,7 +86,7 @@ setup(
      long_description_content_type="text/markdown",
      license='MIT',
      install_requires=["certifi>=2025.6.15", 'colorama', "cryptography>=45.0.4", 'dateparser', 'pyOpenSSL',
-                       "requests>=2.32.4", 'service-identity', 'ujson', 'regex', 'PySocks', 'Cython'],
+                       "requests>=2.32.4", 'service-identity', 'regex', 'PySocks', 'Cython'],
      keywords='',
      project_urls={
          'Howto': 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api#howto',

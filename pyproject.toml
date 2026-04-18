@@ -22,16 +22,15 @@ repository = "https://github.com/oliver-zehentleitner/unicorn-binance-rest-api"
 [tool.poetry.dependencies]
 python = ">=3.9.0"
 Cython = "*"
-requests = ">=2.31.0"
-certifi = ">=2023.7.22"
+requests = ">=2.32.4"
+certifi = ">=2025.6.15"
 colorama = "*"
-cryptography = ">=42.0.4"
+cryptography = ">=45.0.4"
 dateparser = "*"
 pyopenssl = "*"
 pysocks = "*"
 regex = "*"
 service-identity = "*"
-ujson = "*"
 
 [tool.poetry.dev-dependencies]
 

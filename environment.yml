@@ -1,21 +1,19 @@
 name: unicorn_binance_rest_api
 
 channels:
-  - lucit
   - conda-forge
   - defaults
 
 dependencies:
   - python>=3.9
-  - certifi>=2023.7.22
+  - certifi>=2025.6.15
   - colorama
-  - cryptography>=42.0.4
+  - cryptography>=45.0.4
   - cython
   - dateparser
   - pyopenssl
   - pysocks
-  - requests>=2.31.0
+  - requests>=2.32.4
   - regex
-  - ujson
   - pip:
     - service-identity
