@@ -16,6 +16,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
   build badges. Removed the "There is no conda support until migration"
   placeholders. Install section is now a single
   `conda install -c conda-forge unicorn-binance-rest-api`.
+- Aligned dependency pins across `requirements.txt`, `setup.py`,
+  `pyproject.toml`, `environment.yml` and `meta.yaml` to the
+  newer minimums already used in `setup.py`
+  (`certifi>=2025.6.15`, `cryptography>=45.0.4`, `requests>=2.32.4`).
+- `meta.yaml`: removed the leftover `channels:` and `dependencies:`
+  blocks (they are `environment.yml` keys, not valid in `meta.yaml`).
+  Refreshed `about.description` by re-embedding the current `README.md`,
+  set `license: MIT` (was stale `LSOSL`).
+- `environment.yml`: dropped the `lucit` channel.
+### Removed
+- `ujson` dropped from `requirements.txt`, `setup.py`, `pyproject.toml`,
+  `environment.yml` and `meta.yaml`. UBRA never actually imports it —
+  the SDK decodes responses via `requests.Response.json()` (stdlib).
+  Suite-wide standard for JSON is now `orjson`, which UBRA doesn't need
+  either.
 ### Removed
 - `.github/workflows/build_conda.yml`: the conda-forge feedstock
   (`conda-forge/unicorn-binance-rest-api-feedstock`) now builds and
