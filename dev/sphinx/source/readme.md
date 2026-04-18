@@ -2,6 +2,8 @@
 [![GitHub Downloads](https://img.shields.io/github/downloads/oliver-zehentleitner/unicorn-binance-rest-api/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases)
 [![PyPi Release](https://img.shields.io/pypi/v/unicorn-binance-rest-api?color=blue)](https://pypi.org/project/unicorn-binance-rest-api/)
 [![PyPi Downloads](https://pepy.tech/badge/unicorn-binance-rest-api)](https://pepy.tech/project/unicorn-binance-rest-api)
+[![Conda-Forge Version](https://img.shields.io/conda/v/conda-forge/unicorn-binance-rest-api?color=blue&label=conda)](https://anaconda.org/conda-forge/unicorn-binance-rest-api)
+[![Conda-Forge Downloads](https://img.shields.io/conda/dn/conda-forge/unicorn-binance-rest-api?color=blue&label=downloads)](https://anaconda.org/conda-forge/unicorn-binance-rest-api)
 [![License](https://img.shields.io/github/license/oliver-zehentleitner/unicorn-binance-rest-api.svg?color=blue)](https://oliver-zehentleitner.github.io/unicorn-binance-rest-apilicense.html)
 [![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_binance_rest_api.svg)](https://www.python.org/downloads/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_binance_rest_api.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues)
@@ -9,6 +11,7 @@
 [![CodeQL](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml)
 [![Unittests](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml)
 [![Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml)
+[![Conda-Forge Build](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/unicorn-binance-rest-api-feedstock?branchName=main)](https://github.com/conda-forge/unicorn-binance-rest-api-feedstock)
 [![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/)
 [![Read How To`s](https://img.shields.io/badge/read-%20howto-yellow)](https://technopathy.club)
 [![Github](https://img.shields.io/badge/source-github-cbc2c8)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
@@ -167,9 +170,7 @@ If you like the project, please [![star](https://raw.githubusercontent.com/olive
 ## Installation and Upgrade
 The module requires Python 3.9 and runs smoothly up to and including Python 3.14.
 
-[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
-
-For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
+PyPy wheels are available for all supported Python versions.
 
 The current dependencies are listed 
 [here](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/requirements.txt).
@@ -177,15 +178,13 @@ The current dependencies are listed
 If you run into errors during the installation take a look [here](https://github.com/oliver-zehentleitner/unicorn-binance-suite/wiki/Installation).
 
 ### Packages are created automatically with GitHub Actions
-When a new release is to be created, we start two GitHubActions: 
-
-- [Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
-- [Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml) 
-
-Both start virtual Windows/Linux/Mac servers provided by GitHub in the cloud with preconfigured environments and 
-create the respective compilations and stub files, pack them into wheels and conda packages and then publish them on 
-GitHub, PYPI and Anaconda. This is a transparent method that makes it possible to trace the source code behind a 
-compilation.
+When a new release is created, the
+[Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml)
+workflow spins up virtual Windows/Linux/Mac runners, compiles the Cython extensions, builds the
+wheels and publishes them on GitHub and PyPI. The conda-forge feedstock
+[conda-forge/unicorn-binance-rest-api-feedstock](https://github.com/conda-forge/unicorn-binance-rest-api-feedstock)
+picks up the new PyPI release automatically and builds the Conda packages on its own infrastructure.
+This is a transparent method that makes it possible to trace the source code behind a compilation.
 
 ### A Cython binary, PyPy or source code based CPython wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-binance-rest-api/)
 Our [Cython](https://cython.org/) and [PyPy](https://www.pypy.org/) Wheels are available on [PyPI](https://pypi.org/), 
@@ -213,29 +212,10 @@ this may take some time!
 #### Update
 `pip install unicorn-binance-rest-api --upgrade`
 
-### A Conda Package of the latest version with `conda` from [Anaconda](https://anaconda.org/lucit)
-[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
-
-The `unicorn-binance-rest-api` package is also available as a Cython version for the `linux-64`, `osx-64` 
-and `win-64` architectures with [Conda](https://docs.conda.io/en/latest/) through the 
-[`lucit` channel](https://anaconda.org/lucit). 
-
-For optimal compatibility and performance, it is recommended to source the necessary dependencies from the 
-[`conda-forge` channel](https://anaconda.org/conda-forge). 
-
-#### Installation
-[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
-
+### conda
 ```
-conda config --add channels conda-forge
-conda config --add channels lucit
-conda install -c lucit unicorn-binance-rest-api
+conda install -c conda-forge unicorn-binance-rest-api
 ```
-
-#### Update
-[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
-
-`conda update -c lucit unicorn-binance-rest-api`
 
 ### From source of the latest release with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 #### Linux, macOS, ...
@@ -244,10 +224,10 @@ Run in bash:
 `pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn-binance-rest-api/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 2.10.0) you determined 
+Use the below command with the version (such as 2.11.0) you determined 
 [here](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases/latest):
 
-`pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/2.10.0.tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/2.11.0.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 This is not a release version and can not be considered to be stable!

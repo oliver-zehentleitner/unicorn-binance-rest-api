@@ -9,7 +9,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
-## 2.10.0.dev (development stage/unreleased/unstable)
+## 2.11.0.dev (development stage/unreleased/unstable)
+
+## 2.11.0
 ### Changed
 - `.github/workflows/unit-tests.yml`: removed the obsolete
   `LUCIT_API_SECRET` / `LUCIT_LICENSE_TOKEN` environment block from
@@ -33,8 +35,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
   now that 3.9 is already the minimum for everything, it's just
   noise. Replaced with a short "PyPy wheels are available for all
   supported Python versions."
-
-### Changed
 - README: switched all conda references from the legacy `lucit` channel
   to `conda-forge`. Added conda-forge version / downloads / feedstock
   build badges. Removed the "There is no conda support until migration"
@@ -55,7 +55,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
   the SDK decodes responses via `requests.Response.json()` (stdlib).
   Suite-wide standard for JSON is now `orjson`, which UBRA doesn't need
   either.
-### Removed
 - `.github/workflows/build_conda.yml`: the conda-forge feedstock
   (`conda-forge/unicorn-binance-rest-api-feedstock`) now builds and
   publishes the conda package; no in-repo build is needed anymore.

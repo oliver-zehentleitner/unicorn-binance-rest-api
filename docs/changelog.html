@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>unicorn-binance-rest-api Change Log &#8212; unicorn-binance-rest-api 2.10.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicorn-binance-rest-api Change Log &#8212; unicorn-binance-rest-api 2.11.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -52,166 +52,171 @@
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">unicorn-binance-rest-api Change Log</a><ul>
-<li><a class="reference internal" href="#dev-development-stage-unreleased-unstable">2.10.0.dev (development stage/unreleased/unstable)</a></li>
-<li><a class="reference internal" href="#id1">2.10.0</a><ul>
-<li><a class="reference internal" href="#added">Added</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id2">2.9.1</a><ul>
-<li><a class="reference internal" href="#fixed">Fixed</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id3">2.9.0</a></li>
-<li><a class="reference internal" href="#next">next</a><ul>
-<li><a class="reference internal" href="#id4">Added</a></li>
+<li><a class="reference internal" href="#dev-development-stage-unreleased-unstable">2.11.0.dev (development stage/unreleased/unstable)</a></li>
+<li><a class="reference internal" href="#id1">2.11.0</a><ul>
 <li><a class="reference internal" href="#changed">Changed</a></li>
-<li><a class="reference internal" href="#id5">Fixed</a></li>
 <li><a class="reference internal" href="#removed">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">2.8.1</a><ul>
-<li><a class="reference internal" href="#id7">Added</a></li>
+<li><a class="reference internal" href="#id2">2.10.0</a><ul>
+<li><a class="reference internal" href="#added">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">2.8.0</a><ul>
-<li><a class="reference internal" href="#id9">Changed</a></li>
-<li><a class="reference internal" href="#id10">Removed</a></li>
+<li><a class="reference internal" href="#id3">2.9.1</a><ul>
+<li><a class="reference internal" href="#fixed">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id11">2.6.1</a><ul>
-<li><a class="reference internal" href="#id12">Fixed</a></li>
+<li><a class="reference internal" href="#id4">2.9.0</a></li>
+<li><a class="reference internal" href="#next">next</a><ul>
+<li><a class="reference internal" href="#id5">Added</a></li>
+<li><a class="reference internal" href="#id6">Changed</a></li>
+<li><a class="reference internal" href="#id7">Fixed</a></li>
+<li><a class="reference internal" href="#id8">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">2.6.0</a><ul>
-<li><a class="reference internal" href="#id14">Added</a></li>
+<li><a class="reference internal" href="#id9">2.8.1</a><ul>
+<li><a class="reference internal" href="#id10">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">2.8.0</a><ul>
+<li><a class="reference internal" href="#id12">Changed</a></li>
+<li><a class="reference internal" href="#id13">Removed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">2.6.1</a><ul>
 <li><a class="reference internal" href="#id15">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id16">2.5.1</a><ul>
-<li><a class="reference internal" href="#id17">Changed</a></li>
+<li><a class="reference internal" href="#id16">2.6.0</a><ul>
+<li><a class="reference internal" href="#id17">Added</a></li>
+<li><a class="reference internal" href="#id18">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">2.5.0</a><ul>
-<li><a class="reference internal" href="#id19">Added</a></li>
+<li><a class="reference internal" href="#id19">2.5.1</a><ul>
 <li><a class="reference internal" href="#id20">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">2.4.0</a><ul>
-<li><a class="reference internal" href="#id22">Changed</a></li>
-<li><a class="reference internal" href="#id23">Fixed</a></li>
+<li><a class="reference internal" href="#id21">2.5.0</a><ul>
+<li><a class="reference internal" href="#id22">Added</a></li>
+<li><a class="reference internal" href="#id23">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id24">2.4.0</a><ul>
+<li><a class="reference internal" href="#id25">Changed</a></li>
+<li><a class="reference internal" href="#id26">Fixed</a></li>
 <li><a class="reference internal" href="#security">Security</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id24">2.3.0</a><ul>
-<li><a class="reference internal" href="#id25">Added</a></li>
-<li><a class="reference internal" href="#id26">Changed</a></li>
-<li><a class="reference internal" href="#id27">Fixed</a></li>
+<li><a class="reference internal" href="#id27">2.3.0</a><ul>
+<li><a class="reference internal" href="#id28">Added</a></li>
+<li><a class="reference internal" href="#id29">Changed</a></li>
+<li><a class="reference internal" href="#id30">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id28">2.2.1</a></li>
-<li><a class="reference internal" href="#id29">2.2.0</a><ul>
-<li><a class="reference internal" href="#id30">Added</a></li>
+<li><a class="reference internal" href="#id31">2.2.1</a></li>
+<li><a class="reference internal" href="#id32">2.2.0</a><ul>
+<li><a class="reference internal" href="#id33">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id31">2.1.2</a><ul>
-<li><a class="reference internal" href="#id32">Added</a></li>
-<li><a class="reference internal" href="#id33">Fixed</a></li>
-<li><a class="reference internal" href="#id34">Removed</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id35">2.1.1</a><ul>
+<li><a class="reference internal" href="#id34">2.1.2</a><ul>
+<li><a class="reference internal" href="#id35">Added</a></li>
 <li><a class="reference internal" href="#id36">Fixed</a></li>
+<li><a class="reference internal" href="#id37">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id37">2.1.0</a><ul>
+<li><a class="reference internal" href="#id38">2.1.1</a><ul>
+<li><a class="reference internal" href="#id39">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id40">2.1.0</a><ul>
 <li><a class="reference internal" href="#adding">Adding</a></li>
-<li><a class="reference internal" href="#id38">Changed</a></li>
+<li><a class="reference internal" href="#id41">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">2.0.5</a></li>
-<li><a class="reference internal" href="#id40">2.0.4</a></li>
-<li><a class="reference internal" href="#id41">2.0.3</a></li>
-<li><a class="reference internal" href="#id42">2.0.2</a><ul>
-<li><a class="reference internal" href="#id43">Changed</a></li>
-<li><a class="reference internal" href="#id44">Fixed</a></li>
+<li><a class="reference internal" href="#id42">2.0.5</a></li>
+<li><a class="reference internal" href="#id43">2.0.4</a></li>
+<li><a class="reference internal" href="#id44">2.0.3</a></li>
+<li><a class="reference internal" href="#id45">2.0.2</a><ul>
+<li><a class="reference internal" href="#id46">Changed</a></li>
+<li><a class="reference internal" href="#id47">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id45">2.0.1</a><ul>
-<li><a class="reference internal" href="#id46">Fixed</a></li>
+<li><a class="reference internal" href="#id48">2.0.1</a><ul>
+<li><a class="reference internal" href="#id49">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id47">2.0.0</a><ul>
-<li><a class="reference internal" href="#id48">Added</a></li>
+<li><a class="reference internal" href="#id50">2.0.0</a><ul>
+<li><a class="reference internal" href="#id51">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id49">1.10.0</a><ul>
-<li><a class="reference internal" href="#id50">Added</a></li>
+<li><a class="reference internal" href="#id52">1.10.0</a><ul>
+<li><a class="reference internal" href="#id53">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id51">1.9.0</a><ul>
-<li><a class="reference internal" href="#id52">Added</a></li>
-<li><a class="reference internal" href="#id53">Removed</a></li>
+<li><a class="reference internal" href="#id54">1.9.0</a><ul>
+<li><a class="reference internal" href="#id55">Added</a></li>
+<li><a class="reference internal" href="#id56">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id54">1.8.1</a><ul>
+<li><a class="reference internal" href="#id57">1.8.1</a><ul>
 <li><a class="reference internal" href="#fixing">Fixing</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id55">1.8.0</a><ul>
-<li><a class="reference internal" href="#id56">Added</a></li>
-<li><a class="reference internal" href="#id57">Fixing</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id58">1.7.0</a><ul>
+<li><a class="reference internal" href="#id58">1.8.0</a><ul>
 <li><a class="reference internal" href="#id59">Added</a></li>
+<li><a class="reference internal" href="#id60">Fixing</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">1.6.0</a><ul>
-<li><a class="reference internal" href="#id61">Added</a></li>
-<li><a class="reference internal" href="#id62">Changed</a></li>
+<li><a class="reference internal" href="#id61">1.7.0</a><ul>
+<li><a class="reference internal" href="#id62">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id63">1.5.0</a><ul>
+<li><a class="reference internal" href="#id63">1.6.0</a><ul>
 <li><a class="reference internal" href="#id64">Added</a></li>
+<li><a class="reference internal" href="#id65">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id65">1.4.3</a></li>
-<li><a class="reference internal" href="#id66">1.4.2</a><ul>
-<li><a class="reference internal" href="#id67">Changed</a></li>
+<li><a class="reference internal" href="#id66">1.5.0</a><ul>
+<li><a class="reference internal" href="#id67">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id68">1.4.1</a><ul>
-<li><a class="reference internal" href="#id69">Fixed</a></li>
+<li><a class="reference internal" href="#id68">1.4.3</a></li>
+<li><a class="reference internal" href="#id69">1.4.2</a><ul>
+<li><a class="reference internal" href="#id70">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id70">1.4.0</a><ul>
-<li><a class="reference internal" href="#id71">Adding</a></li>
-<li><a class="reference internal" href="#id72">Changed</a></li>
+<li><a class="reference internal" href="#id71">1.4.1</a><ul>
+<li><a class="reference internal" href="#id72">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id73">1.3.0</a><ul>
-<li><a class="reference internal" href="#id74">Added</a></li>
+<li><a class="reference internal" href="#id73">1.4.0</a><ul>
+<li><a class="reference internal" href="#id74">Adding</a></li>
 <li><a class="reference internal" href="#id75">Changed</a></li>
-<li><a class="reference internal" href="#id76">Fixed</a></li>
-<li><a class="reference internal" href="#id77">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id78">1.2.0</a><ul>
-<li><a class="reference internal" href="#id79">Added</a></li>
-<li><a class="reference internal" href="#id80">Changed</a></li>
+<li><a class="reference internal" href="#id76">1.3.0</a><ul>
+<li><a class="reference internal" href="#id77">Added</a></li>
+<li><a class="reference internal" href="#id78">Changed</a></li>
+<li><a class="reference internal" href="#id79">Fixed</a></li>
+<li><a class="reference internal" href="#id80">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id81">1.1.1</a><ul>
-<li><a class="reference internal" href="#id82">Fixed</a></li>
+<li><a class="reference internal" href="#id81">1.2.0</a><ul>
+<li><a class="reference internal" href="#id82">Added</a></li>
+<li><a class="reference internal" href="#id83">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id83">1.1.0</a><ul>
-<li><a class="reference internal" href="#id84">Added</a></li>
+<li><a class="reference internal" href="#id84">1.1.1</a><ul>
+<li><a class="reference internal" href="#id85">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id85">1.0.0</a><ul>
-<li><a class="reference internal" href="#id86">Added</a></li>
-<li><a class="reference internal" href="#id87">Removed</a></li>
+<li><a class="reference internal" href="#id86">1.1.0</a><ul>
+<li><a class="reference internal" href="#id87">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id88">1.0.0</a><ul>
+<li><a class="reference internal" href="#id89">Added</a></li>
+<li><a class="reference internal" href="#id90">Removed</a></li>
 </ul>
 </li>
 </ul>
@@ -330,10 +335,67 @@
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/discussions/categories/releases">Discussions about unicorn-binance-rest-api releases!</a></p>
 <p><a class="reference external" href="https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade">How to upgrade to the latest version!</a></p>
 <section id="dev-development-stage-unreleased-unstable">
-<h2>2.10.0.dev (development stage/unreleased/unstable)<a class="headerlink" href="#dev-development-stage-unreleased-unstable" title="Link to this heading">¶</a></h2>
+<h2>2.11.0.dev (development stage/unreleased/unstable)<a class="headerlink" href="#dev-development-stage-unreleased-unstable" title="Link to this heading">¶</a></h2>
 </section>
 <section id="id1">
-<h2>2.10.0<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<h2>2.11.0<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.github/workflows/unit-tests.yml</span></code>: removed the obsolete
+<code class="docutils literal notranslate"><span class="pre">LUCIT_API_SECRET</span></code> / <code class="docutils literal notranslate"><span class="pre">LUCIT_LICENSE_TOKEN</span></code> environment block from
+all Python-version test matrices. The LUCIT licensing manager was
+removed from the codebase; these secrets are no longer referenced.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examples/_archive/*.py</span></code> (11 files): updated file headers —
+<code class="docutils literal notranslate"><span class="pre">PyPI:</span> <span class="pre">lucit-licensing-python</span></code> → <code class="docutils literal notranslate"><span class="pre">unicorn-binance-rest-api</span></code>,
+<code class="docutils literal notranslate"><span class="pre">License:</span> <span class="pre">LSOSL</span></code> → <code class="docutils literal notranslate"><span class="pre">MIT</span></code>, and copyright from
+<code class="docutils literal notranslate"><span class="pre">LUCIT</span> <span class="pre">Systems</span> <span class="pre">and</span> <span class="pre">Development</span></code> to <code class="docutils literal notranslate"><span class="pre">Oliver</span> <span class="pre">Zehentleitner</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examples/README.md</span></code>: removed the lucit.tech chat support link.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SECURITY.md</span></code>: replaced the lucit.tech contact form URL with the
+GitHub Security Advisories private-reporting URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>: dropped the <code class="docutils literal notranslate"><span class="pre">defaults</span></code> channel (conda-forge docs
+recommend not mixing channels; Anaconda <code class="docutils literal notranslate"><span class="pre">defaults</span></code> requires a paid
+license for enterprise use since 2024). Moved <code class="docutils literal notranslate"><span class="pre">service-identity</span></code> out
+of the pip block into the main conda deps (now available on
+conda-forge as <code class="docutils literal notranslate"><span class="pre">service_identity</span></code>), so the file is pure conda.</p></li>
+<li><p>README: reworded the PyPy paragraph. The old sentence (“For the PyPy
+interpreter we offer packages only from Python version 3.9 and
+higher”) made sense when we still shipped wheels for pre-3.9 CPython;
+now that 3.9 is already the minimum for everything, it’s just
+noise. Replaced with a short “PyPy wheels are available for all
+supported Python versions.”</p></li>
+<li><p>README: switched all conda references from the legacy <code class="docutils literal notranslate"><span class="pre">lucit</span></code> channel
+to <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. Added conda-forge version / downloads / feedstock
+build badges. Removed the “There is no conda support until migration”
+placeholders. Install section is now a single
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">unicorn-binance-rest-api</span></code>.</p></li>
+<li><p>Aligned dependency pins across <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>,
+<code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>, <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">meta.yaml</span></code> to the
+newer minimums already used in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>
+(<code class="docutils literal notranslate"><span class="pre">certifi&gt;=2025.6.15</span></code>, <code class="docutils literal notranslate"><span class="pre">cryptography&gt;=45.0.4</span></code>, <code class="docutils literal notranslate"><span class="pre">requests&gt;=2.32.4</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meta.yaml</span></code>: removed the leftover <code class="docutils literal notranslate"><span class="pre">channels:</span></code> and <code class="docutils literal notranslate"><span class="pre">dependencies:</span></code>
+blocks (they are <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> keys, not valid in <code class="docutils literal notranslate"><span class="pre">meta.yaml</span></code>).
+Refreshed <code class="docutils literal notranslate"><span class="pre">about.description</span></code> by re-embedding the current <code class="docutils literal notranslate"><span class="pre">README.md</span></code>,
+set <code class="docutils literal notranslate"><span class="pre">license:</span> <span class="pre">MIT</span></code> (was stale <code class="docutils literal notranslate"><span class="pre">LSOSL</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>: dropped the <code class="docutils literal notranslate"><span class="pre">lucit</span></code> channel.</p></li>
+</ul>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ujson</span></code> dropped from <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>,
+<code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">meta.yaml</span></code>. UBRA never actually imports it —
+the SDK decodes responses via <code class="docutils literal notranslate"><span class="pre">requests.Response.json()</span></code> (stdlib).
+Suite-wide standard for JSON is now <code class="docutils literal notranslate"><span class="pre">orjson</span></code>, which UBRA doesn’t need
+either.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.github/workflows/build_conda.yml</span></code>: the conda-forge feedstock
+(<code class="docutils literal notranslate"><span class="pre">conda-forge/unicorn-binance-rest-api-feedstock</span></code>) now builds and
+publishes the conda package; no in-repo build is needed anymore.</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2>2.10.0<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <section id="added">
 <h3>Added<a class="headerlink" href="#added" title="Link to this heading">¶</a></h3>
 <ul class="simple">
@@ -355,8 +417,8 @@
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2>2.9.1<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h2>2.9.1<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <section id="fixed">
 <h3>Fixed<a class="headerlink" href="#fixed" title="Link to this heading">¶</a></h3>
 <ul class="simple">
@@ -364,13 +426,13 @@
 </ul>
 </section>
 </section>
-<section id="id3">
-<h2>2.9.0<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h2>2.9.0<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 </section>
 <section id="next">
 <h2>next<a class="headerlink" href="#next" title="Link to this heading">¶</a></h2>
-<section id="id4">
-<h3>Added<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<section id="id5">
+<h3>Added<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_create_algo_order()</span></code> — POST <code class="docutils literal notranslate"><span class="pre">/fapi/v1/algo/orders</span></code> (VP, TWAP, CONDITIONAL); fixes #93</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_cancel_algo_order()</span></code> — DELETE <code class="docutils literal notranslate"><span class="pre">/fapi/v1/algo/orders</span></code></p></li>
@@ -380,21 +442,21 @@
 <li><p>Python 3.14 support</p></li>
 </ul>
 </section>
-<section id="changed">
-<h3>Changed<a class="headerlink" href="#changed" title="Link to this heading">¶</a></h3>
+<section id="id6">
+<h3>Changed<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">colorama.init()</span></code> → <code class="docutils literal notranslate"><span class="pre">colorama.init(wrap=False)</span></code> to prevent <code class="docutils literal notranslate"><span class="pre">RecursionError</span></code> when <code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager</span></code> is instantiated multiple times in the same process; fixes #92</p></li>
 <li><p>cibuildwheel upgraded from v3.0.0 to v3.4.1</p></li>
 </ul>
 </section>
-<section id="id5">
-<h3>Fixed<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<section id="id7">
+<h3>Fixed<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">helpers.py</span></code>: <code class="docutils literal notranslate"><span class="pre">datetime.utcfromtimestamp()</span></code> replaced with <code class="docutils literal notranslate"><span class="pre">datetime(1970,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">tzinfo=timezone.utc)</span></code> — eliminates <code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code> on Python 3.12+</p></li>
 </ul>
 </section>
-<section id="removed">
-<h3>Removed<a class="headerlink" href="#removed" title="Link to this heading">¶</a></h3>
+<section id="id8">
+<h3>Removed<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Python 3.8 support (EOL Oct 2024); minimum is now 3.9</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">simplejson</span></code> dependency (was listed in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> only, not used in code)</p></li>
@@ -402,10 +464,10 @@
 </ul>
 </section>
 </section>
-<section id="id6">
-<h2>2.8.1<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
-<section id="id7">
-<h3>Added<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<section id="id9">
+<h2>2.8.1<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<section id="id10">
+<h3>Added<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Python 3.13 support</p></li>
 <li><p>build_wheels.yml:<br />
@@ -416,75 +478,75 @@ CIBW_MUSLLINUX_X86_64_IMAGE: “musllinux_1_1”</p></li>
 </ul>
 </section>
 </section>
-<section id="id8">
-<h2>2.8.0<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
-<section id="id9">
-<h3>Changed<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<section id="id11">
+<h2>2.8.0<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<section id="id12">
+<h3>Changed<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Moved from https://github.com/LUCIT-Systems-and-Development/ to https://github.com/oliver-zehentleitner</p></li>
 </ul>
 </section>
-<section id="id10">
-<h3>Removed<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<section id="id13">
+<h3>Removed<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>LUCIT Licensing Manager</p></li>
 </ul>
 </section>
 </section>
-<section id="id11">
-<h2>2.6.1<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
-<section id="id12">
-<h3>Fixed<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<section id="id14">
+<h2>2.6.1<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<section id="id15">
+<h3>Fixed<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>TypeError: unsupported operand type(s) for -: ‘float’ and ‘NoneType’ in <code class="docutils literal notranslate"><span class="pre">get_used_weight()</span></code></p></li>
 </ul>
 </section>
 </section>
-<section id="id13">
-<h2>2.6.0<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h2>
-<section id="id14">
-<h3>Added<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<section id="id16">
+<h2>2.6.0<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<section id="id17">
+<h3>Added<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cached_timeout</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">_save_used_weight()</span></code></p></li>
 </ul>
 </section>
-<section id="id15">
-<h3>Fixed<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<section id="id18">
+<h3>Fixed<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">_save_used_weight()</span></code> - Exception: int() argument must be a string, a bytes-like object or a real number, not ‘NoneType’</p></li>
 </ul>
 </section>
 </section>
-<section id="id16">
-<h2>2.5.1<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
-<section id="id17">
-<h3>Changed<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<section id="id19">
+<h2>2.5.1<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<section id="id20">
+<h3>Changed<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Returned type of <code class="docutils literal notranslate"><span class="pre">get_used_weight()['weight']</span></code> to int</p></li>
 </ul>
 </section>
 </section>
-<section id="id18">
-<h2>2.5.0<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
-<section id="id19">
-<h3>Added<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<section id="id21">
+<h2>2.5.0<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h2>
+<section id="id22">
+<h3>Added<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">_save_used_weight()</span></code> to cache the used weight on every request.</p></li>
 <li><p>Updated <code class="docutils literal notranslate"><span class="pre">get_used_weight()</span></code> and added parameter <code class="docutils literal notranslate"><span class="pre">cached=False</span></code>.</p></li>
 </ul>
 </section>
-<section id="id20">
-<h3>Changed<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<section id="id23">
+<h3>Changed<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">type(start_str)</span> <span class="pre">==</span> <span class="pre">int</span></code> to <code class="docutils literal notranslate"><span class="pre">type(start_str)</span> <span class="pre">is</span> <span class="pre">int</span></code> a couple of times.</p></li>
 </ul>
 </section>
 </section>
-<section id="id21">
-<h2>2.4.0<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h2>
+<section id="id24">
+<h2>2.4.0<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h2>
 <p>Exclude known security vulnerabilities in dependencies by increasing the minimum version numbers of the dependencies.</p>
-<section id="id22">
-<h3>Changed<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
+<section id="id25">
+<h3>Changed<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Updated description text in all files.</p></li>
 <li><p>Update of <code class="docutils literal notranslate"><span class="pre">get_used_weight()</span></code>, removed parameter <code class="docutils literal notranslate"><span class="pre">make_new_request</span></code>, it is now allways using <code class="docutils literal notranslate"><span class="pre">ping()</span></code> to get the
@@ -492,8 +554,8 @@ current used weight.</p></li>
 <li><p>https://pypi.org/project/requesocks/ has been discontinued and socks support is now provided directly by <code class="docutils literal notranslate"><span class="pre">requests</span></code>.</p></li>
 </ul>
 </section>
-<section id="id23">
-<h3>Fixed<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<section id="id26">
+<h3>Fixed<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Import in <code class="docutils literal notranslate"><span class="pre">licensing_manager.py</span></code>.</p></li>
 <li><p>Type of global <code class="docutils literal notranslate"><span class="pre">logger</span></code> variable.</p></li>
@@ -575,10 +637,10 @@ versions 2.3.0 through 2.30.0.</p></li>
 </ul>
 </section>
 </section>
-<section id="id24">
-<h2>2.3.0<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h2>
-<section id="id25">
-<h3>Added<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+<section id="id27">
+<h2>2.3.0<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h2>
+<section id="id28">
+<h3>Added<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Parameter <code class="docutils literal notranslate"><span class="pre">version</span></code> to <code class="docutils literal notranslate"><span class="pre">_request_futures_api()</span></code>, <code class="docutils literal notranslate"><span class="pre">_create_futures_coin_data_api_url()</span></code> and <code class="docutils literal notranslate"><span class="pre">_create_futures_api_uri()</span></code></p></li>
 <li><p>Since UBRA is delivered as a compiled C extension, IDEs such as Pycharm and Visual Code cannot use information about
@@ -587,31 +649,31 @@ now on stub files (PYI) will be created in the build process and attached to the
 obtain the required information from these.</p></li>
 </ul>
 </section>
-<section id="id26">
-<h3>Changed<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<section id="id29">
+<h3>Changed<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Renamed <code class="docutils literal notranslate"><span class="pre">binance.com-coin-futures</span></code> to <code class="docutils literal notranslate"><span class="pre">binance.com-coin_futures</span></code>.</p></li>
 </ul>
 </section>
-<section id="id27">
-<h3>Fixed<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
+<section id="id30">
+<h3>Fixed<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_account()</span></code>, <code class="docutils literal notranslate"><span class="pre">futures_account_balance()</span></code> and <code class="docutils literal notranslate"><span class="pre">futures_position_information()</span></code>  <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/65">issue#65</a></p></li>
 <li><p>Projects <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> - did not correct import.</p></li>
 </ul>
 </section>
 </section>
-<section id="id28">
-<h2>2.2.1<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h2>
+<section id="id31">
+<h2>2.2.1<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">unicorn-binance-rest-api</span></code> can now also be installed on all architectures on which there are no precompiled packages from
 LUCIT. PIP now automatically recognises whether there is a suitable precompiled package and if not, the source is
 automatically compiled on the target system during the installation process with Cython. Even if you don’t have to do
 anything special, please note that this process takes some time!</p>
 </section>
-<section id="id29">
-<h2>2.2.0<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h2>
-<section id="id30">
-<h3>Added<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h3>
+<section id="id32">
+<h2>2.2.0<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h2>
+<section id="id33">
+<h3>Added<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Support of <code class="docutils literal notranslate"><span class="pre">params</span></code> in <code class="docutils literal notranslate"><span class="pre">manager.py</span></code>:</p>
 <ul>
@@ -623,38 +685,38 @@ anything special, please note that this process takes some time!</p>
 </ul>
 </section>
 </section>
-<section id="id31">
-<h2>2.1.2<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h2>
-<section id="id32">
-<h3>Added<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h3>
+<section id="id34">
+<h2>2.1.2<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h2>
+<section id="id35">
+<h3>Added<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Typing for a few more parameters.</p></li>
 </ul>
 </section>
-<section id="id33">
-<h3>Fixed<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
+<section id="id36">
+<h3>Fixed<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Fixed handling of <code class="docutils literal notranslate"><span class="pre">tld</span></code> in <code class="docutils literal notranslate"><span class="pre">manager.__init__()</span></code>.</p></li>
 </ul>
 </section>
-<section id="id34">
-<h3>Removed<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
+<section id="id37">
+<h3>Removed<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">version=1</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">manager._create_futures_coin_data_api_url()</span></code>.</p></li>
 </ul>
 </section>
 </section>
-<section id="id35">
-<h2>2.1.1<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h2>
-<section id="id36">
-<h3>Fixed<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h3>
+<section id="id38">
+<h2>2.1.1<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h2>
+<section id="id39">
+<h3>Fixed<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Used <code class="docutils literal notranslate"><span class="pre">False</span></code> instead of <code class="docutils literal notranslate"><span class="pre">None</span></code> in <code class="docutils literal notranslate"><span class="pre">manager.__init__()</span></code> parameter <code class="docutils literal notranslate"><span class="pre">tld</span></code>.</p></li>
 </ul>
 </section>
 </section>
-<section id="id37">
-<h2>2.1.0<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h2>
+<section id="id40">
+<h2>2.1.0<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h2>
 <section id="adding">
 <h3>Adding<a class="headerlink" href="#adding" title="Link to this heading">¶</a></h3>
 <ul class="simple">
@@ -681,60 +743,60 @@ private rest call now supports specific <code class="docutils literal notranslat
 </li>
 </ul>
 </section>
-<section id="id38">
-<h3>Changed<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h3>
+<section id="id41">
+<h3>Changed<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Using types in <code class="docutils literal notranslate"><span class="pre">manager.__init__()</span></code>.</p></li>
 </ul>
 </section>
 </section>
-<section id="id39">
-<h2>2.0.5<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h2>
+<section id="id42">
+<h2>2.0.5<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Building conda packages and distribute them via https://anaconda.org/lucit</p></li>
 </ul>
 </section>
-<section id="id40">
-<h2>2.0.4<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h2>
+<section id="id43">
+<h2>2.0.4<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Same as 2.0.2, error during github upload.</p></li>
 </ul>
 </section>
-<section id="id41">
-<h2>2.0.3<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h2>
+<section id="id44">
+<h2>2.0.3<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Same as 2.0.2, error during pypi upload.</p></li>
 </ul>
 </section>
-<section id="id42">
-<h2>2.0.2<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h2>
-<section id="id43">
-<h3>Changed<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h3>
+<section id="id45">
+<h2>2.0.2<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h2>
+<section id="id46">
+<h3>Changed<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Replaced URLs</p></li>
 </ul>
 </section>
-<section id="id44">
-<h3>Fixed<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h3>
+<section id="id47">
+<h3>Fixed<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Stopping manager automatically if an unknown exchange string was used before the exception gets raised.</p></li>
 </ul>
 </section>
 </section>
-<section id="id45">
-<h2>2.0.1<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h2>
-<section id="id46">
-<h3>Fixed<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
+<section id="id48">
+<h2>2.0.1<a class="headerlink" href="#id48" title="Link to this heading">¶</a></h2>
+<section id="id49">
+<h3>Fixed<a class="headerlink" href="#id49" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>New exception <code class="docutils literal notranslate"><span class="pre">AlreadyStoppedError</span></code> is thrown if a stopped instance gets used.</p></li>
 <li><p>Memory leak with implementation of <code class="docutils literal notranslate"><span class="pre">manager.stop_manager()</span></code>.</p></li>
 </ul>
 </section>
 </section>
-<section id="id47">
-<h2>2.0.0<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h2>
-<section id="id48">
-<h3>Added<a class="headerlink" href="#id48" title="Link to this heading">¶</a></h3>
+<section id="id50">
+<h2>2.0.0<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h2>
+<section id="id51">
+<h3>Added<a class="headerlink" href="#id51" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Support for Python 3.11 and 3.12</p></li>
 <li><p>Integration of the <code class="docutils literal notranslate"><span class="pre">lucit-licensing-python</span></code> library for verifying the UNICORN Binance Suite license. A license can be
@@ -751,34 +813,34 @@ transparent and the user can be sure that the compilation of a version fully cor
 </ul>
 </section>
 </section>
-<section id="id49">
-<h2>1.10.0<a class="headerlink" href="#id49" title="Link to this heading">¶</a></h2>
-<section id="id50">
-<h3>Added<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h3>
+<section id="id52">
+<h2>1.10.0<a class="headerlink" href="#id52" title="Link to this heading">¶</a></h2>
+<section id="id53">
+<h3>Added<a class="headerlink" href="#id53" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;s&quot;:</span> <span class="pre">1,</span></code> to helpers.py to fix kline_1s support</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">create_margin_oco_order()</span></code>, <code class="docutils literal notranslate"><span class="pre">cancel_margin_oco_order()</span></code>, <code class="docutils literal notranslate"><span class="pre">get_margin_oco_order()</span></code>, <code class="docutils literal notranslate"><span class="pre">get_open_margin_oco_orders()</span></code></p></li>
 </ul>
 </section>
 </section>
-<section id="id51">
-<h2>1.9.0<a class="headerlink" href="#id51" title="Link to this heading">¶</a></h2>
-<section id="id52">
-<h3>Added<a class="headerlink" href="#id52" title="Link to this heading">¶</a></h3>
+<section id="id54">
+<h2>1.9.0<a class="headerlink" href="#id54" title="Link to this heading">¶</a></h2>
+<section id="id55">
+<h3>Added<a class="headerlink" href="#id55" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_stream_get_listen_key()</span></code>, <code class="docutils literal notranslate"><span class="pre">futures_stream_keepalive()</span></code> and <code class="docutils literal notranslate"><span class="pre">futures_stream_close()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_coin_stream_get_listen_key()</span></code>, <code class="docutils literal notranslate"><span class="pre">futures_coin_stream_keepalive()</span></code> and <code class="docutils literal notranslate"><span class="pre">futures_coin_stream_close()</span></code></p></li>
 </ul>
 </section>
-<section id="id53">
-<h3>Removed<a class="headerlink" href="#id53" title="Link to this heading">¶</a></h3>
+<section id="id56">
+<h3>Removed<a class="headerlink" href="#id56" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>jex.com support</p></li>
 </ul>
 </section>
 </section>
-<section id="id54">
-<h2>1.8.1<a class="headerlink" href="#id54" title="Link to this heading">¶</a></h2>
+<section id="id57">
+<h2>1.8.1<a class="headerlink" href="#id57" title="Link to this heading">¶</a></h2>
 <section id="fixing">
 <h3>Fixing<a class="headerlink" href="#fixing" title="Link to this heading">¶</a></h3>
 <ul class="simple">
@@ -786,91 +848,91 @@ transparent and the user can be sure that the compilation of a version fully cor
 </ul>
 </section>
 </section>
-<section id="id55">
-<h2>1.8.0<a class="headerlink" href="#id55" title="Link to this heading">¶</a></h2>
-<section id="id56">
-<h3>Added<a class="headerlink" href="#id56" title="Link to this heading">¶</a></h3>
+<section id="id58">
+<h2>1.8.0<a class="headerlink" href="#id58" title="Link to this heading">¶</a></h2>
+<section id="id59">
+<h3>Added<a class="headerlink" href="#id59" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">output=&quot;value&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">throw_exception=True</span></code> to: <code class="docutils literal notranslate"><span class="pre">stream_get_listen_key()</span></code>, <code class="docutils literal notranslate"><span class="pre">margin_stream_get_listen_key()</span></code>, <code class="docutils literal notranslate"><span class="pre">isolated_margin_stream_get_listen_key()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">throw_exception=True</span></code> to: <code class="docutils literal notranslate"><span class="pre">_request()</span></code>, <code class="docutils literal notranslate"><span class="pre">_request_api()</span></code>, <code class="docutils literal notranslate"><span class="pre">_request_margin_api()</span></code>, <code class="docutils literal notranslate"><span class="pre">_request_website()</span></code>, <code class="docutils literal notranslate"><span class="pre">_request_futures_api()</span></code>, <code class="docutils literal notranslate"><span class="pre">_request_futures_data_api()</span></code>, <code class="docutils literal notranslate"><span class="pre">_request_futures_coin_api()</span></code>, <code class="docutils literal notranslate"><span class="pre">_request_futures_coin_data_api()</span></code>, <code class="docutils literal notranslate"><span class="pre">_handle_response()</span></code>, <code class="docutils literal notranslate"><span class="pre">stream_keepalive()</span></code>, <code class="docutils literal notranslate"><span class="pre">stream_close()</span></code>, <code class="docutils literal notranslate"><span class="pre">margin_stream_keepalive()</span></code>, <code class="docutils literal notranslate"><span class="pre">margin_stream_close()</span></code>, <code class="docutils literal notranslate"><span class="pre">isolated_margin_stream_keepalive()</span></code>, <code class="docutils literal notranslate"><span class="pre">isolated_margin_stream_close()</span></code></p></li>
 </ul>
 </section>
-<section id="id57">
-<h3>Fixing<a class="headerlink" href="#id57" title="Link to this heading">¶</a></h3>
+<section id="id60">
+<h3>Fixing<a class="headerlink" href="#id60" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Issue in <code class="docutils literal notranslate"><span class="pre">get_used_weight()</span></code></p></li>
 </ul>
 </section>
 </section>
-<section id="id58">
-<h2>1.7.0<a class="headerlink" href="#id58" title="Link to this heading">¶</a></h2>
-<section id="id59">
-<h3>Added<a class="headerlink" href="#id59" title="Link to this heading">¶</a></h3>
+<section id="id61">
+<h2>1.7.0<a class="headerlink" href="#id61" title="Link to this heading">¶</a></h2>
+<section id="id62">
+<h3>Added<a class="headerlink" href="#id62" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>SOCKS5 proxy support to <a class="reference external" href="https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager()</span></code></a> -
 New parameter: <code class="docutils literal notranslate"><span class="pre">socks5_proxy_server</span></code>, <code class="docutils literal notranslate"><span class="pre">socks5_proxy_user</span></code>, <code class="docutils literal notranslate"><span class="pre">socks5_proxy_pass</span></code>, <code class="docutils literal notranslate"><span class="pre">socks5_proxy_ssl_verification</span></code></p></li>
 </ul>
 </section>
 </section>
-<section id="id60">
-<h2>1.6.0<a class="headerlink" href="#id60" title="Link to this heading">¶</a></h2>
-<section id="id61">
-<h3>Added<a class="headerlink" href="#id61" title="Link to this heading">¶</a></h3>
+<section id="id63">
+<h2>1.6.0<a class="headerlink" href="#id63" title="Link to this heading">¶</a></h2>
+<section id="id64">
+<h3>Added<a class="headerlink" href="#id64" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>New kline interval: 1s <code class="docutils literal notranslate"><span class="pre">KLINE_INTERVAL_1SECOND</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_place_batch_order()</span></code> - Placing batch orders for USD-M API. Thx <a class="reference external" href="https://github.com/hawkeye-bot">&#64;hawkeye-bot</a>
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/42">PR#42</a></p></li>
 </ul>
 </section>
-<section id="id62">
-<h3>Changed<a class="headerlink" href="#id62" title="Link to this heading">¶</a></h3>
+<section id="id65">
+<h3>Changed<a class="headerlink" href="#id65" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Dependency regex no specific version anymore</p></li>
 </ul>
 </section>
 </section>
-<section id="id63">
-<h2>1.5.0<a class="headerlink" href="#id63" title="Link to this heading">¶</a></h2>
-<section id="id64">
-<h3>Added<a class="headerlink" href="#id64" title="Link to this heading">¶</a></h3>
+<section id="id66">
+<h2>1.5.0<a class="headerlink" href="#id66" title="Link to this heading">¶</a></h2>
+<section id="id67">
+<h3>Added<a class="headerlink" href="#id67" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cancel_all_open_margin_orders()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_auto_cancel_all_open_orders()</span></code></p></li>
 </ul>
 </section>
 </section>
-<section id="id65">
-<h2>1.4.3<a class="headerlink" href="#id65" title="Link to this heading">¶</a></h2>
+<section id="id68">
+<h2>1.4.3<a class="headerlink" href="#id68" title="Link to this heading">¶</a></h2>
 <p>Codebase equal to 1.4.2, testing azure pipe</p>
 </section>
-<section id="id66">
-<h2>1.4.2<a class="headerlink" href="#id66" title="Link to this heading">¶</a></h2>
-<section id="id67">
-<h3>Changed<a class="headerlink" href="#id67" title="Link to this heading">¶</a></h3>
+<section id="id69">
+<h2>1.4.2<a class="headerlink" href="#id69" title="Link to this heading">¶</a></h2>
+<section id="id70">
+<h3>Changed<a class="headerlink" href="#id70" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Dependency regex to &lt;= 2022.3.2 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/24">issue#24</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id68">
-<h2>1.4.1<a class="headerlink" href="#id68" title="Link to this heading">¶</a></h2>
-<section id="id69">
-<h3>Fixed<a class="headerlink" href="#id69" title="Link to this heading">¶</a></h3>
+<section id="id71">
+<h2>1.4.1<a class="headerlink" href="#id71" title="Link to this heading">¶</a></h2>
+<section id="id72">
+<h3>Fixed<a class="headerlink" href="#id72" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Binance Futures Testnet URL <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/20">issue#20</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id70">
-<h2>1.4.0<a class="headerlink" href="#id70" title="Link to this heading">¶</a></h2>
-<section id="id71">
-<h3>Adding<a class="headerlink" href="#id71" title="Link to this heading">¶</a></h3>
+<section id="id73">
+<h2>1.4.0<a class="headerlink" href="#id73" title="Link to this heading">¶</a></h2>
+<section id="id74">
+<h3>Adding<a class="headerlink" href="#id74" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">futures_commission_rate()</span></code> <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/18">issue#18</a></p></li>
 </ul>
 </section>
-<section id="id72">
-<h3>Changed<a class="headerlink" href="#id72" title="Link to this heading">¶</a></h3>
+<section id="id75">
+<h3>Changed<a class="headerlink" href="#id75" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Moved from https://github.com/oliver-zehentleitner to https://github.com/oliver-zehentleitner/</p></li>
 <li><p>removed “unicorn_binance_rest_api_”-part of the module file names (more info: <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/discussions/19">Discussions</a>)</p></li>
@@ -881,10 +943,10 @@ its own logger name.</p></li>
 </ul>
 </section>
 </section>
-<section id="id73">
-<h2>1.3.0<a class="headerlink" href="#id73" title="Link to this heading">¶</a></h2>
-<section id="id74">
-<h3>Added<a class="headerlink" href="#id74" title="Link to this heading">¶</a></h3>
+<section id="id76">
+<h2>1.3.0<a class="headerlink" href="#id76" title="Link to this heading">¶</a></h2>
+<section id="id77">
+<h3>Added<a class="headerlink" href="#id77" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exchange</span></code> parameter to manager class to replace <code class="docutils literal notranslate"><span class="pre">tld</span></code> parameter</p></li>
 <li><p>support for new endpoints: trbinance.com</p></li>
@@ -893,69 +955,69 @@ its own logger name.</p></li>
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/3">issue#3</a></p></li>
 </ul>
 </section>
-<section id="id75">
-<h3>Changed<a class="headerlink" href="#id75" title="Link to this heading">¶</a></h3>
+<section id="id78">
+<h3>Changed<a class="headerlink" href="#id78" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tld</span></code> is now obsolete</p></li>
 </ul>
 </section>
-<section id="id76">
-<h3>Fixed<a class="headerlink" href="#id76" title="Link to this heading">¶</a></h3>
+<section id="id79">
+<h3>Fixed<a class="headerlink" href="#id79" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>ValueError in <code class="docutils literal notranslate"><span class="pre">get_used_weight()</span></code></p></li>
 <li><p>get_open_margin_orders()</p></li>
 </ul>
 </section>
-<section id="id77">
-<h3>Removed<a class="headerlink" href="#id77" title="Link to this heading">¶</a></h3>
+<section id="id80">
+<h3>Removed<a class="headerlink" href="#id80" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>double definition of <code class="docutils literal notranslate"><span class="pre">make_universal_transfer()</span></code></p></li>
 <li><p>binance.je support (Binance Jersey has ceased operations.)</p></li>
 </ul>
 </section>
 </section>
-<section id="id78">
-<h2>1.2.0<a class="headerlink" href="#id78" title="Link to this heading">¶</a></h2>
-<section id="id79">
-<h3>Added<a class="headerlink" href="#id79" title="Link to this heading">¶</a></h3>
+<section id="id81">
+<h2>1.2.0<a class="headerlink" href="#id81" title="Link to this heading">¶</a></h2>
+<section id="id82">
+<h3>Added<a class="headerlink" href="#id82" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>get_used_weight()</p></li>
 <li><p>futures_coin_place_batch_order()</p></li>
 </ul>
 </section>
-<section id="id80">
-<h3>Changed<a class="headerlink" href="#id80" title="Link to this heading">¶</a></h3>
+<section id="id83">
+<h3>Changed<a class="headerlink" href="#id83" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Migrate from WAPI to SAPI <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/7">issue#7</a></p></li>
 <li><p>URLs to Biannce Docs</p></li>
 </ul>
 </section>
 </section>
-<section id="id81">
-<h2>1.1.1<a class="headerlink" href="#id81" title="Link to this heading">¶</a></h2>
-<section id="id82">
-<h3>Fixed<a class="headerlink" href="#id82" title="Link to this heading">¶</a></h3>
+<section id="id84">
+<h2>1.1.1<a class="headerlink" href="#id84" title="Link to this heading">¶</a></h2>
+<section id="id85">
+<h3>Fixed<a class="headerlink" href="#id85" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>changed FUTURES_COIN_URL <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/pull/5">PR#5</a> -
 Thanks to <a class="reference external" href="https://github.com/flo-rian">flo-rian</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id83">
-<h2>1.1.0<a class="headerlink" href="#id83" title="Link to this heading">¶</a></h2>
-<section id="id84">
-<h3>Added<a class="headerlink" href="#id84" title="Link to this heading">¶</a></h3>
+<section id="id86">
+<h2>1.1.0<a class="headerlink" href="#id86" title="Link to this heading">¶</a></h2>
+<section id="id87">
+<h3>Added<a class="headerlink" href="#id87" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>logging</p></li>
 <li><p>update check</p></li>
 </ul>
 </section>
 </section>
-<section id="id85">
-<h2>1.0.0<a class="headerlink" href="#id85" title="Link to this heading">¶</a></h2>
+<section id="id88">
+<h2>1.0.0<a class="headerlink" href="#id88" title="Link to this heading">¶</a></h2>
 <p>forked from Sam McHardy <a class="reference external" href="https://github.com/sammchardy/python-binance">python-binance v0.7.10</a></p>
-<section id="id86">
-<h3>Added<a class="headerlink" href="#id86" title="Link to this heading">¶</a></h3>
+<section id="id89">
+<h3>Added<a class="headerlink" href="#id89" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>get_latest_release_info()</p></li>
 <li><p>get_latest_version()</p></li>
@@ -965,8 +1027,8 @@ Thanks to <a class="reference external" href="https://github.com/flo-rian">flo-r
 <li><p>colorama as requirement</p></li>
 </ul>
 </section>
-<section id="id87">
-<h3>Removed<a class="headerlink" href="#id87" title="Link to this heading">¶</a></h3>
+<section id="id90">
+<h3>Removed<a class="headerlink" href="#id90" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Websocket support from python-binance and dependencies</p></li>
 </ul>
@@ -990,166 +1052,171 @@ Thanks to <a class="reference external" href="https://github.com/flo-rian">flo-r
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">unicorn-binance-rest-api Change Log</a><ul>
-<li><a class="reference internal" href="#dev-development-stage-unreleased-unstable">2.10.0.dev (development stage/unreleased/unstable)</a></li>
-<li><a class="reference internal" href="#id1">2.10.0</a><ul>
-<li><a class="reference internal" href="#added">Added</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id2">2.9.1</a><ul>
-<li><a class="reference internal" href="#fixed">Fixed</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id3">2.9.0</a></li>
-<li><a class="reference internal" href="#next">next</a><ul>
-<li><a class="reference internal" href="#id4">Added</a></li>
+<li><a class="reference internal" href="#dev-development-stage-unreleased-unstable">2.11.0.dev (development stage/unreleased/unstable)</a></li>
+<li><a class="reference internal" href="#id1">2.11.0</a><ul>
 <li><a class="reference internal" href="#changed">Changed</a></li>
-<li><a class="reference internal" href="#id5">Fixed</a></li>
 <li><a class="reference internal" href="#removed">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">2.8.1</a><ul>
-<li><a class="reference internal" href="#id7">Added</a></li>
+<li><a class="reference internal" href="#id2">2.10.0</a><ul>
+<li><a class="reference internal" href="#added">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">2.8.0</a><ul>
-<li><a class="reference internal" href="#id9">Changed</a></li>
-<li><a class="reference internal" href="#id10">Removed</a></li>
+<li><a class="reference internal" href="#id3">2.9.1</a><ul>
+<li><a class="reference internal" href="#fixed">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id11">2.6.1</a><ul>
-<li><a class="reference internal" href="#id12">Fixed</a></li>
+<li><a class="reference internal" href="#id4">2.9.0</a></li>
+<li><a class="reference internal" href="#next">next</a><ul>
+<li><a class="reference internal" href="#id5">Added</a></li>
+<li><a class="reference internal" href="#id6">Changed</a></li>
+<li><a class="reference internal" href="#id7">Fixed</a></li>
+<li><a class="reference internal" href="#id8">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">2.6.0</a><ul>
-<li><a class="reference internal" href="#id14">Added</a></li>
+<li><a class="reference internal" href="#id9">2.8.1</a><ul>
+<li><a class="reference internal" href="#id10">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">2.8.0</a><ul>
+<li><a class="reference internal" href="#id12">Changed</a></li>
+<li><a class="reference internal" href="#id13">Removed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">2.6.1</a><ul>
 <li><a class="reference internal" href="#id15">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id16">2.5.1</a><ul>
-<li><a class="reference internal" href="#id17">Changed</a></li>
+<li><a class="reference internal" href="#id16">2.6.0</a><ul>
+<li><a class="reference internal" href="#id17">Added</a></li>
+<li><a class="reference internal" href="#id18">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">2.5.0</a><ul>
-<li><a class="reference internal" href="#id19">Added</a></li>
+<li><a class="reference internal" href="#id19">2.5.1</a><ul>
 <li><a class="reference internal" href="#id20">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">2.4.0</a><ul>
-<li><a class="reference internal" href="#id22">Changed</a></li>
-<li><a class="reference internal" href="#id23">Fixed</a></li>
+<li><a class="reference internal" href="#id21">2.5.0</a><ul>
+<li><a class="reference internal" href="#id22">Added</a></li>
+<li><a class="reference internal" href="#id23">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id24">2.4.0</a><ul>
+<li><a class="reference internal" href="#id25">Changed</a></li>
+<li><a class="reference internal" href="#id26">Fixed</a></li>
 <li><a class="reference internal" href="#security">Security</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id24">2.3.0</a><ul>
-<li><a class="reference internal" href="#id25">Added</a></li>
-<li><a class="reference internal" href="#id26">Changed</a></li>
-<li><a class="reference internal" href="#id27">Fixed</a></li>
+<li><a class="reference internal" href="#id27">2.3.0</a><ul>
+<li><a class="reference internal" href="#id28">Added</a></li>
+<li><a class="reference internal" href="#id29">Changed</a></li>
+<li><a class="reference internal" href="#id30">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id28">2.2.1</a></li>
-<li><a class="reference internal" href="#id29">2.2.0</a><ul>
-<li><a class="reference internal" href="#id30">Added</a></li>
+<li><a class="reference internal" href="#id31">2.2.1</a></li>
+<li><a class="reference internal" href="#id32">2.2.0</a><ul>
+<li><a class="reference internal" href="#id33">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id31">2.1.2</a><ul>
-<li><a class="reference internal" href="#id32">Added</a></li>
-<li><a class="reference internal" href="#id33">Fixed</a></li>
-<li><a class="reference internal" href="#id34">Removed</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id35">2.1.1</a><ul>
+<li><a class="reference internal" href="#id34">2.1.2</a><ul>
+<li><a class="reference internal" href="#id35">Added</a></li>
 <li><a class="reference internal" href="#id36">Fixed</a></li>
+<li><a class="reference internal" href="#id37">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id37">2.1.0</a><ul>
+<li><a class="reference internal" href="#id38">2.1.1</a><ul>
+<li><a class="reference internal" href="#id39">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id40">2.1.0</a><ul>
 <li><a class="reference internal" href="#adding">Adding</a></li>
-<li><a class="reference internal" href="#id38">Changed</a></li>
+<li><a class="reference internal" href="#id41">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">2.0.5</a></li>
-<li><a class="reference internal" href="#id40">2.0.4</a></li>
-<li><a class="reference internal" href="#id41">2.0.3</a></li>
-<li><a class="reference internal" href="#id42">2.0.2</a><ul>
-<li><a class="reference internal" href="#id43">Changed</a></li>
-<li><a class="reference internal" href="#id44">Fixed</a></li>
+<li><a class="reference internal" href="#id42">2.0.5</a></li>
+<li><a class="reference internal" href="#id43">2.0.4</a></li>
+<li><a class="reference internal" href="#id44">2.0.3</a></li>
+<li><a class="reference internal" href="#id45">2.0.2</a><ul>
+<li><a class="reference internal" href="#id46">Changed</a></li>
+<li><a class="reference internal" href="#id47">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id45">2.0.1</a><ul>
-<li><a class="reference internal" href="#id46">Fixed</a></li>
+<li><a class="reference internal" href="#id48">2.0.1</a><ul>
+<li><a class="reference internal" href="#id49">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id47">2.0.0</a><ul>
-<li><a class="reference internal" href="#id48">Added</a></li>
+<li><a class="reference internal" href="#id50">2.0.0</a><ul>
+<li><a class="reference internal" href="#id51">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id49">1.10.0</a><ul>
-<li><a class="reference internal" href="#id50">Added</a></li>
+<li><a class="reference internal" href="#id52">1.10.0</a><ul>
+<li><a class="reference internal" href="#id53">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id51">1.9.0</a><ul>
-<li><a class="reference internal" href="#id52">Added</a></li>
-<li><a class="reference internal" href="#id53">Removed</a></li>
+<li><a class="reference internal" href="#id54">1.9.0</a><ul>
+<li><a class="reference internal" href="#id55">Added</a></li>
+<li><a class="reference internal" href="#id56">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id54">1.8.1</a><ul>
+<li><a class="reference internal" href="#id57">1.8.1</a><ul>
 <li><a class="reference internal" href="#fixing">Fixing</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id55">1.8.0</a><ul>
-<li><a class="reference internal" href="#id56">Added</a></li>
-<li><a class="reference internal" href="#id57">Fixing</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id58">1.7.0</a><ul>
+<li><a class="reference internal" href="#id58">1.8.0</a><ul>
 <li><a class="reference internal" href="#id59">Added</a></li>
+<li><a class="reference internal" href="#id60">Fixing</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">1.6.0</a><ul>
-<li><a class="reference internal" href="#id61">Added</a></li>
-<li><a class="reference internal" href="#id62">Changed</a></li>
+<li><a class="reference internal" href="#id61">1.7.0</a><ul>
+<li><a class="reference internal" href="#id62">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id63">1.5.0</a><ul>
+<li><a class="reference internal" href="#id63">1.6.0</a><ul>
 <li><a class="reference internal" href="#id64">Added</a></li>
+<li><a class="reference internal" href="#id65">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id65">1.4.3</a></li>
-<li><a class="reference internal" href="#id66">1.4.2</a><ul>
-<li><a class="reference internal" href="#id67">Changed</a></li>
+<li><a class="reference internal" href="#id66">1.5.0</a><ul>
+<li><a class="reference internal" href="#id67">Added</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id68">1.4.1</a><ul>
-<li><a class="reference internal" href="#id69">Fixed</a></li>
+<li><a class="reference internal" href="#id68">1.4.3</a></li>
+<li><a class="reference internal" href="#id69">1.4.2</a><ul>
+<li><a class="reference internal" href="#id70">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id70">1.4.0</a><ul>
-<li><a class="reference internal" href="#id71">Adding</a></li>
-<li><a class="reference internal" href="#id72">Changed</a></li>
+<li><a class="reference internal" href="#id71">1.4.1</a><ul>
+<li><a class="reference internal" href="#id72">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id73">1.3.0</a><ul>
-<li><a class="reference internal" href="#id74">Added</a></li>
+<li><a class="reference internal" href="#id73">1.4.0</a><ul>
+<li><a class="reference internal" href="#id74">Adding</a></li>
 <li><a class="reference internal" href="#id75">Changed</a></li>
-<li><a class="reference internal" href="#id76">Fixed</a></li>
-<li><a class="reference internal" href="#id77">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id78">1.2.0</a><ul>
-<li><a class="reference internal" href="#id79">Added</a></li>
-<li><a class="reference internal" href="#id80">Changed</a></li>
+<li><a class="reference internal" href="#id76">1.3.0</a><ul>
+<li><a class="reference internal" href="#id77">Added</a></li>
+<li><a class="reference internal" href="#id78">Changed</a></li>
+<li><a class="reference internal" href="#id79">Fixed</a></li>
+<li><a class="reference internal" href="#id80">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id81">1.1.1</a><ul>
-<li><a class="reference internal" href="#id82">Fixed</a></li>
+<li><a class="reference internal" href="#id81">1.2.0</a><ul>
+<li><a class="reference internal" href="#id82">Added</a></li>
+<li><a class="reference internal" href="#id83">Changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id83">1.1.0</a><ul>
-<li><a class="reference internal" href="#id84">Added</a></li>
+<li><a class="reference internal" href="#id84">1.1.1</a><ul>
+<li><a class="reference internal" href="#id85">Fixed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id85">1.0.0</a><ul>
-<li><a class="reference internal" href="#id86">Added</a></li>
-<li><a class="reference internal" href="#id87">Removed</a></li>
+<li><a class="reference internal" href="#id86">1.1.0</a><ul>
+<li><a class="reference internal" href="#id87">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id88">1.0.0</a><ul>
+<li><a class="reference internal" href="#id89">Added</a></li>
+<li><a class="reference internal" href="#id90">Removed</a></li>
 </ul>
 </li>
 </ul>
@@ -1258,7 +1325,7 @@ Thanks to <a class="reference external" href="https://github.com/flo-rian">flo-r
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Apr 17 2026 at 14:37 (CET).
+    Last updated on Apr 18 2026 at 18:39 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.

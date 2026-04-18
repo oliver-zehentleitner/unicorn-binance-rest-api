@@ -9,7 +9,55 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
-## 2.10.0.dev (development stage/unreleased/unstable)
+## 2.11.0.dev (development stage/unreleased/unstable)
+
+## 2.11.0
+### Changed
+- `.github/workflows/unit-tests.yml`: removed the obsolete
+  `LUCIT_API_SECRET` / `LUCIT_LICENSE_TOKEN` environment block from
+  all Python-version test matrices. The LUCIT licensing manager was
+  removed from the codebase; these secrets are no longer referenced.
+- `examples/_archive/*.py` (11 files): updated file headers —
+  `PyPI: lucit-licensing-python` → `unicorn-binance-rest-api`,
+  `License: LSOSL` → `MIT`, and copyright from
+  `LUCIT Systems and Development` to `Oliver Zehentleitner`.
+- `examples/README.md`: removed the lucit.tech chat support link.
+- `SECURITY.md`: replaced the lucit.tech contact form URL with the
+  GitHub Security Advisories private-reporting URL.
+- `environment.yml`: dropped the `defaults` channel (conda-forge docs
+  recommend not mixing channels; Anaconda `defaults` requires a paid
+  license for enterprise use since 2024). Moved `service-identity` out
+  of the pip block into the main conda deps (now available on
+  conda-forge as `service_identity`), so the file is pure conda.
+- README: reworded the PyPy paragraph. The old sentence ("For the PyPy
+  interpreter we offer packages only from Python version 3.9 and
+  higher") made sense when we still shipped wheels for pre-3.9 CPython;
+  now that 3.9 is already the minimum for everything, it's just
+  noise. Replaced with a short "PyPy wheels are available for all
+  supported Python versions."
+- README: switched all conda references from the legacy `lucit` channel
+  to `conda-forge`. Added conda-forge version / downloads / feedstock
+  build badges. Removed the "There is no conda support until migration"
+  placeholders. Install section is now a single
+  `conda install -c conda-forge unicorn-binance-rest-api`.
+- Aligned dependency pins across `requirements.txt`, `setup.py`,
+  `pyproject.toml`, `environment.yml` and `meta.yaml` to the
+  newer minimums already used in `setup.py`
+  (`certifi>=2025.6.15`, `cryptography>=45.0.4`, `requests>=2.32.4`).
+- `meta.yaml`: removed the leftover `channels:` and `dependencies:`
+  blocks (they are `environment.yml` keys, not valid in `meta.yaml`).
+  Refreshed `about.description` by re-embedding the current `README.md`,
+  set `license: MIT` (was stale `LSOSL`).
+- `environment.yml`: dropped the `lucit` channel.
+### Removed
+- `ujson` dropped from `requirements.txt`, `setup.py`, `pyproject.toml`,
+  `environment.yml` and `meta.yaml`. UBRA never actually imports it —
+  the SDK decodes responses via `requests.Response.json()` (stdlib).
+  Suite-wide standard for JSON is now `orjson`, which UBRA doesn't need
+  either.
+- `.github/workflows/build_conda.yml`: the conda-forge feedstock
+  (`conda-forge/unicorn-binance-rest-api-feedstock`) now builds and
+  publishes the conda package; no in-repo build is needed anymore.
 
 ## 2.10.0
 ### Added
