@@ -4,7 +4,7 @@
 > Spot, Margin, Isolated Margin, Futures, COIN-M Futures, European Options, US and TR.
 > Part of [UNICORN Binance Suite](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
 
-Version: 2.10.x. Python 3.9 – 3.14.
+Version: 2.11.0. Python 3.9 – 3.14.
 
 Install: `pip install unicorn-binance-rest-api`
 Import: `from unicorn_binance_rest_api import BinanceRestApiManager`
