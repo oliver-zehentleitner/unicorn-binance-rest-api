@@ -14,7 +14,7 @@
 #
 # Author: Oliver Zehentleitner
 #
-# Copyright (c) 2022-2024, LUCIT Systems and Development (https://www.lucit.tech)
+# Copyright (c) 2022-2026, Oliver Zehentleitner (https://about.me/oliver-zehentleitner)
 # All rights reserved.
 
 from unicorn_binance_rest_api import BinanceRestApiManager

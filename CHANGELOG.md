@@ -11,6 +11,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 2.10.0.dev (development stage/unreleased/unstable)
 ### Changed
+- `.github/workflows/unit-tests.yml`: removed the obsolete
+  `LUCIT_API_SECRET` / `LUCIT_LICENSE_TOKEN` environment block from
+  all Python-version test matrices. The LUCIT licensing manager was
+  removed from the codebase; these secrets are no longer referenced.
+- `examples/_archive/*.py` (11 files): updated file headers —
+  `PyPI: lucit-licensing-python` → `unicorn-binance-rest-api`,
+  `License: LSOSL` → `MIT`, and copyright from
+  `LUCIT Systems and Development` to `Oliver Zehentleitner`.
+- `examples/README.md`: removed the lucit.tech chat support link.
+- `SECURITY.md`: replaced the lucit.tech contact form URL with the
+  GitHub Security Advisories private-reporting URL.
 - `environment.yml`: dropped the `defaults` channel (conda-forge docs
   recommend not mixing channels; Anaconda `defaults` requires a paid
   license for enterprise use since 2024). Moved `service-identity` out
