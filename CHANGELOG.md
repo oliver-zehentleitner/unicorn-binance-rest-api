@@ -10,6 +10,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
 ## 2.10.0.dev (development stage/unreleased/unstable)
+### Changed
+- README: switched all conda references from the legacy `lucit` channel
+  to `conda-forge`. Added conda-forge version / downloads / feedstock
+  build badges. Removed the "There is no conda support until migration"
+  placeholders. Install section is now a single
+  `conda install -c conda-forge unicorn-binance-rest-api`.
+### Removed
+- `.github/workflows/build_conda.yml`: the conda-forge feedstock
+  (`conda-forge/unicorn-binance-rest-api-feedstock`) now builds and
+  publishes the conda package; no in-repo build is needed anymore.
 
 ## 2.10.0
 ### Added
