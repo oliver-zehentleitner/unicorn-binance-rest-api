@@ -7,14 +7,14 @@
 # Project website: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
 # Github: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
 # Documentation: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/
-# PyPI: https://pypi.org/project/lucit-licensing-python
+# PyPI: https://pypi.org/project/unicorn-binance-rest-api
 #
-# License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/oliver-zehentleitner/lucit-licensing-python/blob/master/LICENSE
+# License: MIT
+# https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/LICENSE
 #
 # Author: Oliver Zehentleitner
 #
-# Copyright (c) 2021-2023, LUCIT Systems and Development (https://www.lucit.tech)
+# Copyright (c) 2021-2026, Oliver Zehentleitner (https://about.me/oliver-zehentleitner)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a

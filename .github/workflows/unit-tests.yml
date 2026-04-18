@@ -26,9 +26,6 @@ jobs:
         pip install coveralls
 
     - name: Run Unittest
-      env:
-        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
-        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
       run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
 
   test_python_3_10:
@@ -50,9 +47,6 @@ jobs:
         pip install coveralls
 
     - name: Run Unittest
-      env:
-        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
-        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
       run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
 
   test_python_3_11:
@@ -74,9 +68,6 @@ jobs:
         pip install coveralls
 
     - name: Run Unittest
-      env:
-        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
-        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
       run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
 
   test_python_3_12:
@@ -98,9 +89,6 @@ jobs:
         pip install coveralls
 
     - name: Run Unittest
-      env:
-        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
-        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
       run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
 
   test_python_3_13:
@@ -122,9 +110,6 @@ jobs:
         pip install coveralls
 
     - name: Run Unittest
-      env:
-        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
-        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
       run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
 
     - name: Upload coverage to Codecov
@@ -154,8 +139,5 @@ jobs:
         pip install coveralls
 
     - name: Run Unittest
-      env:
-        LUCIT_API_SECRET: ${{ secrets.LUCIT_API_SECRET }}
-        LUCIT_LICENSE_TOKEN: ${{ secrets.LUCIT_LICENSE_TOKEN }}
       run: coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
 
