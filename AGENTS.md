@@ -1,5 +1,8 @@
 # AGENTS.md — UNICORN Binance REST API
 
+> **End-user cheatsheet for AI-assisted consumption:** [`llms.txt`](llms.txt) — use that one if you're writing code *against* this SDK.
+> **This file** is for AI agents working *on* this repo itself.
+
 ## Planning & Backlog
 
 Open development tasks and decisions are tracked in **[TASKS.md](TASKS.md)**.

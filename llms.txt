@@ -115,6 +115,7 @@ Each of these can be given an existing `BinanceRestApiManager` via `ubra_manager
 ## Docs
 
 - Repo: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+- AGENTS.md (for AI agents working on this repo): https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/AGENTS.md
 - Docs: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/
 - Full method reference: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html
 - PyPI: https://pypi.org/project/unicorn-binance-rest-api/
