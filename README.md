@@ -172,6 +172,9 @@ The module requires Python 3.9 and runs smoothly up to and including Python 3.14
 
 PyPy wheels are available for all supported Python versions.
 
+**conda-forge note:** Conda packages are provided for Python 3.10 – 3.14. Python 3.9 is not available on conda-forge — it was dropped from the global pinning after reaching end-of-life in October 2025. For Python 3.9, use `pip install`.
+
+
 The current dependencies are listed 
 [here](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/requirements.txt).
 
