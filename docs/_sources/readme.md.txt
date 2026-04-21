@@ -13,7 +13,7 @@
 [![Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml)
 [![Conda-Forge Build](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/unicorn-binance-rest-api-feedstock?branchName=main)](https://github.com/conda-forge/unicorn-binance-rest-api-feedstock)
 [![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/)
-[![Read How To`s](https://img.shields.io/badge/read-%20howto-yellow)](https://technopathy.club)
+[![Read How To`s](https://img.shields.io/badge/read-%20howto-yellow)](https://blog.technopathy.club)
 [![Github](https://img.shields.io/badge/source-github-cbc2c8)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 [![Telegram](https://img.shields.io/badge/community-telegram-41ab8c)](https://t.me/unicorndevs)
 
@@ -21,10 +21,8 @@
 
 # UNICORN Binance REST API
 
-[Description](#description) | [Installation](#installation-and-upgrade) | [How To](#howto) |
-[Documentation](#documentation) | [Examples](#examples) | [Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) |
-[Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) | 
-[Contributing](#contributing) | [Disclaimer](#disclaimer)
+[Description](#description) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | [Examples](#examples) | [Change Log](#change-log) | 
+[Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Disclaimer](#disclaimer)
 
 A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, 
 com-futures+testnet, com-vanilla-options+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way. 
@@ -172,6 +170,9 @@ The module requires Python 3.9 and runs smoothly up to and including Python 3.14
 
 PyPy wheels are available for all supported Python versions.
 
+**conda-forge note:** Conda packages are provided for Python 3.10 – 3.14. Python 3.9 is not available on conda-forge — it was dropped from the global pinning after reaching end-of-life in October 2025. For Python 3.9, use `pip install`.
+
+
 The current dependencies are listed 
 [here](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/blob/master/requirements.txt).
 
@@ -255,11 +256,12 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-b
 ## Examples
 - [Look here!](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/tree/master/examples/)
 
-## Howto
-- [Restful Binance Requests in Python with UNICORN Binance REST API](https://technopathy.club/restful-binance-requests-in-python-with-unicorn-binance-rest-api-288f364e92a8)
-- [How to Download Klines from Binance using Python?](https://technopathy.club/how-to-download-data-from-binance-using-python-8f1b6e8f19f3)
-- [How to Connect to binance.com REST API using Python via a SOCKS5 Proxy](https://technopathy.club/how-to-connect-to-binance-com-rest-api-using-python-via-a-socks5-proxy-638dbbecacfd)
-- [Buy an Asset and instantly create a Take Profit and Stop Loss OCO Sell Order using Python in Binance Isolated Margin](https://technopathy.club/buy-an-asset-and-instantly-create-a-take-profit-and-stop-loss-oco-sell-order-using-python-in-5d68a5d22a9b)
+## Related Articles
+- [Restful Binance Requests in Python with UNICORN Binance REST API](https://blog.technopathy.club/restful-binance-requests-in-python-with-unicorn-binance-rest-api)
+- [How to Download Klines from Binance using Python?](https://blog.technopathy.club/how-to-download-klines-from-binance-using-python)
+- [How to Connect to binance.com REST API using Python via a SOCKS5 Proxy](https://blog.technopathy.club/how-to-connect-to-binance-com-rest-api-using-python-via-a-socks5-proxy)
+- [Buy an Asset and instantly create a Take Profit and Stop Loss OCO Sell Order using Python in Binance Isolated Margin](https://blog.technopathy.club/buy-an-asset-and-instantly-create-a-take-profit-and-stop-loss-oco-sell-order-using-python-in-binance-isolated-margin)
+- [UNICORN Binance Suite Article Series](https://blog.technopathy.club/series/unicorn-binance-suite)
 
 ## Project Homepage
 [https://github.com/oliver-zehentleitner/unicorn-binance-rest-api](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
