@@ -257,6 +257,7 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-b
 - [Look here!](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/tree/master/examples/)
 
 ## Related Articles
+- [How to create a Binance API Key and API Secret?](https://blog.technopathy.club/how-to-create-a-binance-api-key-and-api-secret)
 - [Restful Binance Requests in Python with UNICORN Binance REST API](https://blog.technopathy.club/restful-binance-requests-in-python-with-unicorn-binance-rest-api)
 - [How to Download Klines from Binance using Python?](https://blog.technopathy.club/how-to-download-klines-from-binance-using-python)
 - [How to Connect to binance.com REST API using Python via a SOCKS5 Proxy](https://blog.technopathy.club/how-to-connect-to-binance-com-rest-api-using-python-via-a-socks5-proxy)
