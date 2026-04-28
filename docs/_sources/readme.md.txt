@@ -1,4 +1,4 @@
-> ⚠️ Security Warning: There are currently fraudulent repositories (e.g., under the user gesine1541ro7) impersonating this project to distribute malware. Please ensure you are only using the official source: oliver-zehentleitner/unicorn-binance-websocket-api.
+> ⚠️ Security Warning: There are currently fraudulent repositories (e.g., under the user gesine1541ro7) impersonating `unicorn-binance-websocket-api` to distribute malware. Please ensure you are only using the official source: oliver-zehentleitner/unicorn-binance-websocket-api.
 [Read the full technical analysis and campaign details here!](https://blog.technopathy.club/security-warning-fraudulent-github-repository-impersonating-unicorn-binance-websocket-api)
 
 [![GitHub Release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-binance-rest-api.svg?label=github&color=blue)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases)
