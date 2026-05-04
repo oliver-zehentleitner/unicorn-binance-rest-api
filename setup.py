@@ -15,7 +15,7 @@
 # Author: Oliver Zehentleitner
 #
 # Copyright (c) 2017-2021, MIT License, Sam McHardy (https://github.com/sammchardy)
-# Copyright (c) 2021-2025, Oliver Zehentleitner (https://about.me/oliver-zehentleitner)
+# Copyright (c) 2021-2026, Oliver Zehentleitner (https://about.me/oliver-zehentleitner)
 #
 # All rights reserved.
 #

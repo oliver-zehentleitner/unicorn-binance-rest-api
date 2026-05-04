@@ -131,7 +131,7 @@ python setup.py bdist_wheel
 
 ## Code Conventions
 
-- **File header:** Always include the full MIT license block with dual copyright (2017-2021 Sam McHardy + 2021-2025 Oliver Zehentleitner)
+- **File header:** Always include the full MIT license block with dual copyright (2017-2021 Sam McHardy + 2021-2026 Oliver Zehentleitner)
 - **Encoding:** UTF-8, UNIX line endings
 - **Logging:** `logging.getLogger("unicorn_binance_rest_api")`
 - **JSON:** `ujson` — do not switch to stdlib `json` or `simplejson`
