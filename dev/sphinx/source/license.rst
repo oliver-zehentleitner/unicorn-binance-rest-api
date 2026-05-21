@@ -2,7 +2,7 @@ MIT License
 ===========
 
 Copyright (c) 2017-2021 Sam McHardy, https://github.com/sammchardy
-Copyright (c) 2021-2025 Oliver Zehentleitner, https://about.me/oliver-zehentleitner
+Copyright (c) 2021-2026 Oliver Zehentleitner, https://about.me/oliver-zehentleitner
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
