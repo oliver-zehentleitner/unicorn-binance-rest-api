@@ -124,6 +124,10 @@ except BinanceAPIException as e:
 
 Each of these can be given an existing `BinanceRestApiManager` via `ubra_manager=...` to share a single instance across the suite.
 
+## Related Articles
+
+- [The Complete Binance Python API Guide 2026](https://blog.technopathy.club/the-complete-binance-python-api-guide-2026) — comprehensive 2026 overview of building Binance trading systems in Python; positions UBRA within the UNICORN Binance Suite landscape (UBWA, UBRA, UBLDC, UBDCC, UBTSL, UnicornFy) and helps users pick the right module.
+
 ## Docs
 
 - Repo: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
