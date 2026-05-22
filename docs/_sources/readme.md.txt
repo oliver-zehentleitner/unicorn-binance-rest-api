@@ -1,6 +1,3 @@
-> ⚠️ Security Warning: There are currently fraudulent repositories (e.g., under the user gesine1541ro7) impersonating `unicorn-binance-websocket-api` to distribute malware. Please ensure you are only using the official source: oliver-zehentleitner/unicorn-binance-websocket-api.
-[Read the full technical analysis and campaign details here!](https://blog.technopathy.club/security-warning-fraudulent-github-repository-impersonating-unicorn-binance-websocket-api)
-
 [![GitHub Release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-binance-rest-api.svg?label=github&color=blue)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases)
 [![GitHub Downloads](https://img.shields.io/github/downloads/oliver-zehentleitner/unicorn-binance-rest-api/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases)
 [![PyPi Release](https://img.shields.io/pypi/v/unicorn-binance-rest-api?color=blue)](https://pypi.org/project/unicorn-binance-rest-api/)
@@ -19,6 +16,7 @@
 [![Read How To`s](https://img.shields.io/badge/read-%20howto-yellow)](https://blog.technopathy.club/series/unicorn-binance-suite)
 [![Github](https://img.shields.io/badge/source-github-cbc2c8)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api)
 [![Telegram](https://img.shields.io/badge/community-telegram-41ab8c)](https://t.me/unicorndevs)
+[![Reddit](https://img.shields.io/badge/community-reddit-41ab8c)](https://www.reddit.com/r/UNICORNBinanceSuite)
 
 [![UBS-Banner](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/master/images/logo/UBS-Banner-Readme.png)](https://github.com/oliver-zehentleitner/unicorn-binance-suite)
 
