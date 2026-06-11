@@ -28,7 +28,7 @@
 A Python SDK to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, 
 com-futures+testnet, com-vanilla-options+testnet, us, tr) in a simple, fast, flexible, robust and fully-featured way. 
 
-Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
+Part of '[UNICORN Binance Suite](https://blog.technopathy.club/page/unicorn-binance-suite)'.
 
 ## Receive Data from Binance REST API Endpoints
 
