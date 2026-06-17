@@ -97,6 +97,7 @@ setup(
          'Wiki': 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/wiki',
          'Author': 'https://www.linkedin.com/in/oliver-zehentleitner',
          'Telegram': 'https://t.me/unicorndevs',
+         'Umbrella Project': 'https://github.com/oliver-zehentleitner/unicorn-binance-suite',
      },
      packages=find_packages(exclude=[f"dev/{source_dir}"], include=[source_dir]),
      ext_modules=cythonize(extensions, compiler_directives={'language_level': "3"}),
