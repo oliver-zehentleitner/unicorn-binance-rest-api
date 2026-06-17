@@ -38,6 +38,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+python3 -m pip install pip --upgrade
 python3 -m pip install sphinx --upgrade
 python3 -m pip install python-docs-theme-ubs --upgrade
 python3 -m pip install rich --upgrade
