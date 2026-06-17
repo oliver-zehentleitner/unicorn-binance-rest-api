@@ -89,7 +89,7 @@ setup(
                        "requests>=2.32.4", 'service-identity', 'regex', 'PySocks', 'Cython'],
      keywords='',
      project_urls={
-         'Howto': 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api#howto',
+         'Howto': 'https://github.com/oliver-zehentleitner/unicorn-binance-rest-api#related-articles',
          'Documentation': 'https://oliver-zehentleitner.github.io/unicorn-binance-rest-api',
          'Changes': 'https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/changelog.html',
          'License': 'https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/license.html',
