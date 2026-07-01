@@ -417,5 +417,53 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
                 print(f"ERROR: {error_msg}")
 
 
+class TestBinancePortfolioMarginRestManager(unittest.TestCase):
+    """Tests for Portfolio Margin (PAPI) listenKey management."""
+
+    @classmethod
+    def setUpClass(cls):
+        print(f"\r\nTestBinancePortfolioMarginRestManager:")
+        cls.ubra = BinanceRestApiManager('api_key', 'api_secret', exchange="binance.com-portfolio_margin")
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.ubra.stop_manager()
+
+    def test_papi_url_init(self):
+        """Test that PAPI_URL is set correctly for the `binance.com-portfolio_margin` exchange."""
+        self.assertEqual(self.ubra.PAPI_URL, "https://papi.binance.com/papi")
+        self.assertEqual(self.ubra.PAPI_API_VERSION, "v1")
+
+    def test_papi_uri_builder(self):
+        """Test that _create_papi_api_uri builds correct URIs."""
+        uri = self.ubra._create_papi_api_uri('listenKey')
+        self.assertEqual(uri, "https://papi.binance.com/papi/v1/listenKey")
+
+    def test_portfolio_margin_stream_get_listen_key(self):
+        with requests_mock.mock() as m:
+            m.post('https://papi.binance.com/papi/v1/listenKey',
+                   json={"listenKey": "pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1"})
+            listen_key = self.ubra.portfolio_margin_stream_get_listen_key()
+            self.assertEqual(listen_key, "pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1")
+
+    def test_portfolio_margin_stream_get_listen_key_raw_data(self):
+        with requests_mock.mock() as m:
+            m.post('https://papi.binance.com/papi/v1/listenKey', json={"listenKey": "abc"})
+            result = self.ubra.portfolio_margin_stream_get_listen_key(output="raw_data")
+            self.assertEqual(result, {"listenKey": "abc"})
+
+    def test_portfolio_margin_stream_keepalive(self):
+        with requests_mock.mock() as m:
+            m.put('https://papi.binance.com/papi/v1/listenKey', json={})
+            result = self.ubra.portfolio_margin_stream_keepalive(listenKey="abc")
+            self.assertEqual(result, {})
+
+    def test_portfolio_margin_stream_close(self):
+        with requests_mock.mock() as m:
+            m.delete('https://papi.binance.com/papi/v1/listenKey', json={})
+            result = self.ubra.portfolio_margin_stream_close(listenKey="abc")
+            self.assertEqual(result, {})
+
+
 if __name__ == '__main__':
     unittest.main()

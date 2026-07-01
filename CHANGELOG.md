@@ -10,6 +10,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#installation-and-upgrade)
 
 ## 2.11.0.dev (development stage/unreleased/unstable)
+### Added
+- Portfolio Margin support (`binance.com-portfolio_margin` exchange), scoped
+  to user data stream `listenKey` management for now:
+  - `manager.py`: `PAPI_URL`/`PAPI_API_VERSION`, `_create_papi_api_uri()`,
+    `_request_papi_api()`, `portfolio_margin_stream_get_listen_key()`,
+    `portfolio_margin_stream_keepalive()`, `portfolio_margin_stream_close()`.
+  - This is the minimum UBRA needs to let
+    [UBWA](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api)
+    open Portfolio Margin user data streams (see
+    [issue #452](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/issues/452)).
+    Broader Portfolio Margin REST coverage is deferred to the planned UBRA
+    rewrite.
 
 ## 2.11.0
 ### Changed

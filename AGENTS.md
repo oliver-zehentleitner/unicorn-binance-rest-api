@@ -54,8 +54,18 @@ dev/sphinx/                    # Sphinx source for rebuilding docs
 | `binance.com-futures` | Binance.com USDT-M Futures |
 | `binance.com-futures-testnet` | Binance.com USDT-M Futures Testnet |
 | `binance.com-coin_futures` | Binance.com Coin-M Futures |
+| `binance.com-portfolio_margin` | Binance.com Portfolio Margin (listenKey management only, see below) |
 | `binance.us` | Binance.US |
 | `trbinance.com` | TRBinance.com |
+
+Portfolio Margin (`binance.com-portfolio_margin`) is scoped to the PAPI
+`listenKey` endpoints only — `portfolio_margin_stream_get_listen_key()`,
+`portfolio_margin_stream_keepalive()`, `portfolio_margin_stream_close()`
+(`PAPI_URL = https://papi.binance.com/papi`). This is the minimum UBRA needs
+so that UBWA can open a Portfolio Margin user data stream. The rest of the
+PAPI surface (account, positions, orders, etc.) is intentionally not
+implemented yet — a full UBRA rewrite (unifying async/sync) is planned and
+that's where broader Portfolio Margin coverage will be designed properly.
 
 ---
 
