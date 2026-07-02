@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>unicorn_binance_rest_api package &#8212; unicorn-binance-rest-api 2.11.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicorn_binance_rest_api package &#8212; unicorn-binance-rest-api 2.12.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -136,6 +136,8 @@
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS_LIMIT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_TYPE_STOP_LOSS_LIMIT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PAPI_API_VERSION</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_URL"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PAPI_URL</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PRIVATE_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PRIVATE_API_VERSION</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PUBLIC_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PUBLIC_API_VERSION</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_BUY"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.SIDE_BUY</span></code></a></li>
@@ -378,6 +380,9 @@
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_oco_buy"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_oco_buy()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_oco_sell"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_oco_sell()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ping"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ping()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_close"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.portfolio_margin_stream_close()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_get_listen_key"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.portfolio_margin_stream_get_listen_key()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_keepalive"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.portfolio_margin_stream_keepalive()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.purchase_lending_product"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.purchase_lending_product()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.query_subaccount_spot_summary"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.query_subaccount_spot_summary()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.query_universal_transfer_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.query_universal_transfer_history()</span></code></a></li>
@@ -972,6 +977,16 @@ This overrules parameter <cite>tld</cite>.</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT">
 <span class="sig-name descname"><span class="pre">ORDER_TYPE_TAKE_PROFIT_LIMIT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TAKE_PROFIT_LIMIT'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_API_VERSION">
+<span class="sig-name descname"><span class="pre">PAPI_API_VERSION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'v1'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_API_VERSION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_URL">
+<span class="sig-name descname"><span class="pre">PAPI_URL</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://papi.binance.com/papi'</span></span><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_URL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -7048,6 +7063,90 @@ BinanceOrderInactiveSymbolException</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_close">
+<span class="sig-name descname"><span class="pre">portfolio_margin_stream_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">listenKey</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.portfolio_margin_stream_close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_close" title="Link to this definition">¶</a></dt>
+<dd><p>Close out a Portfolio Margin user data stream.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams">https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listenKey</strong> (<em>str</em>) – required</p></li>
+<li><p><strong>throw_exception</strong> (<em>bool</em>) – Default <cite>True</cite>, if <cite>False</cite> the raw response will be returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>API response</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p>BinanceRequestException, BinanceAPIException</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_get_listen_key">
+<span class="sig-name descname"><span class="pre">portfolio_margin_stream_get_listen_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.portfolio_margin_stream_get_listen_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_get_listen_key" title="Link to this definition">¶</a></dt>
+<dd><p>Start a new Portfolio Margin user data stream and return the listen key.
+If a stream already exists it should return the same key.
+If the stream becomes invalid a new key is returned.</p>
+<p>Can be used to keep the stream alive.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams">https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output</strong> (<em>str</em>) – Set <cite>output</cite> to “raw_data” to receive the request resource, default is “value” which returns
+the plain listenKey.</p></li>
+<li><p><strong>throw_exception</strong> (<em>bool</em>) – Default <cite>True</cite>, if <cite>False</cite> the raw response will be returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>API response</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;listenKey&quot;</span><span class="p">:</span> <span class="s2">&quot;pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p>BinanceRequestException, BinanceAPIException</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_keepalive">
+<span class="sig-name descname"><span class="pre">portfolio_margin_stream_keepalive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">listenKey</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.portfolio_margin_stream_keepalive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_keepalive" title="Link to this definition">¶</a></dt>
+<dd><p>PING a Portfolio Margin user data stream to prevent a timeout.</p>
+<p><a class="reference external" href="https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams">https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>listenKey</strong> (<em>str</em>) – required</p></li>
+<li><p><strong>throw_exception</strong> (<em>bool</em>) – Default <cite>True</cite>, if <cite>False</cite> the raw response will be returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>API response</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p>BinanceRequestException, BinanceAPIException</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="unicorn_binance_rest_api.manager.BinanceRestApiManager.purchase_lending_product">
 <span class="sig-name descname"><span class="pre">purchase_lending_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/unicorn_binance_rest_api/manager.html#BinanceRestApiManager.purchase_lending_product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.purchase_lending_product" title="Link to this definition">¶</a></dt>
 <dd><p>Purchase Flexible Product</p>
@@ -7668,6 +7767,8 @@ Default false.</p></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_STOP_LOSS_LIMIT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_TYPE_STOP_LOSS_LIMIT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ORDER_TYPE_TAKE_PROFIT_LIMIT</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PAPI_API_VERSION</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PAPI_URL"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PAPI_URL</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PRIVATE_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PRIVATE_API_VERSION</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.PUBLIC_API_VERSION"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.PUBLIC_API_VERSION</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.SIDE_BUY"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.SIDE_BUY</span></code></a></li>
@@ -7910,6 +8011,9 @@ Default false.</p></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_oco_buy"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_oco_buy()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.order_oco_sell"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.order_oco_sell()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.ping"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.ping()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_close"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.portfolio_margin_stream_close()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_get_listen_key"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.portfolio_margin_stream_get_listen_key()</span></code></a></li>
+<li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_keepalive"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.portfolio_margin_stream_keepalive()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.purchase_lending_product"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.purchase_lending_product()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.query_subaccount_spot_summary"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.query_subaccount_spot_summary()</span></code></a></li>
 <li><a class="reference internal" href="#unicorn_binance_rest_api.manager.BinanceRestApiManager.query_universal_transfer_history"><code class="docutils literal notranslate"><span class="pre">BinanceRestApiManager.query_universal_transfer_history()</span></code></a></li>
@@ -8040,7 +8144,7 @@ Default false.</p></li>
     <a href="https://oliver-zehentleitner.github.io/unicorn-binance-suite/docs_index.html">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Jun 17 2026 at 09:58 (CET).
+    Last updated on Jul 02 2026 at 11:26 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.

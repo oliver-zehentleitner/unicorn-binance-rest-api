@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>UNICORN Binance REST API &#8212; unicorn-binance-rest-api 2.11.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNICORN Binance REST API &#8212; unicorn-binance-rest-api 2.12.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -396,6 +396,10 @@ combination.</p>
 <td><code>binance.com-vanilla-options-testnet</code></td>
 </tr>
 <tr>
+<td><a href="https://www.binance.com">Binance Portfolio Margin</a>*</td>
+<td><code>binance.com-portfolio_margin</code></td>
+</tr>
+<tr>
 <td><a href="https://www.binance.us">Binance US</a></td>
 <td><code>binance.us</code></td>
 </tr>
@@ -405,6 +409,13 @@ combination.</p>
 </tr>
 </tbody>
 </table>
+<p>* Portfolio Margin support is currently limited to user data stream
+<code class="docutils literal notranslate"><span class="pre">listenKey</span></code> management (<code class="docutils literal notranslate"><span class="pre">portfolio_margin_stream_get_listen_key()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">portfolio_margin_stream_keepalive()</span></code>, <code class="docutils literal notranslate"><span class="pre">portfolio_margin_stream_close()</span></code>) —
+needed for <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UBWA</a>
+to open Portfolio Margin user data streams. The full set of Portfolio
+Margin REST endpoints (account, positions, orders, etc.) is not covered
+yet — contributions welcome!</p>
 <ul>
 <li><p>Helpful management features like
 <a class="reference external" href="https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.get_used_weight"><code class="docutils literal notranslate"><span class="pre">get_used_weight()</span></code></a>,</p></li>
@@ -487,9 +498,9 @@ this may take some time!</p>
 </section>
 <section id="windows">
 <h4>Windows<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h4>
-<p>Use the below command with the version (such as 2.11.0) you determined
+<p>Use the below command with the version (such as 2.12.0) you determined
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/releases/latest">here</a>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/2.11.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/archive/2.12.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
 </section>
 </section>
 <section id="from-the-latest-source-dev-stage-with-pip-from-github">
@@ -803,7 +814,7 @@ companies from the US analyze binance.com market data - as long as they do not t
     <a href="https://oliver-zehentleitner.github.io/unicorn-binance-suite/docs_index.html">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Jun 17 2026 at 09:58 (CET).
+    Last updated on Jul 02 2026 at 11:26 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.

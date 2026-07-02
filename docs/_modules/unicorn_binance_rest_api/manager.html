@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>unicorn_binance_rest_api.manager &#8212; unicorn-binance-rest-api 2.11.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicorn_binance_rest_api.manager &#8212; unicorn-binance-rest-api 2.12.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="../../_static/pydoctheme.css?v=fdf8e9ae" />
@@ -40,7 +40,7 @@
         <nav class="menu" role="navigation" aria-label="main navigation">
             <p class="logo">
                 <div style="text-align: center;">
-                    <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite">
+                    <a href="https://blog.technopathy.club/page/unicorn-binance-suite">
                         <img src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/refs/heads/master/images/logo/UBS-Logo.png">
                     </a>
                 </div>
@@ -186,7 +186,7 @@
 
 
 <span class="n">__app_name__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;unicorn-binance-rest-api&quot;</span>
-<span class="n">__version__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;2.11.0.dev&quot;</span>
+<span class="n">__version__</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;2.12.0.dev&quot;</span>
 <span class="n">__logger__</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;unicorn_binance_rest_api&quot;</span><span class="p">)</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">__logger__</span>
@@ -253,6 +253,8 @@
     <span class="n">FUTURES_API_VERSION2</span> <span class="o">=</span> <span class="s2">&quot;v2&quot;</span>
     <span class="n">OPTIONS_URL</span> <span class="o">=</span> <span class="s1">&#39;https://eapi.binance.com/eapi&#39;</span>
     <span class="n">OPTIONS_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;v1&#39;</span>
+    <span class="n">PAPI_URL</span> <span class="o">=</span> <span class="s1">&#39;https://papi.binance.com/papi&#39;</span>
+    <span class="n">PAPI_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;v1&#39;</span>
 
     <span class="n">SYMBOL_TYPE_SPOT</span> <span class="o">=</span> <span class="s1">&#39;SPOT&#39;</span>
 
@@ -477,6 +479,15 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.trbinance.com/futures/data&quot;</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.trbinance.com/fapi&quot;</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://dapi.trbinance.com/futures/data&quot;</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">exchange</span> <span class="o">==</span> <span class="s2">&quot;binance.com-portfolio_margin&quot;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;https://api.binance.com/api&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">MARGIN_API_URL</span> <span class="o">=</span> <span class="s2">&quot; https://api.binance.com/sapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">WEBSITE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.binance.com&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.binance.com/fapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.binance.com/futures/data&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_URL</span> <span class="o">=</span> <span class="s2">&quot;https://fapi.binance.com/fapi&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_COIN_DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://dapi.binance.com/futures/data&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">PAPI_URL</span> <span class="o">=</span> <span class="s2">&quot;https://papi.binance.com/papi&quot;</span>
             <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">exchange</span> <span class="o">==</span> <span class="s2">&quot;binance.com-vanilla-options&quot;</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;https://api.binance.com/api&quot;</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">MARGIN_API_URL</span> <span class="o">=</span> <span class="s2">&quot; https://api.binance.com/sapi&quot;</span>
@@ -593,6 +604,10 @@
         <span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_API_VERSION</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">FUTURES_API_VERSION2</span><span class="p">}</span>
         <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">options</span><span class="p">[</span><span class="n">version</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">path</span>
 
+    <span class="k">def</span><span class="w"> </span><span class="nf">_create_papi_api_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">PAPI_API_VERSION</span><span class="p">}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">PAPI_URL</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">options</span><span class="p">[</span><span class="n">version</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">path</span>
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_generate_signature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="n">ordered_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_order_params</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="n">query_string</span> <span class="o">=</span> <span class="s1">&#39;&amp;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ordered_data</span><span class="p">])</span>
@@ -708,6 +723,10 @@
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_request_futures_api</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_futures_api_uri</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">signed</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_request_papi_api</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_papi_api_uri</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">signed</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_request_futures_data_api</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -7300,6 +7319,100 @@
                                          <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
+    <span class="c1"># Portfolio Margin API</span>
+<div class="viewcode-block" id="BinanceRestApiManager.portfolio_margin_stream_get_listen_key">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_get_listen_key">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">portfolio_margin_stream_get_listen_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start a new Portfolio Margin user data stream and return the listen key.</span>
+<span class="sd">        If a stream already exists it should return the same key.</span>
+<span class="sd">        If the stream becomes invalid a new key is returned.</span>
+
+<span class="sd">        Can be used to keep the stream alive.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams</span>
+
+<span class="sd">        :param output: Set `output` to &quot;raw_data&quot; to receive the request resource, default is &quot;value&quot; which returns</span>
+<span class="sd">                        the plain listenKey.</span>
+<span class="sd">        :type output: str</span>
+<span class="sd">        :param throw_exception: Default `True`, if `False` the raw response will be returned.</span>
+<span class="sd">        :type throw_exception: bool</span>
+<span class="sd">        :returns: API response</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {</span>
+<span class="sd">                &quot;listenKey&quot;: &quot;pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1&quot;</span>
+<span class="sd">            }</span>
+
+<span class="sd">        :raises: BinanceRequestException, BinanceAPIException</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_papi_api</span><span class="p">(</span><span class="s1">&#39;post&#39;</span><span class="p">,</span> <span class="s1">&#39;listenKey&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{},</span>
+                                     <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">output</span> <span class="o">==</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="s1">&#39;listenKey&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">output</span> <span class="o">==</span> <span class="s2">&quot;raw_data&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="s1">&#39;listenKey&#39;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.portfolio_margin_stream_keepalive">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_keepalive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">portfolio_margin_stream_keepalive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">listenKey</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;PING a Portfolio Margin user data stream to prevent a timeout.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams</span>
+
+<span class="sd">        :param listenKey: required</span>
+<span class="sd">        :type listenKey: str</span>
+<span class="sd">        :param throw_exception: Default `True`, if `False` the raw response will be returned.</span>
+<span class="sd">        :type throw_exception: bool</span>
+
+<span class="sd">        :returns: API response</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {}</span>
+
+<span class="sd">        :raises: BinanceRequestException, BinanceAPIException</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;listenKey&#39;</span><span class="p">:</span> <span class="n">listenKey</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_papi_api</span><span class="p">(</span><span class="s1">&#39;put&#39;</span><span class="p">,</span> <span class="s1">&#39;listenKey&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
+                                      <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BinanceRestApiManager.portfolio_margin_stream_close">
+<a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.portfolio_margin_stream_close">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">portfolio_margin_stream_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">listenKey</span><span class="p">,</span> <span class="n">throw_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Close out a Portfolio Margin user data stream.</span>
+
+<span class="sd">        https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams</span>
+
+<span class="sd">        :param listenKey: required</span>
+<span class="sd">        :type listenKey: str</span>
+<span class="sd">        :param throw_exception: Default `True`, if `False` the raw response will be returned.</span>
+<span class="sd">        :type throw_exception: bool</span>
+
+<span class="sd">        :returns: API response</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {}</span>
+
+<span class="sd">        :raises: BinanceRequestException, BinanceAPIException</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;listenKey&#39;</span><span class="p">:</span> <span class="n">listenKey</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_papi_api</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span> <span class="s1">&#39;listenKey&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
+                                      <span class="n">throw_exception</span><span class="o">=</span><span class="n">throw_exception</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
     <span class="c1"># COIN Futures API</span>
 <div class="viewcode-block" id="BinanceRestApiManager.futures_coin_ping">
 <a class="viewcode-back" href="../../unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.futures_coin_ping">[docs]</a>
@@ -8353,7 +8466,7 @@
         <div class="sphinxsidebarwrapper">
             <p class="logo">
                 <div style="text-align: center;">
-                    <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite"><img src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/refs/heads/master/images/logo/UBS-Logo.png"></a><br>
+                    <a href="https://blog.technopathy.club/page/unicorn-binance-suite"><img src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/refs/heads/master/images/logo/UBS-Logo.png"></a><br>
                 </div>
             </p>
 <div id="searchbox" style="display: block" role="search">
@@ -8432,10 +8545,10 @@
       </ul>
     </div>  
     <div class="footer">
-    <a href="https://github.com/oliver-zehentleitner/unicorn-binance-suite#documentation">Index of all docs</a><br />
+    <a href="https://oliver-zehentleitner.github.io/unicorn-binance-suite/docs_index.html">Index of all docs</a><br />
     &copy; <a href="/license.html">Copyright</a> 2021-2025, Oliver Zehentleitner All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on May 21 2026 at 17:57 (CET).
+    Last updated on Jul 02 2026 at 11:26 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
