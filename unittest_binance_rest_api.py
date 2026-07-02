@@ -423,7 +423,13 @@ class TestBinancePortfolioMarginRestManager(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print(f"\r\nTestBinancePortfolioMarginRestManager:")
-        cls.ubra = BinanceRestApiManager('api_key', 'api_secret', exchange="binance.com-portfolio_margin")
+        # `binance.com-portfolio_margin` triggers a live get_server_time() call against
+        # binance.com during __init__ (timestamp offset sync) - blocked on US-based CI
+        # runners ("restricted location"). Use binance.us for init (works from CI), same
+        # workaround as TestBinanceOptionsRestManager, then override PAPI_URL manually.
+        cls.ubra = BinanceRestApiManager('api_key', 'api_secret', exchange="binance.us")
+        cls.ubra.PAPI_URL = "https://papi.binance.com/papi"
+        cls.ubra.PAPI_API_VERSION = "v1"
 
     @classmethod
     def tearDownClass(cls):
