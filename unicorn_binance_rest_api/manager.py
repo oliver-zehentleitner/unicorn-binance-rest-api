@@ -122,6 +122,8 @@ class BinanceRestApiManager(object):
     FUTURES_API_VERSION2 = "v2"
     OPTIONS_URL = 'https://eapi.binance.com/eapi'
     OPTIONS_API_VERSION = 'v1'
+    PAPI_URL = 'https://papi.binance.com/papi'
+    PAPI_API_VERSION = 'v1'
 
     SYMBOL_TYPE_SPOT = 'SPOT'
 
@@ -346,6 +348,15 @@ class BinanceRestApiManager(object):
                 self.FUTURES_DATA_URL = "https://fapi.trbinance.com/futures/data"
                 self.FUTURES_COIN_URL = "https://fapi.trbinance.com/fapi"
                 self.FUTURES_COIN_DATA_URL = "https://dapi.trbinance.com/futures/data"
+            elif self.exchange == "binance.com-portfolio_margin":
+                self.API_URL = "https://api.binance.com/api"
+                self.MARGIN_API_URL = " https://api.binance.com/sapi"
+                self.WEBSITE_URL = "https://www.binance.com"
+                self.FUTURES_URL = "https://fapi.binance.com/fapi"
+                self.FUTURES_DATA_URL = "https://fapi.binance.com/futures/data"
+                self.FUTURES_COIN_URL = "https://fapi.binance.com/fapi"
+                self.FUTURES_COIN_DATA_URL = "https://dapi.binance.com/futures/data"
+                self.PAPI_URL = "https://papi.binance.com/papi"
             elif self.exchange == "binance.com-vanilla-options":
                 self.API_URL = "https://api.binance.com/api"
                 self.MARGIN_API_URL = " https://api.binance.com/sapi"
@@ -462,6 +473,10 @@ class BinanceRestApiManager(object):
         options = {1: self.FUTURES_API_VERSION, 2: self.FUTURES_API_VERSION2}
         return url + "/" + options[version] + "/" + path
 
+    def _create_papi_api_uri(self, path: str, version: int = 1) -> str:
+        options = {1: self.PAPI_API_VERSION}
+        return self.PAPI_URL + '/' + options[version] + '/' + path
+
     def _generate_signature(self, data):
         ordered_data = self._order_params(data)
         query_string = '&'.join(["{}={}".format(d[0], d[1]) for d in ordered_data])
@@ -577,6 +592,10 @@ class BinanceRestApiManager(object):
 
     def _request_futures_api(self, method, path, signed=False, version=1, throw_exception=True, **kwargs):
         uri = self._create_futures_api_uri(path, version=version)
+        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+
+    def _request_papi_api(self, method, path, signed=False, version=1, throw_exception=True, **kwargs):
+        uri = self._create_papi_api_uri(path, version=version)
         return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
 
     def _request_futures_data_api(self, method, path, signed=False, throw_exception=True, **kwargs):
@@ -6622,6 +6641,91 @@ class BinanceRestApiManager(object):
         }
         return self._request_futures_api('delete', 'listenKey', signed=False, data=params,
                                          throw_exception=throw_exception, **kwargs)
+
+    # Portfolio Margin API
+    def portfolio_margin_stream_get_listen_key(self, output="value", throw_exception=True, **kwargs):
+        """Start a new Portfolio Margin user data stream and return the listen key.
+        If a stream already exists it should return the same key.
+        If the stream becomes invalid a new key is returned.
+
+        Can be used to keep the stream alive.
+
+        https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams
+
+        :param output: Set `output` to "raw_data" to receive the request resource, default is "value" which returns
+                        the plain listenKey.
+        :type output: str
+        :param throw_exception: Default `True`, if `False` the raw response will be returned.
+        :type throw_exception: bool
+        :returns: API response
+
+        .. code-block:: python
+
+            {
+                "listenKey": "pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1"
+            }
+
+        :raises: BinanceRequestException, BinanceAPIException
+
+        """
+        res = self._request_papi_api('post', 'listenKey', signed=False, data={},
+                                     throw_exception=throw_exception, **kwargs)
+        if output == "value":
+            return res['listenKey']
+        elif output == "raw_data":
+            return res
+        else:
+            return res['listenKey']
+
+    def portfolio_margin_stream_keepalive(self, listenKey, throw_exception=True, **kwargs):
+        """PING a Portfolio Margin user data stream to prevent a timeout.
+
+        https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams
+
+        :param listenKey: required
+        :type listenKey: str
+        :param throw_exception: Default `True`, if `False` the raw response will be returned.
+        :type throw_exception: bool
+
+        :returns: API response
+
+        .. code-block:: python
+
+            {}
+
+        :raises: BinanceRequestException, BinanceAPIException
+
+        """
+        params = {
+            'listenKey': listenKey
+        }
+        return self._request_papi_api('put', 'listenKey', signed=False, data=params,
+                                      throw_exception=throw_exception, **kwargs)
+
+    def portfolio_margin_stream_close(self, listenKey, throw_exception=True, **kwargs):
+        """Close out a Portfolio Margin user data stream.
+
+        https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams
+
+        :param listenKey: required
+        :type listenKey: str
+        :param throw_exception: Default `True`, if `False` the raw response will be returned.
+        :type throw_exception: bool
+
+        :returns: API response
+
+        .. code-block:: python
+
+            {}
+
+        :raises: BinanceRequestException, BinanceAPIException
+
+        """
+        params = {
+            'listenKey': listenKey
+        }
+        return self._request_papi_api('delete', 'listenKey', signed=False, data=params,
+                                      throw_exception=throw_exception, **kwargs)
 
     # COIN Futures API
     def futures_coin_ping(self):

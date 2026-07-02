@@ -1,7 +1,8 @@
 # UNICORN Binance REST API (UBRA)
 
 > Full-coverage Python SDK for all Binance REST API endpoints. 270+ methods covering
-> Spot, Margin, Isolated Margin, Futures, COIN-M Futures, European Options, US and TR.
+> Spot, Margin, Isolated Margin, Futures, COIN-M Futures, European Options, Portfolio Margin
+> (listenKey management only), US and TR.
 > Part of [UNICORN Binance Suite](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
 
 Beginner-friendly despite depth — complexity is optional, the API stays clean and Pythonic.

@@ -139,8 +139,17 @@ combination.
 | [Binance Coin-M Futures](https://www.binance.com)                  | `binance.com-coin_futures`            |
 | [Binance European Options](https://www.binance.com)                | `binance.com-vanilla-options`         |
 | [Binance European Options Testnet](https://testnet.binancefuture.com) | `binance.com-vanilla-options-testnet` |
+| [Binance Portfolio Margin](https://www.binance.com)*                | `binance.com-portfolio_margin`        |
 | [Binance US](https://www.binance.us)                               | `binance.us`                          |
 | [Binance TR](https://www.trbinance.com)                            | `trbinance.com`                       |
+
+  \* Portfolio Margin support is currently limited to user data stream
+  `listenKey` management (`portfolio_margin_stream_get_listen_key()`,
+  `portfolio_margin_stream_keepalive()`, `portfolio_margin_stream_close()`) —
+  needed for [UBWA](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api)
+  to open Portfolio Margin user data streams. The full set of Portfolio
+  Margin REST endpoints (account, positions, orders, etc.) is not covered
+  yet — contributions welcome!
 
 - Helpful management features like 
 [`get_used_weight()`](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/unicorn_binance_rest_api.html#unicorn_binance_rest_api.manager.BinanceRestApiManager.get_used_weight), 
