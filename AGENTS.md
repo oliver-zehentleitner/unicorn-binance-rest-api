@@ -3,6 +3,10 @@
 > **End-user cheatsheet for AI-assisted consumption:** [`llms.txt`](llms.txt) — use that one if you're writing code *against* this SDK.
 > **This file** is for AI agents working *on* this repo itself.
 
+## Why things are the way they are
+
+See [`context/index.md`](context/index.md) before making non-trivial changes — it points to the reasoning behind design decisions, rejected alternatives, and constraints that aren't visible in the code. If `AGENTS.local.md` exists in this repo, that's personal/local notes, not relevant to anyone else.
+
 ## Planning & Backlog
 
 Open development tasks and decisions are tracked in **[TASKS.md](TASKS.md)**.
@@ -61,29 +65,24 @@ dev/sphinx/                    # Sphinx source for rebuilding docs
 Portfolio Margin (`binance.com-portfolio_margin`) is scoped to the PAPI
 `listenKey` endpoints only — `portfolio_margin_stream_get_listen_key()`,
 `portfolio_margin_stream_keepalive()`, `portfolio_margin_stream_close()`
-(`PAPI_URL = https://papi.binance.com/papi`). This is the minimum UBRA needs
-so that UBWA can open a Portfolio Margin user data stream. The rest of the
-PAPI surface (account, positions, orders, etc.) is intentionally not
-implemented yet — a full UBRA rewrite (unifying async/sync) is planned and
-that's where broader Portfolio Margin coverage will be designed properly.
+(`PAPI_URL = https://papi.binance.com/papi`). Why the scope is this narrow:
+[`context/portfolio-margin.md`](context/portfolio-margin.md).
 
 ---
 
 ## Dependencies
 
-Managed in `requirements.txt`, `setup.py`, `pyproject.toml`, `environment.yml`, and `meta.yaml` — **all five must be kept in sync manually**:
+Managed in `requirements.txt`, `setup.py`, `pyproject.toml`, `environment.yml`, and `meta.yaml` — **all five must be kept in sync manually** (why, and a real drift incident: [`context/history.md`](context/history.md)):
 
-- `requests>=2.31.0` — HTTP client
-- `ujson` — fast JSON parsing
-- `certifi>=2023.7.22` — TLS certificates
-- `cryptography>=42.0.4` — signature/encryption
+- `requests>=2.32.4` — HTTP client
+- `certifi>=2025.6.15` — TLS certificates
+- `cryptography>=45.0.4` — signature/encryption
 - `pyOpenSSL` — SSL support
 - `service-identity` — SSL identity verification
-- `colorama` — colored terminal output
+- `colorama` — colored terminal output (see [`context/testing.md`](context/testing.md) for the `wrap=False` gotcha)
 - `dateparser` — date string parsing
 - `regex` — regex utilities
 - `PySocks` — SOCKS5 proxy support
-- `pytz` — timezone handling
 - `Cython` — C extension compilation (release builds only)
 
 ---
@@ -110,7 +109,7 @@ coverage run --source unicorn_binance_rest_api unittest_binance_rest_api.py
 python unittest_binance_rest_api.py
 ```
 
-Tests in `dev/` are local integration tests that require live Binance credentials — they are **not run in CI**.
+Tests in `dev/` are local integration tests that require live Binance credentials — they are **not run in CI**. CI initializes against `binance.us`, not `binance.com` — see [`context/testing.md`](context/testing.md).
 
 ---
 
@@ -135,7 +134,8 @@ python setup.py bdist_wheel
 - `unit-tests.yml` — Python matrix on Ubuntu, Codecov upload
 - `build_wheels.yml` — Manual trigger, builds wheels for Linux/macOS/Windows, PyPI release
 - `codeql-analysis.yml` — Security scanning
-- `build_conda.yml` — Conda package build
+
+No in-repo conda build — conda-forge's own feedstock is the only conda source (see [`context/history.md`](context/history.md)).
 
 ---
 
@@ -144,7 +144,7 @@ python setup.py bdist_wheel
 - **File header:** Always include the full MIT license block with dual copyright (2017-2021 Sam McHardy + 2021-2026 Oliver Zehentleitner)
 - **Encoding:** UTF-8, UNIX line endings
 - **Logging:** `logging.getLogger("unicorn_binance_rest_api")`
-- **JSON:** `ujson` — do not switch to stdlib `json` or `simplejson`
+- **JSON:** decoded via `requests`' built-in `Response.json()` — no separate JSON library
 - **Cython:** Core module compiles to C extension for releases — no `#cython:` directives needed in source
 - **Versioning:** Keep version in sync across `setup.py`, `pyproject.toml`, and `manager.py` manually
 
@@ -186,3 +186,8 @@ ubra_futures = BinanceRestApiManager(exchange="binance.com-futures")
 - `unicorn-binance-websocket-api` — for listen key management and REST fallbacks
 - `unicorn-binance-trailing-stop-loss` — for order placement and account queries
 - `unicorn-binance-local-depth-cache` — for initial snapshot fetching
+
+<!-- keep-the-why:config -->
+- context: `context/`
+- init: complete
+<!-- /keep-the-why:config -->
