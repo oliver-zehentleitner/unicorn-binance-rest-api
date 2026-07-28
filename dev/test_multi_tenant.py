@@ -8,8 +8,7 @@ api_secret = ""
 
 
 async def main(ubra):
-    kwargs = {'api_key': api_key,
-              'api_secret': api_secret}
+    kwargs = {"api_key": api_key, "api_secret": api_secret}
 
     listen_key = ubra.stream_get_listen_key(**kwargs)
     print(f"{listen_key=:}")
@@ -22,10 +21,12 @@ async def main(ubra):
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG,
-                        filename=os.path.basename(__file__) + '.log',
-                        format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                        style="{")
+    logging.basicConfig(
+        level=logging.DEBUG,
+        filename=os.path.basename(__file__) + ".log",
+        format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+        style="{",
+    )
 
     try:
         with BinanceRestApiManager(exchange="binance.com") as ubra_manager:

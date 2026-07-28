@@ -45,10 +45,12 @@ import os
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_binance_rest_api")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 api_key = "aaa"
 api_secret = "bbb"
@@ -56,7 +58,9 @@ api_secret = "bbb"
 try:
     # To use this library you need a valid UNICORN Binance Suite License:
     # https://technopathy.club/87b0088124a8
-    with BinanceRestApiManager(api_key, api_secret, lucit_license_profile="LUCIT") as ubra:
+    with BinanceRestApiManager(
+        api_key, api_secret, lucit_license_profile="LUCIT"
+    ) as ubra:
         print(ubra.get_version())
         print(ubra.get_server_time())
         print(ubra.get_ticker(symbol="BNBUSDT"))

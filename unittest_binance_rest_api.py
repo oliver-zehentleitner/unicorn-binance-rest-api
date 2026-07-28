@@ -46,13 +46,17 @@ import requests_mock
 import unittest
 
 import tracemalloc
+
 tracemalloc.start(25)
 
 logging.getLogger("unicorn_binance_rest_api")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
+
 
 def is_github_action_env():
     try:
@@ -68,7 +72,7 @@ class TestBinanceUsRestManager(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print(f"\r\nTestBinanceUsRestManager:")
-        cls.ubra = BinanceRestApiManager('api_key', 'api_secret', exchange="binance.us")
+        cls.ubra = BinanceRestApiManager("api_key", "api_secret", exchange="binance.us")
 
     @classmethod
     def tearDownClass(cls):
@@ -82,13 +86,38 @@ class TestBinanceUsRestManager(unittest.TestCase):
     def test_exact_amount(self):
         """Test Exact amount returned"""
 
-        first_available_res = [[1500004800000, "0.00005000", "0.00005300", "0.00001000", "0.00004790",
-                                "663152.00000000", 1500004859999, "30.55108144", 43, "559224.00000000",
-                                "25.65468144", "83431971.04346950"]]
+        first_available_res = [
+            [
+                1500004800000,
+                "0.00005000",
+                "0.00005300",
+                "0.00001000",
+                "0.00004790",
+                "663152.00000000",
+                1500004859999,
+                "30.55108144",
+                43,
+                "559224.00000000",
+                "25.65468144",
+                "83431971.04346950",
+            ]
+        ]
 
         first_res = []
-        row = [1519892340000, "0.00099400", "0.00099810", "0.00099400", "0.00099810", "4806.04000000", 1519892399999,
-               "4.78553253", 154, "1785.14000000", "1.77837524", "0"]
+        row = [
+            1519892340000,
+            "0.00099400",
+            "0.00099810",
+            "0.00099400",
+            "0.00099810",
+            "4806.04000000",
+            1519892399999,
+            "4.78553253",
+            154,
+            "1785.14000000",
+            "1.77837524",
+            "0",
+        ]
 
         for i in range(0, 500):
             first_res.append(row)
@@ -96,16 +125,22 @@ class TestBinanceUsRestManager(unittest.TestCase):
         second_res = []
 
         with requests_mock.mock() as m:
-            m.get('https://api.binance.us/api/v3/klines?interval=1m&limit=1&startTime=0&symbol=BNBBTC',
-                  json=first_available_res)
-            m.get('https://api.binance.us/api/v3/klines?interval=1m&limit=500&startTime=1519862400000&symbol=BNBBTC',
-                  json=first_res)
-            m.get('https://api.binance.us/api/v3/klines?interval=1m&limit=500&startTime=1519892400000&symbol=BNBBTC',
-                  json=second_res)
+            m.get(
+                "https://api.binance.us/api/v3/klines?interval=1m&limit=1&startTime=0&symbol=BNBBTC",
+                json=first_available_res,
+            )
+            m.get(
+                "https://api.binance.us/api/v3/klines?interval=1m&limit=500&startTime=1519862400000&symbol=BNBBTC",
+                json=first_res,
+            )
+            m.get(
+                "https://api.binance.us/api/v3/klines?interval=1m&limit=500&startTime=1519892400000&symbol=BNBBTC",
+                json=second_res,
+            )
             self.__class__.ubra.get_historical_klines(
                 symbol="BNBBTC",
                 interval=self.__class__.ubra.KLINE_INTERVAL_1MINUTE,
-                start_str="1st March 2018"
+                start_str="1st March 2018",
             )
             # self.assertEqual(len(kline), 500)
             self.assertEqual(5, 5)
@@ -287,7 +322,9 @@ class TestBinanceUsRestManager(unittest.TestCase):
         """Test API response Exception"""
         ubra = BinanceRestApiManager(exchange="binance.us")
         with self.assertRaises(BinanceAPIException):
-            raise BinanceAPIException(getattr(ubra.session, "get")("https://www.binance.com/testerror.uri"))
+            raise BinanceAPIException(
+                getattr(ubra.session, "get")("https://www.binance.com/testerror.uri")
+            )
         ubra.stop_manager()
 
     def test_request_exception(self):
@@ -342,7 +379,9 @@ class TestBinanceUsRestManager(unittest.TestCase):
             try:
                 with BinanceRestApiManager(exchange="binance.com") as ubra_com:
                     ubra_com.get_exchange_info()
-                with BinanceRestApiManager(exchange="binance.com-futures") as ubra_com_futures:
+                with BinanceRestApiManager(
+                    exchange="binance.com-futures"
+                ) as ubra_com_futures:
                     ubra_com_futures.futures_time()
             except BinanceAPIException as error_msg:
                 print(f"ERROR: {error_msg}")
@@ -369,14 +408,16 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
 
     def test_options_url_init(self):
         """Test that OPTIONS_URL class default is correct."""
-        self.assertEqual(BinanceRestApiManager.OPTIONS_URL, "https://eapi.binance.com/eapi")
+        self.assertEqual(
+            BinanceRestApiManager.OPTIONS_URL, "https://eapi.binance.com/eapi"
+        )
         self.assertEqual(BinanceRestApiManager.OPTIONS_API_VERSION, "v1")
 
     def test_options_uri_builder(self):
         """Test that _create_options_api_uri builds correct URIs."""
-        uri = self.ubra._create_options_api_uri('depth')
+        uri = self.ubra._create_options_api_uri("depth")
         self.assertEqual(uri, "https://eapi.binance.com/eapi/v1/depth")
-        uri = self.ubra._create_options_api_uri('exchangeInfo')
+        uri = self.ubra._create_options_api_uri("exchangeInfo")
         self.assertEqual(uri, "https://eapi.binance.com/eapi/v1/exchangeInfo")
 
     def test_options_live_run(self):
@@ -384,26 +425,30 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
         if is_github_action_env is False:
             try:
                 # Test with full exchange init
-                with BinanceRestApiManager(exchange="binance.com-vanilla-options") as ubra_opts:
-                    self.assertEqual(ubra_opts.OPTIONS_URL, "https://eapi.binance.com/eapi")
+                with BinanceRestApiManager(
+                    exchange="binance.com-vanilla-options"
+                ) as ubra_opts:
+                    self.assertEqual(
+                        ubra_opts.OPTIONS_URL, "https://eapi.binance.com/eapi"
+                    )
 
                     result = ubra_opts.options_ping()
                     self.assertIsNotNone(result)
 
                     result = ubra_opts.options_time()
-                    self.assertIn('serverTime', result)
+                    self.assertIn("serverTime", result)
 
                     result = ubra_opts.options_exchange_info()
-                    self.assertIn('optionSymbols', result)
-                    self.assertIsInstance(result['optionSymbols'], list)
-                    self.assertGreater(len(result['optionSymbols']), 0)
+                    self.assertIn("optionSymbols", result)
+                    self.assertIsInstance(result["optionSymbols"], list)
+                    self.assertGreater(len(result["optionSymbols"]), 0)
 
-                    symbol = result['optionSymbols'][0]['symbol']
+                    symbol = result["optionSymbols"][0]["symbol"]
                     result = ubra_opts.options_order_book(symbol=symbol, limit=10)
-                    self.assertIn('lastUpdateId', result)
-                    self.assertIn('bids', result)
-                    self.assertIn('asks', result)
-                    self.assertIn('T', result)
+                    self.assertIn("lastUpdateId", result)
+                    self.assertIn("bids", result)
+                    self.assertIn("asks", result)
+                    self.assertIn("T", result)
 
                     result = ubra_opts.options_mark_price()
                     self.assertIsInstance(result, list)
@@ -412,7 +457,7 @@ class TestBinanceOptionsRestManager(unittest.TestCase):
                     self.assertIsInstance(result, list)
 
                     result = ubra_opts.options_index_price(underlying="BTCUSDT")
-                    self.assertIn('indexPrice', result)
+                    self.assertIn("indexPrice", result)
             except BinanceAPIException as error_msg:
                 print(f"ERROR: {error_msg}")
 
@@ -427,7 +472,7 @@ class TestBinancePortfolioMarginRestManager(unittest.TestCase):
         # binance.com during __init__ (timestamp offset sync) - blocked on US-based CI
         # runners ("restricted location"). Use binance.us for init (works from CI), same
         # workaround as TestBinanceOptionsRestManager, then override PAPI_URL manually.
-        cls.ubra = BinanceRestApiManager('api_key', 'api_secret', exchange="binance.us")
+        cls.ubra = BinanceRestApiManager("api_key", "api_secret", exchange="binance.us")
         cls.ubra.PAPI_URL = "https://papi.binance.com/papi"
         cls.ubra.PAPI_API_VERSION = "v1"
 
@@ -442,34 +487,43 @@ class TestBinancePortfolioMarginRestManager(unittest.TestCase):
 
     def test_papi_uri_builder(self):
         """Test that _create_papi_api_uri builds correct URIs."""
-        uri = self.ubra._create_papi_api_uri('listenKey')
+        uri = self.ubra._create_papi_api_uri("listenKey")
         self.assertEqual(uri, "https://papi.binance.com/papi/v1/listenKey")
 
     def test_portfolio_margin_stream_get_listen_key(self):
         with requests_mock.mock() as m:
-            m.post('https://papi.binance.com/papi/v1/listenKey',
-                   json={"listenKey": "pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1"})
+            m.post(
+                "https://papi.binance.com/papi/v1/listenKey",
+                json={
+                    "listenKey": "pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1"
+                },
+            )
             listen_key = self.ubra.portfolio_margin_stream_get_listen_key()
-            self.assertEqual(listen_key, "pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1")
+            self.assertEqual(
+                listen_key,
+                "pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a65a1",
+            )
 
     def test_portfolio_margin_stream_get_listen_key_raw_data(self):
         with requests_mock.mock() as m:
-            m.post('https://papi.binance.com/papi/v1/listenKey', json={"listenKey": "abc"})
+            m.post(
+                "https://papi.binance.com/papi/v1/listenKey", json={"listenKey": "abc"}
+            )
             result = self.ubra.portfolio_margin_stream_get_listen_key(output="raw_data")
             self.assertEqual(result, {"listenKey": "abc"})
 
     def test_portfolio_margin_stream_keepalive(self):
         with requests_mock.mock() as m:
-            m.put('https://papi.binance.com/papi/v1/listenKey', json={})
+            m.put("https://papi.binance.com/papi/v1/listenKey", json={})
             result = self.ubra.portfolio_margin_stream_keepalive(listenKey="abc")
             self.assertEqual(result, {})
 
     def test_portfolio_margin_stream_close(self):
         with requests_mock.mock() as m:
-            m.delete('https://papi.binance.com/papi/v1/listenKey', json={})
+            m.delete("https://papi.binance.com/papi/v1/listenKey", json={})
             result = self.ubra.portfolio_margin_stream_close(listenKey="abc")
             self.assertEqual(result, {})
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

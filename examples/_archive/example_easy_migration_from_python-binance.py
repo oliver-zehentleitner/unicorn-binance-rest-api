@@ -43,10 +43,12 @@ import os
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_binance_rest_api")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 api_key = "aaa"
 api_secret = "bbb"
@@ -55,7 +57,7 @@ api_secret = "bbb"
 client = Client(api_key, api_secret, tld="com")
 
 # get market depth
-depth = client.get_order_book(symbol='BNBBTC')
+depth = client.get_order_book(symbol="BNBBTC")
 print(f"{depth}")
 
 # get all symbol prices
@@ -63,4 +65,3 @@ prices = client.get_all_tickers()
 print(f"{prices}")
 
 client.stop_manager()
-

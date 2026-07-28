@@ -39,22 +39,25 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+
 class BinanceAPIException(Exception):
     def __init__(self, response):
         self.code = 0
         try:
             json_res = response.json()
         except ValueError:
-            self.message = 'Invalid JSON error message from Binance: {}'.format(response.text)
+            self.message = "Invalid JSON error message from Binance: {}".format(
+                response.text
+            )
         else:
-            self.code = json_res['code']
-            self.message = json_res['msg']
+            self.code = json_res["code"]
+            self.message = json_res["msg"]
         self.status_code = response.status_code
         self.response = response
-        self.request = getattr(response, 'request', None)
+        self.request = getattr(response, "request", None)
 
     def __str__(self):  # pragma: no cover
-        return 'APIError(code=%s): %s' % (self.code, self.message)
+        return "APIError(code=%s): %s" % (self.code, self.message)
 
 
 class BinanceRequestException(Exception):
@@ -62,7 +65,7 @@ class BinanceRequestException(Exception):
         self.message = message
 
     def __str__(self):
-        return 'BinanceRequestException: %s' % self.message
+        return "BinanceRequestException: %s" % self.message
 
 
 class BinanceOrderException(Exception):
@@ -72,7 +75,7 @@ class BinanceOrderException(Exception):
         self.message = message
 
     def __str__(self):
-        return 'BinanceOrderException(code=%s): %s' % (self.code, self.message)
+        return "BinanceOrderException(code=%s): %s" % (self.code, self.message)
 
 
 class BinanceOrderMinAmountException(BinanceOrderException):
@@ -112,21 +115,23 @@ class BinanceOrderInactiveSymbolException(BinanceOrderException):
 
 class BinanceWithdrawException(Exception):
     def __init__(self, message):
-        if message == u'参数异常':
-            message = 'Withdraw to this address through the website first'
+        if message == "参数异常":
+            message = "Withdraw to this address through the website first"
         self.message = message
 
     def __str__(self):
-        return 'BinanceWithdrawException: %s' % self.message
+        return "BinanceWithdrawException: %s" % self.message
 
 
 class UnknownExchange(Exception):
     """
     Exception for if the manager class is started with an unkown exchange.
     """
+
     pass
 
 
 class AlreadyStoppedError(Exception):
     """Exception raised when an attempt is made to use an instance that has already been stopped."""
+
     pass
