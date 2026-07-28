@@ -41,10 +41,12 @@ import logging
 import os
 
 logging.getLogger("unicorn_binance_rest_api")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 api_key = "aaa"
 api_secret = "bbb"
@@ -52,7 +54,7 @@ api_secret = "bbb"
 # To use this library you need a valid UNICORN Binance Suite License: https://technopathy.club/87b0088124a8
 ubra = BinanceRestApiManager(api_key, api_secret)
 
-depth = ubra.get_order_book(symbol='BNBBTC')
+depth = ubra.get_order_book(symbol="BNBBTC")
 print(f"{depth}")
 
 ubra.stop_manager()

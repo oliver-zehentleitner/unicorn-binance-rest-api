@@ -45,7 +45,9 @@ api_secret = "*"
 ubra = BinanceRestApiManager(api_key, api_secret)
 
 # Retrieve 1-minute klines for the last day so far
-klines_1m = ubra.get_historical_klines("BTCUSDT", ubra.KLINE_INTERVAL_1MINUTE, "1 day ago UTC")
+klines_1m = ubra.get_historical_klines(
+    "BTCUSDT", ubra.KLINE_INTERVAL_1MINUTE, "1 day ago UTC"
+)
 print(f"klines_1m:\r\n{klines_1m}")
 
 # Retrieve 30-minute klines for the last month of 2021

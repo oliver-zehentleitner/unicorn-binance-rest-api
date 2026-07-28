@@ -21,12 +21,15 @@ from unicorn_binance_rest_api import BinanceRestApiManager
 
 with BinanceRestApiManager(warn_on_update=False) as ubra:
     if ubra.is_update_available():
-        print(f"Please upgrade to {ubra.get_latest_version()} you are on {ubra.get_version()}")
+        print(
+            f"Please upgrade to {ubra.get_latest_version()} you are on {ubra.get_version()}"
+        )
         latest_release_info = ubra.get_latest_release_info()
         if latest_release_info:
-            print(f"Please download the latest release or run `pip install unicorn-binance-rest-api --upgrade`"
-                  f":\r\n\ttar: {latest_release_info['tarball_url']}\r\n\tzip: {latest_release_info['zipball_url']}\r\n"
-                  f"release info:\r\n{latest_release_info['body']}")
+            print(
+                f"Please download the latest release or run `pip install unicorn-binance-rest-api --upgrade`"
+                f":\r\n\ttar: {latest_release_info['tarball_url']}\r\n\tzip: {latest_release_info['zipball_url']}\r\n"
+                f"release info:\r\n{latest_release_info['body']}"
+            )
     else:
         print(ubra.get_version(), "is the latest version!")
-

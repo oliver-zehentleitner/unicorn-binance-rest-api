@@ -42,10 +42,12 @@ import os
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_binance_rest_api")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 api_key = ""
 api_secret = ""
@@ -59,15 +61,15 @@ ubra = BinanceRestApiManager(api_key=api_key, api_secret=api_secret, tld="com")
 # futures:
 # ubra.FUTURES_URL = 'https://testnet.binancefuture.com/fapi'
 
-print(ubra.get_all_orders(symbol='BTCUSDT', limit=10))
+print(ubra.get_all_orders(symbol="BTCUSDT", limit=10))
 
 print(ubra.get_account())
 
-print(ubra.get_asset_balance(asset='BTC'))
+print(ubra.get_asset_balance(asset="BTC"))
 
 print(ubra.get_symbol_ticker(symbol="BTCUSDT"))
 
-print(ubra.get_open_orders(symbol='BTCUSDT'))
+print(ubra.get_open_orders(symbol="BTCUSDT"))
 
 # ubra.create_order(symbol='ETHUSDT', side="BUY", quantity=2, stopPrice='2000', type='STOP_LOSS')
 
@@ -75,9 +77,9 @@ print(ubra.get_open_orders(symbol='BTCUSDT'))
 
 # sell_limit_order = ubra.order_limit_sell(symbol='BTCUSDT', quantity=2, price='0.0003')
 
-existing_orders = ubra.get_open_orders(symbol='BTCUSDT')
+existing_orders = ubra.get_open_orders(symbol="BTCUSDT")
 
 for order in existing_orders:
-    print(ubra.cancel_order(symbol="BTCUSDT", orderId=order['orderId']))
+    print(ubra.cancel_order(symbol="BTCUSDT", orderId=order["orderId"]))
 
 ubra.stop_manager()

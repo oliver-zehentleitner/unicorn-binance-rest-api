@@ -40,7 +40,6 @@ from unicorn_binance_rest_api.manager import BinanceRestApiManager
 import logging
 import os
 
-
 # How to:
 # https://medium.com/@oliverzehentleitner/how-to-connect-to-binance-com-rest-api-using-python-via-a-socks5-proxy-638dbbecacfd
 socks5_proxy = "1.2.3.4:1080"
@@ -50,19 +49,25 @@ socks5_ssl_verification = True
 
 if __name__ == "__main__":
     logging.getLogger("unicorn_binance_rest_api")
-    logging.basicConfig(level=logging.INFO,
-                        filename=os.path.basename(__file__) + '.log',
-                        format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                        style="{")
+    logging.basicConfig(
+        level=logging.INFO,
+        filename=os.path.basename(__file__) + ".log",
+        format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+        style="{",
+    )
 
     # To use this library you need a valid UNICORN Binance Suite License: https://technopathy.club/87b0088124a8
-    ubra = BinanceRestApiManager(exchange="binance.com",
-                                 socks5_proxy_server=socks5_proxy,
-                                 socks5_proxy_user=socks5_user,
-                                 socks5_proxy_pass=socks5_pass,
-                                 socks5_proxy_ssl_verification=socks5_ssl_verification)
+    ubra = BinanceRestApiManager(
+        exchange="binance.com",
+        socks5_proxy_server=socks5_proxy,
+        socks5_proxy_user=socks5_user,
+        socks5_proxy_pass=socks5_pass,
+        socks5_proxy_ssl_verification=socks5_ssl_verification,
+    )
 
-    klines_1m = ubra.get_historical_klines("BTCUSDT", ubra.KLINE_INTERVAL_1MINUTE, "1 day ago UTC")
+    klines_1m = ubra.get_historical_klines(
+        "BTCUSDT", ubra.KLINE_INTERVAL_1MINUTE, "1 day ago UTC"
+    )
     print(f"klines_1m:\r\n{klines_1m}")
 
     ubra.stop_manager()

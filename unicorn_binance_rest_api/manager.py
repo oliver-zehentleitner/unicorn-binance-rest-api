@@ -55,7 +55,6 @@ import requests
 import platform
 import time
 
-
 __app_name__: str = "unicorn-binance-rest-api"
 __version__: str = "2.12.0.dev"
 __logger__: logging.getLogger = logging.getLogger("unicorn_binance_rest_api")
@@ -108,78 +107,78 @@ class BinanceRestApiManager(object):
     :type socks5_proxy_ssl_verification:  bool
     """
 
-    API_URL = 'https://api.binance.{}/api'
-    MARGIN_API_URL = 'https://api.binance.{}/sapi'
-    WEBSITE_URL = 'https://www.binance.{}'
-    FUTURES_URL = 'https://fapi.binance.{}/fapi'
-    FUTURES_DATA_URL = 'https://fapi.binance.{}/futures/data'
+    API_URL = "https://api.binance.{}/api"
+    MARGIN_API_URL = "https://api.binance.{}/sapi"
+    WEBSITE_URL = "https://www.binance.{}"
+    FUTURES_URL = "https://fapi.binance.{}/fapi"
+    FUTURES_DATA_URL = "https://fapi.binance.{}/futures/data"
     FUTURES_COIN_URL = "https://fapi.binance.{}/fapi"
     FUTURES_COIN_DATA_URL = "https://dapi.binance.{}/futures/data"
-    PUBLIC_API_VERSION = 'v1'
-    PRIVATE_API_VERSION = 'v3'
-    MARGIN_API_VERSION = 'v1'
-    FUTURES_API_VERSION = 'v1'
+    PUBLIC_API_VERSION = "v1"
+    PRIVATE_API_VERSION = "v3"
+    MARGIN_API_VERSION = "v1"
+    FUTURES_API_VERSION = "v1"
     FUTURES_API_VERSION2 = "v2"
-    OPTIONS_URL = 'https://eapi.binance.com/eapi'
-    OPTIONS_API_VERSION = 'v1'
-    PAPI_URL = 'https://papi.binance.com/papi'
-    PAPI_API_VERSION = 'v1'
+    OPTIONS_URL = "https://eapi.binance.com/eapi"
+    OPTIONS_API_VERSION = "v1"
+    PAPI_URL = "https://papi.binance.com/papi"
+    PAPI_API_VERSION = "v1"
 
-    SYMBOL_TYPE_SPOT = 'SPOT'
+    SYMBOL_TYPE_SPOT = "SPOT"
 
-    ORDER_STATUS_NEW = 'NEW'
-    ORDER_STATUS_PARTIALLY_FILLED = 'PARTIALLY_FILLED'
-    ORDER_STATUS_FILLED = 'FILLED'
-    ORDER_STATUS_CANCELED = 'CANCELED'
-    ORDER_STATUS_PENDING_CANCEL = 'PENDING_CANCEL'
-    ORDER_STATUS_REJECTED = 'REJECTED'
-    ORDER_STATUS_EXPIRED = 'EXPIRED'
+    ORDER_STATUS_NEW = "NEW"
+    ORDER_STATUS_PARTIALLY_FILLED = "PARTIALLY_FILLED"
+    ORDER_STATUS_FILLED = "FILLED"
+    ORDER_STATUS_CANCELED = "CANCELED"
+    ORDER_STATUS_PENDING_CANCEL = "PENDING_CANCEL"
+    ORDER_STATUS_REJECTED = "REJECTED"
+    ORDER_STATUS_EXPIRED = "EXPIRED"
 
-    KLINE_INTERVAL_1SECOND = '1s'
-    KLINE_INTERVAL_1MINUTE = '1m'
-    KLINE_INTERVAL_3MINUTE = '3m'
-    KLINE_INTERVAL_5MINUTE = '5m'
-    KLINE_INTERVAL_15MINUTE = '15m'
-    KLINE_INTERVAL_30MINUTE = '30m'
-    KLINE_INTERVAL_1HOUR = '1h'
-    KLINE_INTERVAL_2HOUR = '2h'
-    KLINE_INTERVAL_4HOUR = '4h'
-    KLINE_INTERVAL_6HOUR = '6h'
-    KLINE_INTERVAL_8HOUR = '8h'
-    KLINE_INTERVAL_12HOUR = '12h'
-    KLINE_INTERVAL_1DAY = '1d'
-    KLINE_INTERVAL_3DAY = '3d'
-    KLINE_INTERVAL_1WEEK = '1w'
-    KLINE_INTERVAL_1MONTH = '1M'
+    KLINE_INTERVAL_1SECOND = "1s"
+    KLINE_INTERVAL_1MINUTE = "1m"
+    KLINE_INTERVAL_3MINUTE = "3m"
+    KLINE_INTERVAL_5MINUTE = "5m"
+    KLINE_INTERVAL_15MINUTE = "15m"
+    KLINE_INTERVAL_30MINUTE = "30m"
+    KLINE_INTERVAL_1HOUR = "1h"
+    KLINE_INTERVAL_2HOUR = "2h"
+    KLINE_INTERVAL_4HOUR = "4h"
+    KLINE_INTERVAL_6HOUR = "6h"
+    KLINE_INTERVAL_8HOUR = "8h"
+    KLINE_INTERVAL_12HOUR = "12h"
+    KLINE_INTERVAL_1DAY = "1d"
+    KLINE_INTERVAL_3DAY = "3d"
+    KLINE_INTERVAL_1WEEK = "1w"
+    KLINE_INTERVAL_1MONTH = "1M"
 
-    SIDE_BUY = 'BUY'
-    SIDE_SELL = 'SELL'
+    SIDE_BUY = "BUY"
+    SIDE_SELL = "SELL"
 
-    ORDER_TYPE_LIMIT = 'LIMIT'
-    ORDER_TYPE_MARKET = 'MARKET'
-    ORDER_TYPE_STOP_LOSS = 'STOP_LOSS'
-    ORDER_TYPE_STOP_LOSS_LIMIT = 'STOP_LOSS_LIMIT'
-    ORDER_TYPE_TAKE_PROFIT = 'TAKE_PROFIT'
-    ORDER_TYPE_TAKE_PROFIT_LIMIT = 'TAKE_PROFIT_LIMIT'
-    ORDER_TYPE_LIMIT_MAKER = 'LIMIT_MAKER'
+    ORDER_TYPE_LIMIT = "LIMIT"
+    ORDER_TYPE_MARKET = "MARKET"
+    ORDER_TYPE_STOP_LOSS = "STOP_LOSS"
+    ORDER_TYPE_STOP_LOSS_LIMIT = "STOP_LOSS_LIMIT"
+    ORDER_TYPE_TAKE_PROFIT = "TAKE_PROFIT"
+    ORDER_TYPE_TAKE_PROFIT_LIMIT = "TAKE_PROFIT_LIMIT"
+    ORDER_TYPE_LIMIT_MAKER = "LIMIT_MAKER"
 
-    TIME_IN_FORCE_GTC = 'GTC'  # Good till cancelled
-    TIME_IN_FORCE_IOC = 'IOC'  # Immediate or cancel
-    TIME_IN_FORCE_FOK = 'FOK'  # Fill or kill
+    TIME_IN_FORCE_GTC = "GTC"  # Good till cancelled
+    TIME_IN_FORCE_IOC = "IOC"  # Immediate or cancel
+    TIME_IN_FORCE_FOK = "FOK"  # Fill or kill
 
-    ORDER_RESP_TYPE_ACK = 'ACK'
-    ORDER_RESP_TYPE_RESULT = 'RESULT'
-    ORDER_RESP_TYPE_FULL = 'FULL'
+    ORDER_RESP_TYPE_ACK = "ACK"
+    ORDER_RESP_TYPE_RESULT = "RESULT"
+    ORDER_RESP_TYPE_FULL = "FULL"
 
     # For accessing the data returned by Client.aggregate_trades().
-    AGG_ID = 'a'
-    AGG_PRICE = 'p'
-    AGG_QUANTITY = 'q'
-    AGG_FIRST_TRADE_ID = 'f'
-    AGG_LAST_TRADE_ID = 'l'
-    AGG_TIME = 'T'
-    AGG_BUYER_MAKES = 'm'
-    AGG_BEST_MATCH = 'M'
+    AGG_ID = "a"
+    AGG_PRICE = "p"
+    AGG_QUANTITY = "q"
+    AGG_FIRST_TRADE_ID = "f"
+    AGG_LAST_TRADE_ID = "l"
+    AGG_TIME = "T"
+    AGG_BUYER_MAKES = "m"
+    AGG_BEST_MATCH = "M"
 
     # new asset transfer api enum
     SPOT_TO_FIAT = "MAIN_C2C"
@@ -200,24 +199,28 @@ class BinanceRestApiManager(object):
     MINING_TO_USDT_FUTURE = "MINING_UMFUTURE"
     MINING_TO_FIAT = "MINING_C2C"
 
-    def __init__(self,
-                 api_key: Optional[str] = None,
-                 api_secret: Optional[str] = None,
-                 requests_params: dict = None,
-                 tld: Optional[str] = None,
-                 warn_on_update: bool = True,
-                 exchange: Optional[str] = None,
-                 disable_colorama: bool = False,
-                 debug: bool = False,
-                 socks5_proxy_server: Optional[str] = None,
-                 socks5_proxy_user: Optional[str] = None,
-                 socks5_proxy_pass: Optional[str] = None,
-                 socks5_proxy_ssl_verification: Optional[bool] = True):
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        api_secret: Optional[str] = None,
+        requests_params: dict = None,
+        tld: Optional[str] = None,
+        warn_on_update: bool = True,
+        exchange: Optional[str] = None,
+        disable_colorama: bool = False,
+        debug: bool = False,
+        socks5_proxy_server: Optional[str] = None,
+        socks5_proxy_user: Optional[str] = None,
+        socks5_proxy_pass: Optional[str] = None,
+        socks5_proxy_ssl_verification: Optional[bool] = True,
+    ):
 
         self.name: Optional[str] = __app_name__
         self.version: Optional[str] = __version__
-        logger.info(f"New instance of {self.get_user_agent()}-{'compiled' if cython.compiled else 'source'} on "
-                    f"{str(platform.system())} {str(platform.release())} for exchange {exchange} started ...")
+        logger.info(
+            f"New instance of {self.get_user_agent()}-{'compiled' if cython.compiled else 'source'} on "
+            f"{str(platform.system())} {str(platform.release())} for exchange {exchange} started ..."
+        )
         self.sigterm = False
         self.session = None
 
@@ -239,24 +242,30 @@ class BinanceRestApiManager(object):
                 self.socks5_proxy_ssl_verification = socks5_proxy_ssl_verification
                 self.socks5_proxy_user = socks5_proxy_user
                 self.socks5_proxy_pass = socks5_proxy_pass
-                self.socks5_proxy_address, self.socks5_proxy_port = socks5_proxy_server.split(":")
+                self.socks5_proxy_address, self.socks5_proxy_port = (
+                    socks5_proxy_server.split(":")
+                )
                 socks_proxy_uri = "socks5://"
                 if self.socks5_proxy_user is not None:
                     socks_proxy_uri += self.socks5_proxy_user
                     if self.socks5_proxy_pass is not None:
                         socks_proxy_uri += f":{self.socks5_proxy_pass}"
                     socks_proxy_uri += "@"
-                socks_proxy_uri += f"{self.socks5_proxy_address}:{self.socks5_proxy_port}"
+                socks_proxy_uri += (
+                    f"{self.socks5_proxy_address}:{self.socks5_proxy_port}"
+                )
                 logger.info(f"Created SOCKS5 proxy URI: {socks_proxy_uri}")
                 self.request_socks5_proxies = {
-                    'http': socks_proxy_uri,
-                    'https': socks_proxy_uri
+                    "http": socks_proxy_uri,
+                    "https": socks_proxy_uri,
                 }
 
             if tld is not None:
                 # Todo: Remove Block with tld!
-                logger.warning("The parameter BinanceRestApiManager(tld=`com`) is obsolete, use parameter `exchange` "
-                               "instead! Attention: parameter `exchange` overrules `tld`!! ")
+                logger.warning(
+                    "The parameter BinanceRestApiManager(tld=`com`) is obsolete, use parameter `exchange` "
+                    "instead! Attention: parameter `exchange` overrules `tld`!! "
+                )
                 self.API_URL = self.API_URL.format(tld)
                 self.MARGIN_API_URL = self.MARGIN_API_URL.format(tld)
                 self.WEBSITE_URL = self.WEBSITE_URL.format(tld)
@@ -273,7 +282,10 @@ class BinanceRestApiManager(object):
                 self.FUTURES_DATA_URL = "https://fapi.binance.com/futures/data"
                 self.FUTURES_COIN_URL = "https://fapi.binance.com/fapi"
                 self.FUTURES_COIN_DATA_URL = "https://dapi.binance.com/futures/data"
-            elif self.exchange == "binance.com-testnet" or self.exchange == "binance.com-futures-testnet":
+            elif (
+                self.exchange == "binance.com-testnet"
+                or self.exchange == "binance.com-futures-testnet"
+            ):
                 # https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/issues/20
                 self.API_URL = "https://testnet.binance.vision/api"
                 self.MARGIN_API_URL = " https://api.binance.com/sapi"
@@ -281,7 +293,9 @@ class BinanceRestApiManager(object):
                 self.FUTURES_URL = "https://testnet.binancefuture.com/fapi"
                 self.FUTURES_DATA_URL = "https://testnet.binancefuture.com/futures/data"
                 self.FUTURES_COIN_URL = "https://testnet.binancefuture.com/dapi"
-                self.FUTURES_COIN_DATA_URL = "https://testnet.binancefuture.com/futures/data"
+                self.FUTURES_COIN_DATA_URL = (
+                    "https://testnet.binancefuture.com/futures/data"
+                )
             elif self.exchange == "binance.com-margin":
                 self.API_URL = "https://api.binance.com/api"
                 self.MARGIN_API_URL = " https://api.binance.com/sapi"
@@ -297,7 +311,9 @@ class BinanceRestApiManager(object):
                 self.FUTURES_URL = "https://testnet.binancefuture.com/fapi"
                 self.FUTURES_DATA_URL = "https://testnet.binancefuture.com/futures/data"
                 self.FUTURES_COIN_URL = "https://testnet.binancefuture.com/dapi"
-                self.FUTURES_COIN_DATA_URL = "https://testnet.binancefuture.com/futures/data"
+                self.FUTURES_COIN_DATA_URL = (
+                    "https://testnet.binancefuture.com/futures/data"
+                )
             elif self.exchange == "binance.com-isolated_margin":
                 self.API_URL = "https://api.binance.com/api"
                 self.MARGIN_API_URL = " https://api.binance.com/sapi"
@@ -313,7 +329,9 @@ class BinanceRestApiManager(object):
                 self.FUTURES_URL = "https://testnet.binancefuture.com/fapi"
                 self.FUTURES_DATA_URL = "https://testnet.binancefuture.com/futures/data"
                 self.FUTURES_COIN_URL = "https://testnet.binancefuture.com/dapi"
-                self.FUTURES_COIN_DATA_URL = "https://testnet.binancefuture.com/futures/data"
+                self.FUTURES_COIN_DATA_URL = (
+                    "https://testnet.binancefuture.com/futures/data"
+                )
             elif self.exchange == "binance.com-futures":
                 self.API_URL = "https://api.binance.com/api"
                 self.MARGIN_API_URL = " https://api.binance.com/sapi"
@@ -322,7 +340,10 @@ class BinanceRestApiManager(object):
                 self.FUTURES_DATA_URL = "https://fapi.binance.com/futures/data"
                 self.FUTURES_COIN_URL = "https://fapi.binance.com/fapi"
                 self.FUTURES_COIN_DATA_URL = "https://dapi.binance.com/futures/data"
-            elif self.exchange == "binance.com-coin-futures" or self.exchange == "binance.com-coin_futures":
+            elif (
+                self.exchange == "binance.com-coin-futures"
+                or self.exchange == "binance.com-coin_futures"
+            ):
                 self.API_URL = "https://api.binance.com/api"
                 self.MARGIN_API_URL = " https://api.binance.com/sapi"
                 self.WEBSITE_URL = "https://www.binance.com"
@@ -373,13 +394,17 @@ class BinanceRestApiManager(object):
                 self.FUTURES_URL = "https://testnet.binancefuture.com/fapi"
                 self.FUTURES_DATA_URL = "https://testnet.binancefuture.com/futures/data"
                 self.FUTURES_COIN_URL = "https://testnet.binancefuture.com/dapi"
-                self.FUTURES_COIN_DATA_URL = "https://testnet.binancefuture.com/futures/data"
+                self.FUTURES_COIN_DATA_URL = (
+                    "https://testnet.binancefuture.com/futures/data"
+                )
                 self.OPTIONS_URL = "https://testnet.binancefuture.com/eapi"
             elif self.exchange:
                 # Unknown Exchange
-                error_msg = f"Unknown exchange '{str(self.exchange)}'! Read the docs to see a list of supported " \
-                            "exchanges: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#what-are-the-" \
-                            "benefits-of-the-unicorn-binance-rest-api"
+                error_msg = (
+                    f"Unknown exchange '{str(self.exchange)}'! Read the docs to see a list of supported "
+                    "exchanges: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/readme.html#what-are-the-"
+                    "benefits-of-the-unicorn-binance-rest-api"
+                )
                 logger.critical(error_msg)
                 self.stop_manager()
                 raise UnknownExchange(error_msg)
@@ -394,16 +419,21 @@ class BinanceRestApiManager(object):
                     self.FUTURES_COIN_DATA_URL = "https://dapi.binance.com/futures/data"
 
             if self.debug:
-                print(f"tld: {tld}, exchange: {exchange}\r\n"
-                      f"self.API_URL: {self.API_URL}\r\nself.MARGIN_API_URL: {self.MARGIN_API_URL}\r\n"
-                      f"self.WEBSITE_URL: {self.WEBSITE_URL}\r\nself.FUTURES_URL: {self.FUTURES_URL}\r\n"
-                      f"self.FUTURES_DATA_URL: {self.FUTURES_DATA_URL}\r\nself.FUTURES_COIN_URL: "
-                      f"{self.FUTURES_COIN_URL}\r\n"
-                      f"self.FUTURES_COIN_DATA_URL: {self.FUTURES_COIN_DATA_URL}")
+                print(
+                    f"tld: {tld}, exchange: {exchange}\r\n"
+                    f"self.API_URL: {self.API_URL}\r\nself.MARGIN_API_URL: {self.MARGIN_API_URL}\r\n"
+                    f"self.WEBSITE_URL: {self.WEBSITE_URL}\r\nself.FUTURES_URL: {self.FUTURES_URL}\r\n"
+                    f"self.FUTURES_DATA_URL: {self.FUTURES_DATA_URL}\r\nself.FUTURES_COIN_URL: "
+                    f"{self.FUTURES_COIN_URL}\r\n"
+                    f"self.FUTURES_COIN_DATA_URL: {self.FUTURES_COIN_DATA_URL}"
+                )
 
             self.API_KEY = api_key
             self.API_SECRET = api_secret
-            self.last_update_check_github = {'timestamp': time.time(), 'status': {'tag_name': None}}
+            self.last_update_check_github = {
+                "timestamp": time.time(),
+                "status": {"tag_name": None},
+            }
             self._requests_params = requests_params
             self.response = None
             self.session = self._init_session()
@@ -414,14 +444,18 @@ class BinanceRestApiManager(object):
             # binance api server
             res = self.get_server_time()
             try:
-                self.timestamp_offset = res['serverTime'] - int(time.time() * 1000)
+                self.timestamp_offset = res["serverTime"] - int(time.time() * 1000)
             except KeyError:
                 self.timestamp_offset = 0
 
             if warn_on_update and self.is_update_availabe():
-                update_msg = f"Release {self.name}_" + self.get_latest_version() + " is available, " \
-                             f"please consider updating! Changelog: " \
-                             f"https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/changelog.html"
+                update_msg = (
+                    f"Release {self.name}_"
+                    + self.get_latest_version()
+                    + " is available, "
+                    f"please consider updating! Changelog: "
+                    f"https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/changelog.html"
+                )
                 print(update_msg)
                 logger.warning(update_msg)
 
@@ -437,32 +471,38 @@ class BinanceRestApiManager(object):
         logger.debug(f"Leaving with-context of BinanceRestApiManager() ...")
         self.stop_manager()
         if exc_type:
-            logger.critical(f"An exception occurred: {exc_type} - {exc_value} - {error_traceback}")
+            logger.critical(
+                f"An exception occurred: {exc_type} - {exc_value} - {error_traceback}"
+            )
 
     def _init_session(self):
         session = requests.session()
-        session.headers.update({'Accept': 'application/json',
-                                'User-Agent': str(self.get_user_agent()),
-                                'X-MBX-APIKEY': str(self.API_KEY)})
+        session.headers.update(
+            {
+                "Accept": "application/json",
+                "User-Agent": str(self.get_user_agent()),
+                "X-MBX-APIKEY": str(self.API_KEY),
+            }
+        )
         return session
 
     def _create_api_uri(self, path, signed=True, version=PUBLIC_API_VERSION):
         v = self.PRIVATE_API_VERSION if signed else version
-        return self.API_URL + '/' + v + '/' + path
+        return self.API_URL + "/" + v + "/" + path
 
     def _create_margin_api_uri(self, path, version=MARGIN_API_VERSION):
-        return self.MARGIN_API_URL + '/' + version + '/' + path
+        return self.MARGIN_API_URL + "/" + version + "/" + path
 
     def _create_website_uri(self, path):
-        return self.WEBSITE_URL + '/' + path
+        return self.WEBSITE_URL + "/" + path
 
     def _create_futures_api_uri(self, path: str, version: int = 1) -> str:
         url = self.FUTURES_URL
         options = {1: self.FUTURES_API_VERSION, 2: self.FUTURES_API_VERSION2}
-        return url + '/' + options[version] + '/' + path
+        return url + "/" + options[version] + "/" + path
 
     def _create_futures_data_api_uri(self, path):
-        return self.FUTURES_DATA_URL + '/' + path
+        return self.FUTURES_DATA_URL + "/" + path
 
     def _create_futures_coin_api_url(self, path: str, version: int = 1) -> str:
         options = {1: self.FUTURES_API_VERSION, 2: self.FUTURES_API_VERSION2}
@@ -475,12 +515,16 @@ class BinanceRestApiManager(object):
 
     def _create_papi_api_uri(self, path: str, version: int = 1) -> str:
         options = {1: self.PAPI_API_VERSION}
-        return self.PAPI_URL + '/' + options[version] + '/' + path
+        return self.PAPI_URL + "/" + options[version] + "/" + path
 
     def _generate_signature(self, data):
         ordered_data = self._order_params(data)
-        query_string = '&'.join(["{}={}".format(d[0], d[1]) for d in ordered_data])
-        m = hmac.new(self.API_SECRET.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256)
+        query_string = "&".join(["{}={}".format(d[0], d[1]) for d in ordered_data])
+        m = hmac.new(
+            self.API_SECRET.encode("utf-8"),
+            query_string.encode("utf-8"),
+            hashlib.sha256,
+        )
         return m.hexdigest()
 
     @staticmethod
@@ -495,17 +539,19 @@ class BinanceRestApiManager(object):
         has_signature = False
         params = []
         for key, value in data.items():
-            if key == 'signature':
+            if key == "signature":
                 has_signature = True
             else:
                 params.append((key, value))
         # sort parameters by key
         params.sort(key=itemgetter(0))
         if has_signature:
-            params.append(('signature', data['signature']))
+            params.append(("signature", data["signature"]))
         return params
 
-    def _request(self, method, uri, signed, force_params=False, throw_exception=True, **kwargs):
+    def _request(
+        self, method, uri, signed, force_params=False, throw_exception=True, **kwargs
+    ):
         if self.sigterm is True:
             info = f"`BinanceRestApiManager()` instance has already been stopped and cannot be used."
             logger.critical(info)
@@ -513,15 +559,17 @@ class BinanceRestApiManager(object):
 
         # if an api_secret and api_key are provided the request session gets reset with new settings
         try:
-            api_key = kwargs['api_key']
-            api_secret = kwargs['api_secret']
-            del kwargs['api_key']
-            del kwargs['api_secret']
+            api_key = kwargs["api_key"]
+            api_secret = kwargs["api_secret"]
+            del kwargs["api_key"]
+            del kwargs["api_secret"]
         except KeyError:
             api_key = None
             api_secret = None
         if api_key is not None and api_secret is not None:
-            logger.debug(f"_request() - Got `api_key` and `api_secret` via `**kwargs`, resetting request session.")
+            logger.debug(
+                f"_request() - Got `api_key` and `api_secret` via `**kwargs`, resetting request session."
+            )
             self.API_KEY = api_key
             self.API_SECRET = api_secret
             if self.session is not None:
@@ -529,108 +577,168 @@ class BinanceRestApiManager(object):
             self.session = self._init_session()
 
         # set default requests timeout
-        kwargs['timeout'] = 10
+        kwargs["timeout"] = 10
 
         # add our global requests params
         if self._requests_params:
             kwargs.update(self._requests_params)
 
-        data = kwargs.get('data', None)
+        data = kwargs.get("data", None)
         if data and isinstance(data, dict):
-            kwargs['data'] = data
+            kwargs["data"] = data
 
             # find any requests params passed and apply them
-            if 'requests_params' in kwargs['data']:
+            if "requests_params" in kwargs["data"]:
                 # merge requests params into kwargs
-                kwargs.update(kwargs['data']['requests_params'])
-                del kwargs['data']['requests_params']
+                kwargs.update(kwargs["data"]["requests_params"])
+                del kwargs["data"]["requests_params"]
 
         if signed:
             # generate signature
-            kwargs['data']['timestamp'] = int(time.time() * 1000 + self.timestamp_offset)
-            kwargs['data']['signature'] = self._generate_signature(kwargs['data'])
+            kwargs["data"]["timestamp"] = int(
+                time.time() * 1000 + self.timestamp_offset
+            )
+            kwargs["data"]["signature"] = self._generate_signature(kwargs["data"])
 
         # sort get and post params to match signature order
         if data:
             # sort post params
-            kwargs['data'] = self._order_params(kwargs['data'])
+            kwargs["data"] = self._order_params(kwargs["data"])
             # Remove any arguments with values of None.
-            null_args = [i for i, (key, value) in enumerate(kwargs['data']) if value is None]
+            null_args = [
+                i for i, (key, value) in enumerate(kwargs["data"]) if value is None
+            ]
             for i in reversed(null_args):
-                del kwargs['data'][i]
+                del kwargs["data"][i]
 
         # if get request assign data array to params value for requests lib
-        if data and (method == 'get' or force_params):
-            kwargs['params'] = '&'.join('%s=%s' % (data[0], data[1]) for data in kwargs['data'])
-            del kwargs['data']
+        if data and (method == "get" or force_params):
+            kwargs["params"] = "&".join(
+                "%s=%s" % (data[0], data[1]) for data in kwargs["data"]
+            )
+            del kwargs["data"]
 
         if self.socks5_proxy_address is not None and self.socks5_proxy_port is not None:
-            self.response = getattr(self.session, method)(uri,
-                                                          proxies=self.request_socks5_proxies,
-                                                          verify=self.socks5_proxy_ssl_verification,
-                                                          **kwargs)
+            self.response = getattr(self.session, method)(
+                uri,
+                proxies=self.request_socks5_proxies,
+                verify=self.socks5_proxy_ssl_verification,
+                **kwargs,
+            )
         else:
             self.response = getattr(self.session, method)(uri, **kwargs)
 
         return self._handle_response(throw_exception=throw_exception)
 
-    def _request_api(self, method, path, signed=False, version=PUBLIC_API_VERSION, throw_exception=True, **kwargs):
+    def _request_api(
+        self,
+        method,
+        path,
+        signed=False,
+        version=PUBLIC_API_VERSION,
+        throw_exception=True,
+        **kwargs,
+    ):
         uri = self._create_api_uri(path, signed, version)
 
-        return self._request(method, uri, signed, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, throw_exception=throw_exception, **kwargs
+        )
 
-    def _request_margin_api(self, method, path, signed=False,
-                            version=MARGIN_API_VERSION, throw_exception=True, **kwargs):
+    def _request_margin_api(
+        self,
+        method,
+        path,
+        signed=False,
+        version=MARGIN_API_VERSION,
+        throw_exception=True,
+        **kwargs,
+    ):
         uri = self._create_margin_api_uri(path, version)
 
-        return self._request(method, uri, signed, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, throw_exception=throw_exception, **kwargs
+        )
 
-    def _request_website(self, method, path, signed=False, throw_exception=True, **kwargs):
+    def _request_website(
+        self, method, path, signed=False, throw_exception=True, **kwargs
+    ):
         uri = self._create_website_uri(path)
 
-        return self._request(method, uri, signed, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, throw_exception=throw_exception, **kwargs
+        )
 
-    def _request_futures_api(self, method, path, signed=False, version=1, throw_exception=True, **kwargs):
+    def _request_futures_api(
+        self, method, path, signed=False, version=1, throw_exception=True, **kwargs
+    ):
         uri = self._create_futures_api_uri(path, version=version)
-        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, True, throw_exception=throw_exception, **kwargs
+        )
 
-    def _request_papi_api(self, method, path, signed=False, version=1, throw_exception=True, **kwargs):
+    def _request_papi_api(
+        self, method, path, signed=False, version=1, throw_exception=True, **kwargs
+    ):
         uri = self._create_papi_api_uri(path, version=version)
-        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, True, throw_exception=throw_exception, **kwargs
+        )
 
-    def _request_futures_data_api(self, method, path, signed=False, throw_exception=True, **kwargs):
+    def _request_futures_data_api(
+        self, method, path, signed=False, throw_exception=True, **kwargs
+    ):
         uri = self._create_futures_data_api_uri(path)
 
-        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, True, throw_exception=throw_exception, **kwargs
+        )
 
-    def _request_futures_coin_api(self, method, path, signed=False, version=1, throw_exception=True, **kwargs):
+    def _request_futures_coin_api(
+        self, method, path, signed=False, version=1, throw_exception=True, **kwargs
+    ):
         uri = self._create_futures_coin_api_url(path, version=version)
 
-        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, True, throw_exception=throw_exception, **kwargs
+        )
 
-    def _request_futures_coin_data_api(self, method, path, signed=False, version=1, throw_exception=True, **kwargs):
+    def _request_futures_coin_data_api(
+        self, method, path, signed=False, version=1, throw_exception=True, **kwargs
+    ):
         uri = self._create_futures_coin_data_api_url(path, version=version)
 
-        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, True, throw_exception=throw_exception, **kwargs
+        )
 
     def _create_options_api_uri(self, path: str) -> str:
-        return self.OPTIONS_URL + '/' + self.OPTIONS_API_VERSION + '/' + path
+        return self.OPTIONS_URL + "/" + self.OPTIONS_API_VERSION + "/" + path
 
-    def _request_options_api(self, method, path, signed=False, throw_exception=True, **kwargs):
+    def _request_options_api(
+        self, method, path, signed=False, throw_exception=True, **kwargs
+    ):
         uri = self._create_options_api_uri(path)
-        return self._request(method, uri, signed, True, throw_exception=throw_exception, **kwargs)
+        return self._request(
+            method, uri, signed, True, throw_exception=throw_exception, **kwargs
+        )
 
     def _save_used_weight(self) -> bool:
         try:
-            weight = self.response.headers.get('X-MBX-USED-WEIGHT')
+            weight = self.response.headers.get("X-MBX-USED-WEIGHT")
             if weight is None:
                 return False
-            self.used_weight = {'status_code': int(self.response.status_code),
-                                'timestamp': datetime.datetime.strptime(self.response.headers.get('Date'),
-                                                                        "%a, %d %b %Y %H:%M:%S GMT").timestamp(),
-                                'weight': int(weight)}
+            self.used_weight = {
+                "status_code": int(self.response.status_code),
+                "timestamp": datetime.datetime.strptime(
+                    self.response.headers.get("Date"), "%a, %d %b %Y %H:%M:%S GMT"
+                ).timestamp(),
+                "weight": int(weight),
+            }
         except Exception as error_msg:
-            logger.debug(f"BinanceRestApiManager._save_used_weight() - Exception: {error_msg}")
+            logger.debug(
+                f"BinanceRestApiManager._save_used_weight() - Exception: {error_msg}"
+            )
             return False
         return True
 
@@ -648,19 +756,28 @@ class BinanceRestApiManager(object):
             self._save_used_weight()
             return self.response.json()
         except ValueError:
-            raise BinanceRequestException('Invalid Response: %s' % self.response.text)
+            raise BinanceRequestException("Invalid Response: %s" % self.response.text)
 
     def _get(self, path, signed=False, version=PUBLIC_API_VERSION, **kwargs):
-        return self._request_api('get', path, signed, version, **kwargs)
+        return self._request_api("get", path, signed, version, **kwargs)
 
-    def _post(self, path, signed=False, version=PUBLIC_API_VERSION, throw_exception=True, **kwargs):
-        return self._request_api('post', path, signed, version, throw_exception, **kwargs)
+    def _post(
+        self,
+        path,
+        signed=False,
+        version=PUBLIC_API_VERSION,
+        throw_exception=True,
+        **kwargs,
+    ):
+        return self._request_api(
+            "post", path, signed, version, throw_exception, **kwargs
+        )
 
     def _put(self, path, signed=False, version=PUBLIC_API_VERSION, **kwargs):
-        return self._request_api('put', path, signed, version, **kwargs)
+        return self._request_api("put", path, signed, version, **kwargs)
 
     def _delete(self, path, signed=False, version=PUBLIC_API_VERSION, **kwargs):
-        return self._request_api('delete', path, signed, version, **kwargs)
+        return self._request_api("delete", path, signed, version, **kwargs)
 
     def is_update_availabe(self):
         """
@@ -692,13 +809,15 @@ class BinanceRestApiManager(object):
         :return: str or False
         """
         # Do a fresh request if status is not a dict, has no tag_name, or last timestamp is older 1 hour
-        if not isinstance(self.last_update_check_github['status'], dict) or \
-                self.last_update_check_github['status'].get('tag_name') is None or \
-                (self.last_update_check_github['timestamp']+(60*60) < time.time()):
-            self.last_update_check_github['status'] = self.get_latest_release_info()
-        if self.last_update_check_github['status']:
+        if (
+            not isinstance(self.last_update_check_github["status"], dict)
+            or self.last_update_check_github["status"].get("tag_name") is None
+            or (self.last_update_check_github["timestamp"] + (60 * 60) < time.time())
+        ):
+            self.last_update_check_github["status"] = self.get_latest_release_info()
+        if self.last_update_check_github["status"]:
             try:
-                return self.last_update_check_github['status']["tag_name"]
+                return self.last_update_check_github["status"]["tag_name"]
             except KeyError:
                 return "unknown"
         else:
@@ -710,18 +829,27 @@ class BinanceRestApiManager(object):
         :return: dict or False
         """
         try:
-            if self.socks5_proxy_address is not None and self.socks5_proxy_port is not None:
-                respond = requests.get('https://api.github.com/repos/oliver-zehentleitner/'
-                                       'unicorn-binance-rest-api/releases/latest',
-                                       proxies=self.request_socks5_proxies,
-                                       verify=self.socks5_proxy_ssl_verification)
+            if (
+                self.socks5_proxy_address is not None
+                and self.socks5_proxy_port is not None
+            ):
+                respond = requests.get(
+                    "https://api.github.com/repos/oliver-zehentleitner/"
+                    "unicorn-binance-rest-api/releases/latest",
+                    proxies=self.request_socks5_proxies,
+                    verify=self.socks5_proxy_ssl_verification,
+                )
             else:
-                respond = requests.get('https://api.github.com/repos/oliver-zehentleitner/'
-                                       'unicorn-binance-rest-api/releases/latest')
+                respond = requests.get(
+                    "https://api.github.com/repos/oliver-zehentleitner/"
+                    "unicorn-binance-rest-api/releases/latest"
+                )
             latest_release_info = respond.json()
             return latest_release_info
         except Exception as error_msg:
-            logger.debug(f"BinanceRestApiManager.get_latest_release_info() - Exception: {error_msg}")
+            logger.debug(
+                f"BinanceRestApiManager.get_latest_release_info() - Exception: {error_msg}"
+            )
             return False
 
     def get_user_agent(self):
@@ -745,7 +873,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        products = self._request_website('get', 'exchange-api/v1/public/asset-service/product/get-products')
+        products = self._request_website(
+            "get", "exchange-api/v1/public/asset-service/product/get-products"
+        )
         return products
 
     def get_exchange_info(self, **params):
@@ -811,7 +941,7 @@ class BinanceRestApiManager(object):
 
         """
 
-        return self._get('exchangeInfo', version=self.PRIVATE_API_VERSION, data=params)
+        return self._get("exchangeInfo", version=self.PRIVATE_API_VERSION, data=params)
 
     def get_symbol_info(self, symbol):
         """
@@ -855,10 +985,10 @@ class BinanceRestApiManager(object):
 
         """
 
-        res = self._get('exchangeInfo', version=self.PRIVATE_API_VERSION)
+        res = self._get("exchangeInfo", version=self.PRIVATE_API_VERSION)
 
-        for item in res['symbols']:
-            if item['symbol'] == symbol.upper():
+        for item in res["symbols"]:
+            if item["symbol"] == symbol.upper():
                 return item
 
         return None
@@ -880,7 +1010,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('ping', version=self.PRIVATE_API_VERSION)
+        return self._get("ping", version=self.PRIVATE_API_VERSION)
 
     def get_server_time(self):
         """
@@ -899,7 +1029,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('time', version=self.PRIVATE_API_VERSION)
+        return self._get("time", version=self.PRIVATE_API_VERSION)
 
     # Market Data Endpoints
 
@@ -927,7 +1057,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('ticker/price', version=self.PRIVATE_API_VERSION)
+        return self._get("ticker/price", version=self.PRIVATE_API_VERSION)
 
     def get_orderbook_tickers(self):
         """
@@ -959,7 +1089,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('ticker/bookTicker', version=self.PRIVATE_API_VERSION)
+        return self._get("ticker/bookTicker", version=self.PRIVATE_API_VERSION)
 
     def get_order_book(self, **params):
         """
@@ -997,7 +1127,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('depth', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get("depth", data=params, version=self.PRIVATE_API_VERSION)
 
     def get_recent_trades(self, **params):
         """
@@ -1028,7 +1158,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('trades', data=params)
+        return self._get("trades", data=params)
 
     def get_historical_trades(self, **params):
         """
@@ -1061,7 +1191,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('historicalTrades', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get(
+            "historicalTrades", data=params, version=self.PRIVATE_API_VERSION
+        )
 
     def get_aggregate_trades(self, **params):
         """
@@ -1100,7 +1232,7 @@ class BinanceRestApiManager(object):
 
         :raises: BinanceRequestException, BinanceAPIException
         """
-        return self._get('aggTrades', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get("aggTrades", data=params, version=self.PRIVATE_API_VERSION)
 
     def aggregate_trade_iter(self, symbol, start_str=None, last_id=None):
         """
@@ -1138,7 +1270,8 @@ class BinanceRestApiManager(object):
         """
         if start_str is not None and last_id is not None:
             raise ValueError(
-                'start_time and last_id may not be simultaneously specified.')
+                "start_time and last_id may not be simultaneously specified."
+            )
 
         # If there's no last_id, get one.
         if last_id is None:
@@ -1160,9 +1293,8 @@ class BinanceRestApiManager(object):
                 while True:
                     end_ts = start_ts + (60 * 60 * 1000)
                     trades = self.get_aggregate_trades(
-                        symbol=symbol,
-                        startTime=start_ts,
-                        endTime=end_ts)
+                        symbol=symbol, startTime=start_ts, endTime=end_ts
+                    )
                     if len(trades) > 0:
                         break
                     # If we reach present moment and find no trades then there is
@@ -1232,7 +1364,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('klines', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get("klines", data=params, version=self.PRIVATE_API_VERSION)
 
     def _get_earliest_valid_timestamp(self, symbol, interval):
         """
@@ -1247,16 +1379,13 @@ class BinanceRestApiManager(object):
 
         """
         kline = self.get_klines(
-            symbol=symbol,
-            interval=interval,
-            limit=1,
-            startTime=0,
-            endTime=None
+            symbol=symbol, interval=interval, limit=1, startTime=0, endTime=None
         )
         return kline[0][0]
 
-    def get_historical_klines(self, symbol, interval, start_str, end_str=None,
-                              limit=500):
+    def get_historical_klines(
+        self, symbol, interval, start_str, end_str=None, limit=500
+    ):
         """
         Get Historical Klines from Binance
 
@@ -1311,7 +1440,7 @@ class BinanceRestApiManager(object):
                 interval=interval,
                 limit=limit,
                 startTime=start_ts,
-                endTime=end_ts
+                endTime=end_ts,
             )
 
             # handle the case where exactly the limit amount of data was returned last loop
@@ -1339,7 +1468,9 @@ class BinanceRestApiManager(object):
 
         return output_data
 
-    def get_historical_klines_generator(self, symbol, interval, start_str, end_str=None):
+    def get_historical_klines_generator(
+        self, symbol, interval, start_str, end_str=None
+    ):
         """
         Get Historical Klines from Binance
 
@@ -1393,7 +1524,7 @@ class BinanceRestApiManager(object):
                 interval=interval,
                 limit=limit,
                 startTime=start_ts,
-                endTime=end_ts
+                endTime=end_ts,
             )
 
             # handle the case where exactly the limit amount of data was returned last loop
@@ -1437,7 +1568,7 @@ class BinanceRestApiManager(object):
                 "price": "9.35751834"
             }
         """
-        return self._get('avgPrice', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get("avgPrice", data=params, version=self.PRIVATE_API_VERSION)
 
     def get_ticker(self, **params):
         """24 hour price change statistics.
@@ -1498,7 +1629,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('ticker/24hr', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get("ticker/24hr", data=params, version=self.PRIVATE_API_VERSION)
 
     def get_symbol_ticker(self, **params):
         """Latest price for a symbol or symbols.
@@ -1535,7 +1666,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('ticker/price', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get("ticker/price", data=params, version=self.PRIVATE_API_VERSION)
 
     def get_orderbook_ticker(self, **params):
         """Latest price for a symbol or symbols.
@@ -1581,7 +1712,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('ticker/bookTicker', data=params, version=self.PRIVATE_API_VERSION)
+        return self._get(
+            "ticker/bookTicker", data=params, version=self.PRIVATE_API_VERSION
+        )
 
     # Account Endpoints
 
@@ -1701,7 +1834,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderMinPriceException, BinanceOrderMinTotalException, BinanceOrderUnknownSymbolException,
                  BinanceOrderInactiveSymbolException
         """
-        return self._post('order', True, data=params)
+        return self._post("order", True, data=params)
 
     def order_limit(self, timeInForce=TIME_IN_FORCE_GTC, **params):
         """Send in a new limit order
@@ -1736,10 +1869,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        params.update({
-            'type': self.ORDER_TYPE_LIMIT,
-            'timeInForce': timeInForce
-        })
+        params.update({"type": self.ORDER_TYPE_LIMIT, "timeInForce": timeInForce})
         return self.create_order(**params)
 
     def order_limit_buy(self, timeInForce=TIME_IN_FORCE_GTC, **params):
@@ -1775,9 +1905,11 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        params.update({
-            'side': self.SIDE_BUY,
-        })
+        params.update(
+            {
+                "side": self.SIDE_BUY,
+            }
+        )
         return self.order_limit(timeInForce=timeInForce, **params)
 
     def order_limit_sell(self, timeInForce=TIME_IN_FORCE_GTC, **params):
@@ -1811,9 +1943,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        params.update({
-            'side': self.SIDE_SELL
-        })
+        params.update({"side": self.SIDE_SELL})
         return self.order_limit(timeInForce=timeInForce, **params)
 
     def order_market(self, **params):
@@ -1844,9 +1974,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        params.update({
-            'type': self.ORDER_TYPE_MARKET
-        })
+        params.update({"type": self.ORDER_TYPE_MARKET})
         return self.create_order(**params)
 
     def order_market_buy(self, **params):
@@ -1874,9 +2002,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        params.update({
-            'side': self.SIDE_BUY
-        })
+        params.update({"side": self.SIDE_BUY})
         return self.order_market(**params)
 
     def order_market_sell(self, **params):
@@ -1904,9 +2030,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        params.update({
-            'side': self.SIDE_SELL
-        })
+        params.update({"side": self.SIDE_SELL})
         return self.order_market(**params)
 
     def create_oco_order(self, **params):
@@ -1971,7 +2095,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        return self._post('order/oco', True, data=params)
+        return self._post("order/oco", True, data=params)
 
     def order_oco_buy(self, **params):
         """Send in a new OCO buy order
@@ -2012,9 +2136,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderInactiveSymbolException
 
         """
-        params.update({
-            'side': self.SIDE_BUY
-        })
+        params.update({"side": self.SIDE_BUY})
         return self.create_oco_order(**params)
 
     def order_oco_sell(self, **params):
@@ -2055,9 +2177,7 @@ class BinanceRestApiManager(object):
                  BinanceOrderMinPriceException, BinanceOrderMinTotalException, BinanceOrderUnknownSymbolException,
                  BinanceOrderInactiveSymbolException
         """
-        params.update({
-            'side': self.SIDE_SELL
-        })
+        params.update({"side": self.SIDE_SELL})
         return self.create_oco_order(**params)
 
     def create_test_order(self, **params):
@@ -2099,7 +2219,7 @@ class BinanceRestApiManager(object):
 
 
         """
-        return self._post('order/test', True, data=params)
+        return self._post("order/test", True, data=params)
 
     def get_order(self, **params):
         """Check an order's status. Either orderId or origClientOrderId must be sent.
@@ -2138,7 +2258,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('order', True, data=params)
+        return self._get("order", True, data=params)
 
     def get_all_orders(self, **params):
         """Get all account orders; active, canceled, or filled.
@@ -2179,7 +2299,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('allOrders', True, data=params)
+        return self._get("allOrders", True, data=params)
 
     def cancel_all_open_orders(self, **params):
         """Cancel all open orders of a symbol.
@@ -2292,7 +2412,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._delete('openOrders', True, data=params)
+        return self._delete("openOrders", True, data=params)
 
     def cancel_all_open_margin_orders(self, **params):
         """Cancel all open margin orders of a symbol.
@@ -2401,7 +2521,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('delete', 'margin/openOrders', signed=True, data=params)
+        return self._request_margin_api(
+            "delete", "margin/openOrders", signed=True, data=params
+        )
 
     def cancel_order(self, **params):
         """Cancel an active order. Either orderId or origClientOrderId must be sent.
@@ -2433,7 +2555,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._delete('order', True, data=params)
+        return self._delete("order", True, data=params)
 
     def get_open_orders(self, **params):
         """Get all open orders on a symbol.
@@ -2470,7 +2592,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('openOrders', True, data=params)
+        return self._get("openOrders", True, data=params)
 
     # User Stream Endpoints
     def get_account(self, **params):
@@ -2510,7 +2632,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('account', True, data=params)
+        return self._get("account", True, data=params)
 
     def get_asset_balance(self, asset, **params):
         """Get current asset balance.
@@ -2538,8 +2660,8 @@ class BinanceRestApiManager(object):
         res = self.get_account(**params)
         # find asset balance in list of balances
         if "balances" in res:
-            for bal in res['balances']:
-                if bal['asset'].lower() == asset.lower():
+            for bal in res["balances"]:
+                if bal["asset"].lower() == asset.lower():
                     return bal
         return None
 
@@ -2578,7 +2700,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._get('myTrades', True, data=params)
+        return self._get("myTrades", True, data=params)
 
     def get_system_status(self):
         """Get system status detail.
@@ -2597,7 +2719,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'system/status')
+        return self._request_margin_api("get", "system/status")
 
     def get_account_status(self, **params):
         """Get account status detail.
@@ -2618,9 +2740,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceWithdrawException
 
         """
-        res = self._request_margin_api('get', 'account/status', True, data=params)
-        if not res.get('success'):
-            raise BinanceWithdrawException(res['msg'])
+        res = self._request_margin_api("get", "account/status", True, data=params)
+        if not res.get("success"):
+            raise BinanceWithdrawException(res["msg"])
         return res
 
     def get_account_api_trading_status(self, **params):
@@ -2693,9 +2815,11 @@ class BinanceRestApiManager(object):
         :raises: BinanceWithdrawException
 
         """
-        res = self._request_margin_api('get', 'account/apiTradingStatus', True, data=params)
-        if not res.get('success'):
-            raise BinanceWithdrawException(res['msg'])
+        res = self._request_margin_api(
+            "get", "account/apiTradingStatus", True, data=params
+        )
+        if not res.get("success"):
+            raise BinanceWithdrawException(res["msg"])
         return res
 
     def get_dust_log(self, **params):
@@ -2770,9 +2894,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceWithdrawException
 
         """
-        res = self._request_margin_api('get', 'asset/dribblet', True, data=params)
-        if not res.get('success'):
-            raise BinanceWithdrawException(res['msg'])
+        res = self._request_margin_api("get", "asset/dribblet", True, data=params)
+        if not res.get("success"):
+            raise BinanceWithdrawException(res["msg"])
         return res
 
     def transfer_dust(self, **params):
@@ -2812,7 +2936,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'asset/dust', True, data=params)
+        return self._request_margin_api("post", "asset/dust", True, data=params)
 
     def get_asset_dividend_history(self, **params):
         """Query asset dividend record.
@@ -2860,7 +2984,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'asset/assetDividend', True, data=params)
+        return self._request_margin_api("get", "asset/assetDividend", True, data=params)
 
     def query_universal_transfer_history(self, **params):
         """Query User Universal Transfer History
@@ -2915,7 +3039,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'asset/transfer', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "asset/transfer", signed=True, data=params
+        )
 
     def get_trade_fee(self, **params):
         """Get trade fee.
@@ -2947,9 +3073,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceWithdrawException
 
         """
-        res = self._request_margin_api('get', 'asset/tradeFee', True, data=params)
-        if not res.get('success'):
-            raise BinanceWithdrawException(res['msg'])
+        res = self._request_margin_api("get", "asset/tradeFee", True, data=params)
+        if not res.get("success"):
+            raise BinanceWithdrawException(res["msg"])
         return res
 
     def get_asset_details(self, **params):
@@ -2986,9 +3112,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceWithdrawException
 
         """
-        res = self._request_margin_api('get', 'asset/assetDetail', True, data=params)
-        if not res.get('success'):
-            raise BinanceWithdrawException(res['msg'])
+        res = self._request_margin_api("get", "asset/assetDetail", True, data=params)
+        if not res.get("success"):
+            raise BinanceWithdrawException(res["msg"])
         return res
 
     # Withdraw Endpoints
@@ -3035,11 +3161,13 @@ class BinanceRestApiManager(object):
 
         """
         # force a name for the withdrawal if one not set
-        if 'asset' in params and 'name' not in params:
-            params['name'] = params['asset']
-        res = self._request_margin_api('post', 'capital/withdraw/apply', True, data=params)
-        if not res.get('success'):
-            raise BinanceWithdrawException(res['msg'])
+        if "asset" in params and "name" not in params:
+            params["name"] = params["asset"]
+        res = self._request_margin_api(
+            "post", "capital/withdraw/apply", True, data=params
+        )
+        if not res.get("success"):
+            raise BinanceWithdrawException(res["msg"])
         return res
 
     def get_deposit_history(self, **params):
@@ -3096,7 +3224,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'capital/deposit/hisrec', True, data=params)
+        return self._request_margin_api(
+            "get", "capital/deposit/hisrec", True, data=params
+        )
 
     def get_withdraw_history(self, **params):
         """Fetch withdraw history.
@@ -3152,7 +3282,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'capital/withdraw/history', True, data=params)
+        return self._request_margin_api(
+            "get", "capital/withdraw/history", True, data=params
+        )
 
     def get_withdraw_history_id(self, withdraw_id, **params):
         """Fetch withdraw history.
@@ -3192,12 +3324,14 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        result = self._request_margin_api('get', 'capital/withdraw/history', True, data=params)
+        result = self._request_margin_api(
+            "get", "capital/withdraw/history", True, data=params
+        )
 
-        for entry in result['withdrawList']:
-            if 'id' in entry and entry['id'] == withdraw_id:
+        for entry in result["withdrawList"]:
+            if "id" in entry and entry["id"] == withdraw_id:
                 return entry
-        
+
         raise Exception("There is no entry with withdraw id", result)
 
     def get_deposit_address(self, **params):
@@ -3226,7 +3360,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'capital/deposit/address', True, data=params)
+        return self._request_margin_api(
+            "get", "capital/deposit/address", True, data=params
+        )
 
     # User Stream Endpoints
 
@@ -3255,14 +3391,20 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        res = self._post('userDataStream', False, data={}, version=self.PRIVATE_API_VERSION,
-                         throw_exception=throw_exception, **kwargs)
+        res = self._post(
+            "userDataStream",
+            False,
+            data={},
+            version=self.PRIVATE_API_VERSION,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
         if output == "value":
-            return res['listenKey']
+            return res["listenKey"]
         elif output == "raw_data":
             return res
         else:
-            return res['listenKey']
+            return res["listenKey"]
 
     def stream_keepalive(self, listenKey, throw_exception=True, **kwargs):
         """PING a user data stream to prevent a timeout.
@@ -3283,11 +3425,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._put('userDataStream', False, data=params, version=self.PRIVATE_API_VERSION,
-                         throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._put(
+            "userDataStream",
+            False,
+            data=params,
+            version=self.PRIVATE_API_VERSION,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     def stream_close(self, listenKey, throw_exception=True, **kwargs):
         """Close out a user data stream.
@@ -3308,11 +3454,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._delete('userDataStream', False, data=params, version=self.PRIVATE_API_VERSION,
-                            throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._delete(
+            "userDataStream",
+            False,
+            data=params,
+            version=self.PRIVATE_API_VERSION,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     # Margin Trading Endpoints
 
@@ -3372,7 +3522,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/account', True, data=params)
+        return self._request_margin_api("get", "margin/account", True, data=params)
 
     def get_isolated_margin_account(self, **params):
         """Query isolated margin account details
@@ -3396,7 +3546,7 @@ class BinanceRestApiManager(object):
                 {
                 "assets":[
                     {
-                        "baseAsset": 
+                        "baseAsset":
                         {
                         "asset": "BTC",
                         "borrowEnabled": true,
@@ -3409,7 +3559,7 @@ class BinanceRestApiManager(object):
                         "repayEnabled": true,
                         "totalAsset": "0.00000000"
                         },
-                        "quoteAsset": 
+                        "quoteAsset":
                         {
                         "asset": "USDT",
                         "borrowEnabled": true,
@@ -3423,8 +3573,8 @@ class BinanceRestApiManager(object):
                         "totalAsset": "0.00000000"
                         },
                         "symbol": "BTCUSDT"
-                        "isolatedCreated": true, 
-                        "marginLevel": "0.00000000", 
+                        "isolatedCreated": true,
+                        "marginLevel": "0.00000000",
                         "marginLevelStatus": "EXCESSIVE", // "EXCESSIVE", "NORMAL", "MARGIN_CALL", "PRE_LIQUIDATION", "
                                               FORCE_LIQUIDATION"
                         "marginRatio": "0.00000000",
@@ -3436,7 +3586,7 @@ class BinanceRestApiManager(object):
                     ],
                     "totalAssetOfBtc": "0.00000000",
                     "totalLiabilityOfBtc": "0.00000000",
-                    "totalNetAssetOfBtc": "0.00000000" 
+                    "totalNetAssetOfBtc": "0.00000000"
                 }
 
             If "symbols" is sent:
@@ -3444,7 +3594,7 @@ class BinanceRestApiManager(object):
                 {
                 "assets":[
                     {
-                        "baseAsset": 
+                        "baseAsset":
                         {
                         "asset": "BTC",
                         "borrowEnabled": true,
@@ -3457,7 +3607,7 @@ class BinanceRestApiManager(object):
                         "repayEnabled": true,
                         "totalAsset": "0.00000000"
                         },
-                        "quoteAsset": 
+                        "quoteAsset":
                         {
                         "asset": "USDT",
                         "borrowEnabled": true,
@@ -3471,8 +3621,8 @@ class BinanceRestApiManager(object):
                         "totalAsset": "0.00000000"
                         },
                         "symbol": "BTCUSDT"
-                        "isolatedCreated": true, 
-                        "marginLevel": "0.00000000", 
+                        "isolatedCreated": true,
+                        "marginLevel": "0.00000000",
                         "marginLevelStatus": "EXCESSIVE", // "EXCESSIVE", "NORMAL", "MARGIN_CALL", "PRE_LIQUIDATION", "
                                               FORCE_LIQUIDATION"
                         "marginRatio": "0.00000000",
@@ -3485,7 +3635,9 @@ class BinanceRestApiManager(object):
                 }
 
         """
-        return self._request_margin_api('get', 'margin/isolated/account', True, data=params)
+        return self._request_margin_api(
+            "get", "margin/isolated/account", True, data=params
+        )
 
     def get_margin_asset(self, **params):
         """Query cross-margin asset
@@ -3516,7 +3668,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/asset', data=params)
+        return self._request_margin_api("get", "margin/asset", data=params)
 
     def get_margin_symbol(self, **params):
         """Query cross-margin symbol info
@@ -3548,7 +3700,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/pair', data=params)
+        return self._request_margin_api("get", "margin/pair", data=params)
 
     def create_isolated_margin_account(self, **params):
         """Create isolated margin account for symbol
@@ -3577,7 +3729,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'margin/isolated/create', signed=True, data=params)
+        return self._request_margin_api(
+            "post", "margin/isolated/create", signed=True, data=params
+        )
 
     def get_isolated_margin_symbol(self, **params):
         """Query isolated margin symbol info
@@ -3601,14 +3755,16 @@ class BinanceRestApiManager(object):
             "quote":"USDT",
             "isMarginTrade":true,
             "isBuyAllowed":true,
-            "isSellAllowed":true      
+            "isSellAllowed":true
             }
 
 
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/isolated/pair', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/isolated/pair", signed=True, data=params
+        )
 
     def get_all_isolated_margin_symbols(self, **params):
         """Query isolated margin symbol info for all pairs
@@ -3630,7 +3786,7 @@ class BinanceRestApiManager(object):
                     "isMarginTrade": true,
                     "isSellAllowed": true,
                     "quote": "BTC",
-                    "symbol": "BNBBTC"     
+                    "symbol": "BNBBTC"
                 },
                 {
                     "base": "TRX",
@@ -3638,7 +3794,7 @@ class BinanceRestApiManager(object):
                     "isMarginTrade": true,
                     "isSellAllowed": true,
                     "quote": "BTC",
-                    "symbol": "TRXBTC"    
+                    "symbol": "TRXBTC"
                 }
             ]
 
@@ -3646,7 +3802,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/isolated/allPairs', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/isolated/allPairs", signed=True, data=params
+        )
 
     def toggle_bnb_burn_spot_margin(self, **params):
         """Toggle BNB Burn On Spot Trade And Margin Interest
@@ -3675,7 +3833,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'bnbBurn', signed=True, data=params)
+        return self._request_margin_api("post", "bnbBurn", signed=True, data=params)
 
     def get_bnb_burn_spot_margin(self, **params):
         """Get BNB Burn Status
@@ -3699,7 +3857,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'bnbBurn', signed=True, data=params)
+        return self._request_margin_api("get", "bnbBurn", signed=True, data=params)
 
     def get_margin_price_index(self, **params):
         """Query margin priceIndex
@@ -3726,7 +3884,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/priceIndex', data=params)
+        return self._request_margin_api("get", "margin/priceIndex", data=params)
 
     def transfer_margin_to_spot(self, **params):
         """Execute transfer between cross-margin account and spot account.
@@ -3756,8 +3914,10 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params['type'] = 2
-        return self._request_margin_api('post', 'margin/transfer', signed=True, data=params)
+        params["type"] = 2
+        return self._request_margin_api(
+            "post", "margin/transfer", signed=True, data=params
+        )
 
     def transfer_spot_to_margin(self, **params):
         """Execute transfer between spot account and cross-margin account.
@@ -3787,8 +3947,10 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params['type'] = 1
-        return self._request_margin_api('post', 'margin/transfer', signed=True, data=params)
+        params["type"] = 1
+        return self._request_margin_api(
+            "post", "margin/transfer", signed=True, data=params
+        )
 
     def transfer_isolated_margin_to_spot(self, **params):
         """Execute transfer between isolated margin account and spot account.
@@ -3807,7 +3969,7 @@ class BinanceRestApiManager(object):
 
         .. code:: python
 
-            transfer = client.transfer_isolated_margin_to_spot(asset='BTC', 
+            transfer = client.transfer_isolated_margin_to_spot(asset='BTC',
                                                                 symbol='ETHBTC', amount='1.1')
 
         :returns: API response
@@ -3821,9 +3983,11 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params['transFrom'] = "ISOLATED_MARGIN"
-        params['transTo'] = "SPOT"
-        return self._request_margin_api('post', 'margin/isolated/transfer', signed=True, data=params)
+        params["transFrom"] = "ISOLATED_MARGIN"
+        params["transTo"] = "SPOT"
+        return self._request_margin_api(
+            "post", "margin/isolated/transfer", signed=True, data=params
+        )
 
     def transfer_spot_to_isolated_margin(self, **params):
         """Execute transfer between spot account and isolated margin account.
@@ -3842,7 +4006,7 @@ class BinanceRestApiManager(object):
 
         .. code:: python
 
-            transfer = client.transfer_spot_to_isolated_margin(asset='BTC', 
+            transfer = client.transfer_spot_to_isolated_margin(asset='BTC',
                                                                 symbol='ETHBTC', amount='1.1')
 
         :returns: API response
@@ -3856,9 +4020,11 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params['transFrom'] = "SPOT"
-        params['transTo'] = "ISOLATED_MARGIN"
-        return self._request_margin_api('post', 'margin/isolated/transfer', signed=True, data=params)
+        params["transFrom"] = "SPOT"
+        params["transTo"] = "ISOLATED_MARGIN"
+        return self._request_margin_api(
+            "post", "margin/isolated/transfer", signed=True, data=params
+        )
 
     def create_margin_loan(self, **params):
         """Apply for a loan in cross-margin or isolated-margin account.
@@ -3881,7 +4047,7 @@ class BinanceRestApiManager(object):
 
             transaction = client.margin_create_loan(asset='BTC', amount='1.1')
 
-            transaction = client.margin_create_loan(asset='BTC', amount='1.1', 
+            transaction = client.margin_create_loan(asset='BTC', amount='1.1',
                                                     isIsolated='TRUE', symbol='ETHBTC')
 
         :returns: API response
@@ -3895,12 +4061,12 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'margin/loan', signed=True, data=params)
+        return self._request_margin_api("post", "margin/loan", signed=True, data=params)
 
     def repay_margin_loan(self, **params):
         """Repay loan in cross-margin or isolated-margin account.
 
-        If amount is more than the amount borrowed, the full loan will be repaid. 
+        If amount is more than the amount borrowed, the full loan will be repaid.
 
         https://binance-docs.github.io/apidocs/spot/en/#margin-account-repay-margin
 
@@ -3920,7 +4086,7 @@ class BinanceRestApiManager(object):
 
             transaction = client.margin_repay_loan(asset='BTC', amount='1.1')
 
-            transaction = client.margin_repay_loan(asset='BTC', amount='1.1', 
+            transaction = client.margin_repay_loan(asset='BTC', amount='1.1',
                                                     isIsolated='TRUE', symbol='ETHBTC')
 
         :returns: API response
@@ -3934,7 +4100,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'margin/repay', signed=True, data=params)
+        return self._request_margin_api(
+            "post", "margin/repay", signed=True, data=params
+        )
 
     # Margin OCO
     def create_margin_oco_order(self, **params):
@@ -4044,7 +4212,9 @@ class BinanceRestApiManager(object):
             BinanceOrderInactiveSymbolException
 
         """
-        return self._request_margin_api('post', 'margin/order/oco', signed=True, data=params)
+        return self._request_margin_api(
+            "post", "margin/order/oco", signed=True, data=params
+        )
 
     def cancel_margin_oco_order(self, **params):
         """Cancel an entire Order List for a margin account.
@@ -4124,11 +4294,13 @@ class BinanceRestApiManager(object):
                 ]
             }
 
-    """
-        return self._request_margin_api('delete', 'margin/orderList', signed=True, data=params)
+        """
+        return self._request_margin_api(
+            "delete", "margin/orderList", signed=True, data=params
+        )
 
     def get_margin_oco_order(self, **params):
-        """ Retrieves a specific OCO based on provided optional parameters
+        """Retrieves a specific OCO based on provided optional parameters
 
         https://binance-docs.github.io/apidocs/spot/en/#query-margin-account-39-s-oco-user_data
 
@@ -4171,7 +4343,9 @@ class BinanceRestApiManager(object):
             }
 
         """
-        return self._request_margin_api('get', 'margin/orderList', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/orderList", signed=True, data=params
+        )
 
     def get_open_margin_oco_orders(self, **params):
         """Retrieves open OCO trades
@@ -4244,7 +4418,9 @@ class BinanceRestApiManager(object):
             ]
 
         """
-        return self._request_margin_api('get', 'margin/allOrderList', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/allOrderList", signed=True, data=params
+        )
 
     def create_margin_order(self, **params):
         """Post a new order for margin account.
@@ -4365,7 +4541,9 @@ class BinanceRestApiManager(object):
             BinanceOrderInactiveSymbolException
 
         """
-        return self._request_margin_api('post', 'margin/order', signed=True, data=params)
+        return self._request_margin_api(
+            "post", "margin/order", signed=True, data=params
+        )
 
     def cancel_margin_order(self, **params):
         """
@@ -4412,7 +4590,9 @@ class BinanceRestApiManager(object):
 
         """
 
-        return self._request_margin_api('delete', 'margin/order', signed=True, data=params)
+        return self._request_margin_api(
+            "delete", "margin/order", signed=True, data=params
+        )
 
     def get_margin_loan_details(self, **params):
         """
@@ -4460,7 +4640,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/loan', signed=True, data=params)
+        return self._request_margin_api("get", "margin/loan", signed=True, data=params)
 
     def get_margin_repay_details(self, **params):
         """
@@ -4514,7 +4694,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/repay', signed=True, data=params)
+        return self._request_margin_api("get", "margin/repay", signed=True, data=params)
 
     def get_margin_order(self, **params):
         """Query margin accounts order
@@ -4562,7 +4742,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/order', signed=True, data=params)
+        return self._request_margin_api("get", "margin/order", signed=True, data=params)
 
     def get_open_margin_orders(self, **params):
         """Query margin accounts open orders
@@ -4612,7 +4792,9 @@ class BinanceRestApiManager(object):
 
         """
 
-        return self._request_margin_api('get', 'margin/openOrders', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/openOrders", signed=True, data=params
+        )
 
     def get_open_isolated_margin_orders(self, **params):
         """Query isolated margin accounts open orders
@@ -4662,7 +4844,9 @@ class BinanceRestApiManager(object):
         """
 
         # Todo: Add isIsolated parameter
-        return self._request_margin_api('get', 'margin/openOrders', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/openOrders", signed=True, data=params
+        )
 
     def get_all_margin_orders(self, **params):
         """Query all margin accounts orders
@@ -4723,7 +4907,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/allOrders', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/allOrders", signed=True, data=params
+        )
 
     def get_margin_trades(self, **params):
         """Query margin accounts trades
@@ -4783,7 +4969,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/myTrades', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/myTrades", signed=True, data=params
+        )
 
     def get_max_margin_loan(self, **params):
         """Query max borrow amount for an asset
@@ -4808,7 +4996,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'margin/maxBorrowable', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/maxBorrowable", signed=True, data=params
+        )
 
     def get_max_margin_transfer(self, **params):
         r"""
@@ -4834,11 +5024,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
         """
 
-        return self._request_margin_api('get', 'margin/maxTransferable', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "margin/maxTransferable", signed=True, data=params
+        )
 
-    # Cross-margin 
+    # Cross-margin
 
-    def margin_stream_get_listen_key(self, output="value", throw_exception=True, **kwargs):
+    def margin_stream_get_listen_key(
+        self, output="value", throw_exception=True, **kwargs
+    ):
         """Start a new cross-margin data stream and return the listen key
         If a stream already exists it should return the same key.
         If the stream becomes invalid a new key is returned.
@@ -4863,14 +5057,20 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        res = self._request_margin_api('post', 'userDataStream', signed=False, data={},
-                                       throw_exception=throw_exception, **kwargs)
+        res = self._request_margin_api(
+            "post",
+            "userDataStream",
+            signed=False,
+            data={},
+            throw_exception=throw_exception,
+            **kwargs,
+        )
         if output == "value":
-            return res['listenKey']
+            return res["listenKey"]
         elif output == "raw_data":
             return res
         else:
-            return res['listenKey']
+            return res["listenKey"]
 
     def margin_stream_keepalive(self, listenKey, throw_exception=True, **kwargs):
         """PING a cross-margin data stream to prevent a timeout.
@@ -4891,11 +5091,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_margin_api('put', 'userDataStream', signed=False, data=params,
-                                        throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_margin_api(
+            "put",
+            "userDataStream",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     def margin_stream_close(self, listenKey, throw_exception=True, **kwargs):
         """Close out a cross-margin data stream.
@@ -4916,15 +5120,21 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_margin_api('delete', 'userDataStream', signed=False, data=params,
-                                        throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_margin_api(
+            "delete",
+            "userDataStream",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
-    # Isolated margin 
+    # Isolated margin
 
-    def isolated_margin_stream_get_listen_key(self, symbol, output="value", throw_exception=True, **kwargs):
+    def isolated_margin_stream_get_listen_key(
+        self, symbol, output="value", throw_exception=True, **kwargs
+    ):
         """Start a new isolated margin data stream and return the listen key
         If a stream already exists it should return the same key.
         If the stream becomes invalid a new key is returned.
@@ -4952,19 +5162,25 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'symbol': symbol
-        }
-        res = self._request_margin_api('post', 'userDataStream/isolated', signed=False, data=params,
-                                       throw_exception=throw_exception, **kwargs)
+        params = {"symbol": symbol}
+        res = self._request_margin_api(
+            "post",
+            "userDataStream/isolated",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
         if output == "value":
-            return res['listenKey']
+            return res["listenKey"]
         elif output == "raw_data":
             return res
         else:
-            return res['listenKey']
+            return res["listenKey"]
 
-    def isolated_margin_stream_keepalive(self, symbol, listenKey, throw_exception=True, **kwargs):
+    def isolated_margin_stream_keepalive(
+        self, symbol, listenKey, throw_exception=True, **kwargs
+    ):
         """PING an isolated margin data stream to prevent a timeout.
 
         https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin
@@ -4985,14 +5201,19 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'symbol': symbol,
-            'listenKey': listenKey
-        }
-        return self._request_margin_api('put', 'userDataStream/isolated', signed=False, data=params,
-                                        throw_exception=throw_exception, **kwargs)
+        params = {"symbol": symbol, "listenKey": listenKey}
+        return self._request_margin_api(
+            "put",
+            "userDataStream/isolated",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
-    def isolated_margin_stream_close(self, symbol, listenKey, throw_exception=True, **kwargs):
+    def isolated_margin_stream_close(
+        self, symbol, listenKey, throw_exception=True, **kwargs
+    ):
         """Close out an isolated margin data stream.
 
         https://binance-docs.github.io/apidocs/spot/en/#listen-key-isolated-margin
@@ -5013,12 +5234,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'symbol': symbol,
-            'listenKey': listenKey
-        }
-        return self._request_margin_api('delete', 'userDataStream/isolated', signed=False, data=params,
-                                        throw_exception=throw_exception, **kwargs)
+        params = {"symbol": symbol, "listenKey": listenKey}
+        return self._request_margin_api(
+            "delete",
+            "userDataStream/isolated",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     # Lending Endpoints
 
@@ -5028,7 +5252,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#get-flexible-product-list-user_data
 
         """
-        return self._request_margin_api('get', 'lending/daily/product/list', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/daily/product/list", signed=True, data=params
+        )
 
     def get_lending_daily_quota_left(self, **params):
         """Get Left Daily Purchase Quota of Flexible Product.
@@ -5036,7 +5262,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#get-left-daily-purchase-quota-of-flexible-product-user_data
 
         """
-        return self._request_margin_api('get', 'lending/daily/userLeftQuota', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/daily/userLeftQuota", signed=True, data=params
+        )
 
     def purchase_lending_product(self, **params):
         """Purchase Flexible Product
@@ -5044,7 +5272,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#purchase-flexible-product-user_data
 
         """
-        return self._request_margin_api('post', 'lending/daily/purchase', signed=True, data=params)
+        return self._request_margin_api(
+            "post", "lending/daily/purchase", signed=True, data=params
+        )
 
     def get_lending_daily_redemption_quota(self, **params):
         """Get Left Daily Redemption Quota of Flexible Product
@@ -5052,7 +5282,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#get-left-daily-redemption-quota-of-flexible-product-user_data
 
         """
-        return self._request_margin_api('get', 'lending/daily/userRedemptionQuota', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/daily/userRedemptionQuota", signed=True, data=params
+        )
 
     def redeem_lending_product(self, **params):
         """Redeem Flexible Product
@@ -5060,7 +5292,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#redeem-flexible-product-user_data
 
         """
-        return self._request_margin_api('post', 'lending/daily/redeem', signed=True, data=params)
+        return self._request_margin_api(
+            "post", "lending/daily/redeem", signed=True, data=params
+        )
 
     def get_lending_position(self, **params):
         """Get Flexible Product Position
@@ -5068,7 +5302,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#get-flexible-product-position-user_data
 
         """
-        return self._request_margin_api('get', 'lending/daily/token/position', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/daily/token/position", signed=True, data=params
+        )
 
     def get_fixed_activity_project_list(self, **params):
         """Get Fixed and Activity Project List
@@ -5116,9 +5352,11 @@ class BinanceRestApiManager(object):
             ]
 
         :raises: BinanceRequestException, BinanceAPIException
-        
+
         """
-        return self._request_margin_api('get', 'lending/project/list', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/project/list", signed=True, data=params
+        )
 
     def get_lending_account(self, **params):
         """Get Lending Account Details
@@ -5126,7 +5364,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#lending-account-user_data
 
         """
-        return self._request_margin_api('get', 'lending/union/account', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/union/account", signed=True, data=params
+        )
 
     def get_lending_purchase_history(self, **params):
         """Get Lending Purchase History
@@ -5134,7 +5374,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#get-purchase-record-user_data
 
         """
-        return self._request_margin_api('get', 'lending/union/purchaseRecord', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/union/purchaseRecord", signed=True, data=params
+        )
 
     def get_lending_redemption_history(self, **params):
         """Get Lending Redemption History
@@ -5142,7 +5384,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#get-redemption-record-user_data
 
         """
-        return self._request_margin_api('get', 'lending/union/redemptionRecord', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/union/redemptionRecord", signed=True, data=params
+        )
 
     def get_lending_interest_history(self, **params):
         """Get Lending Interest History
@@ -5150,7 +5394,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#get-interest-history-user_data-2
 
         """
-        return self._request_margin_api('get', 'lending/union/interestHistory', signed=True, data=params)
+        return self._request_margin_api(
+            "get", "lending/union/interestHistory", signed=True, data=params
+        )
 
     def change_fixed_activity_to_daily_position(self, **params):
         """Change Fixed/Activity Position to Daily Position
@@ -5158,7 +5404,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/spot/en/#change-fixed-activity-position-to-daily-position-user_data
 
         """
-        return self._request_margin_api('post', 'lending/positionChanged', signed=True, data=params)
+        return self._request_margin_api(
+            "post", "lending/positionChanged", signed=True, data=params
+        )
 
     # Sub Accounts
 
@@ -5199,7 +5447,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/list', True, data=params)
+        return self._request_margin_api("get", "sub-account/list", True, data=params)
 
     def get_sub_account_transfer_history(self, **params):
         """Query Sub-account Transfer History.
@@ -5249,8 +5497,10 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/sub/transfer/history', True, data=params)
-    
+        return self._request_margin_api(
+            "get", "sub-account/sub/transfer/history", True, data=params
+        )
+
     def get_sub_account_futures_transfer_history(self, **params):
         """Query Sub-account Futures Transfer History.
 
@@ -5299,7 +5549,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/futures/internalTransfer', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/futures/internalTransfer", True, data=params
+        )
 
     def create_sub_account_futures_transfer(self, **params):
         """Execute sub-account Futures transfer
@@ -5331,7 +5583,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/futures/internalTransfer', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/futures/internalTransfer", True, data=params
+        )
 
     def get_sub_account_assets(self, **params):
         """Fetch sub-account assets
@@ -5380,7 +5634,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/assets', True, data=params, version='v3')
+        return self._request_margin_api(
+            "get", "sub-account/assets", True, data=params, version="v3"
+        )
 
     def query_subaccount_spot_summary(self, **params):
         """Query Sub-account Spot Assets Summary (For Master Account)
@@ -5418,7 +5674,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/spotSummary', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/spotSummary", True, data=params
+        )
 
     def get_subaccount_deposit_address(self, **params):
         """Get Sub-account Deposit Address (For Master Account)
@@ -5448,7 +5706,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'capital/deposit/subAddress', True, data=params)
+        return self._request_margin_api(
+            "get", "capital/deposit/subAddress", True, data=params
+        )
 
     def get_subaccount_deposit_history(self, **params):
         """Get Sub-account Deposit History (For Master Account)
@@ -5506,7 +5766,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'capital/deposit/subHisrec', True, data=params)
+        return self._request_margin_api(
+            "get", "capital/deposit/subHisrec", True, data=params
+        )
 
     def get_subaccount_futures_margin_status(self, **params):
         """Get Sub-account's Status on Margin/Futures (For Master Account)
@@ -5537,7 +5799,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/status', True, data=params)
+        return self._request_margin_api("get", "sub-account/status", True, data=params)
 
     def enable_subaccount_margin(self, **params):
         """Enable Margin for Sub-account (For Master Account)
@@ -5564,7 +5826,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/margin/enable', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/margin/enable", True, data=params
+        )
 
     def get_subaccount_margin_details(self, **params):
         """Get Detail on Sub-account's Margin Account (For Master Account)
@@ -5631,7 +5895,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/margin/account', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/margin/account", True, data=params
+        )
 
     def get_subaccount_margin_summary(self, **params):
         """Get Summary of Sub-account's Margin Account (For Master Account)
@@ -5668,7 +5934,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/margin/accountSummary', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/margin/accountSummary", True, data=params
+        )
 
     def enable_subaccount_futures(self, **params):
         """Enable Futures for Sub-account (For Master Account)
@@ -5695,7 +5963,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/futures/enable', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/futures/enable", True, data=params
+        )
 
     def get_subaccount_futures_details(self, **params):
         """Get Detail on Sub-account's Futures Account (For Master Account)
@@ -5745,7 +6015,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/futures/account', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/futures/account", True, data=params
+        )
 
     def get_subaccount_futures_summary(self, **params):
         """Get Summary of Sub-account's Futures Account (For Master Account)
@@ -5797,7 +6069,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/futures/accountSummary', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/futures/accountSummary", True, data=params
+        )
 
     def get_subaccount_futures_positionrisk(self, **params):
         """Get Futures Position-Risk of Sub-account (For Master Account)
@@ -5829,7 +6103,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/futures/positionRisk', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/futures/positionRisk", True, data=params
+        )
 
     def make_subaccount_futures_transfer(self, **params):
         """Futures Transfer for Sub-account (For Master Account)
@@ -5859,7 +6135,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/futures/transfer', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/futures/transfer", True, data=params
+        )
 
     def make_subaccount_margin_transfer(self, **params):
         """Margin Transfer for Sub-account (For Master Account)
@@ -5887,7 +6165,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/margin/transfer', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/margin/transfer", True, data=params
+        )
 
     def make_subaccount_to_subaccount_transfer(self, **params):
         """Transfer to Sub-account of Same Master (For Sub-account)
@@ -5914,7 +6194,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/transfer/subToSub', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/transfer/subToSub", True, data=params
+        )
 
     def make_subaccount_to_master_transfer(self, **params):
         """Transfer to Master (For Sub-account)
@@ -5939,7 +6221,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/transfer/subToMaster', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/transfer/subToMaster", True, data=params
+        )
 
     def get_subaccount_transfer_history(self, **params):
         """Subaccount Transfer History (For Sub-account)
@@ -5989,7 +6273,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/transfer/subUserHistory', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/transfer/subUserHistory", True, data=params
+        )
 
     def make_universal_transfer(self, **params):
         """Universal Transfer (For Master Account)
@@ -6022,7 +6308,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'sub-account/universalTransfer', True, data=params)
+        return self._request_margin_api(
+            "post", "sub-account/universalTransfer", True, data=params
+        )
 
     def get_universal_transfer_history(self, **params):
         """Universal Transfer (For Master Account)
@@ -6076,9 +6364,13 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'sub-account/universalTransfer', True, data=params)
+        return self._request_margin_api(
+            "get", "sub-account/universalTransfer", True, data=params
+        )
 
-    def get_used_weight(self, cached: bool = False, cached_timeout: Optional[float] = None) -> Optional[dict]:
+    def get_used_weight(
+        self, cached: bool = False, cached_timeout: Optional[float] = None
+    ) -> Optional[dict]:
         """
         Get the used weight from Binance endpoints (weight costs: 1)
 
@@ -6104,7 +6396,7 @@ class BinanceRestApiManager(object):
             if cached_timeout is not None and self.used_weight is None:
                 self.ping()
             elif cached_timeout is not None and self.used_weight is not None:
-                if self.used_weight['timestamp'] < (time.time() - cached_timeout):
+                if self.used_weight["timestamp"] < (time.time() - cached_timeout):
                     self.ping()
         else:
             self.ping()
@@ -6117,7 +6409,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#test-connectivity
 
         """
-        return self._request_futures_api('get', 'ping')
+        return self._request_futures_api("get", "ping")
 
     def futures_time(self):
         """Test connectivity to the Rest API and get the current server time.
@@ -6125,7 +6417,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#check-server-time
 
         """
-        return self._request_futures_api('get', 'time')
+        return self._request_futures_api("get", "time")
 
     def futures_exchange_info(self, **params):
         """Current exchange trading rules and symbol information
@@ -6133,7 +6425,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#exchange-information-market_data
 
         """
-        return self._request_futures_api('get', 'exchangeInfo', data=params)
+        return self._request_futures_api("get", "exchangeInfo", data=params)
 
     def futures_order_book(self, **params):
         """Get the Order Book for the market
@@ -6141,7 +6433,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#order-book-market_data
 
         """
-        return self._request_futures_api('get', 'depth', data=params)
+        return self._request_futures_api("get", "depth", data=params)
 
     def futures_recent_trades(self, **params):
         """Get recent trades (up to last 500).
@@ -6149,7 +6441,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#recent-trades-list-market_data
 
         """
-        return self._request_futures_api('get', 'trades', data=params)
+        return self._request_futures_api("get", "trades", data=params)
 
     def futures_historical_trades(self, **params):
         """Get older market historical trades.
@@ -6157,7 +6449,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#old-trades-lookup-market_data
 
         """
-        return self._request_futures_api('get', 'historicalTrades', data=params)
+        return self._request_futures_api("get", "historicalTrades", data=params)
 
     def futures_aggregate_trades(self, **params):
         """Get compressed, aggregate trades. Trades that fill at the time, from the same order, with the same
@@ -6166,7 +6458,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#compressed-aggregate-trades-list-market_data
 
         """
-        return self._request_futures_api('get', 'aggTrades', data=params)
+        return self._request_futures_api("get", "aggTrades", data=params)
 
     def futures_klines(self, **params):
         """Kline/candlestick bars for a symbol. Klines are uniquely identified by their open time.
@@ -6174,7 +6466,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#kline-candlestick-data-market_data
 
         """
-        return self._request_futures_api('get', 'klines', data=params)
+        return self._request_futures_api("get", "klines", data=params)
 
     def futures_mark_price(self, **params):
         """Get Mark Price and Funding Rate
@@ -6182,7 +6474,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#mark-price-market_data
 
         """
-        return self._request_futures_api('get', 'premiumIndex', data=params)
+        return self._request_futures_api("get", "premiumIndex", data=params)
 
     def futures_funding_rate(self, **params):
         """Get funding rate history
@@ -6190,7 +6482,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#get-funding-rate-history-market_data
 
         """
-        return self._request_futures_api('get', 'fundingRate', data=params)
+        return self._request_futures_api("get", "fundingRate", data=params)
 
     def futures_ticker(self, **params):
         """24 hour rolling window price change statistics.
@@ -6198,7 +6490,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#24hr-ticker-price-change-statistics-market_data
 
         """
-        return self._request_futures_api('get', 'ticker/24hr', data=params)
+        return self._request_futures_api("get", "ticker/24hr", data=params)
 
     def futures_symbol_ticker(self, **params):
         """Latest price for a symbol or symbols.
@@ -6206,7 +6498,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#symbol-price-ticker-market_data
 
         """
-        return self._request_futures_api('get', 'ticker/price', data=params)
+        return self._request_futures_api("get", "ticker/price", data=params)
 
     def futures_orderbook_ticker(self, **params):
         """Best price/qty on the order book for a symbol or symbols.
@@ -6214,7 +6506,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#symbol-order-book-ticker-market_data
 
         """
-        return self._request_futures_api('get', 'ticker/bookTicker', data=params)
+        return self._request_futures_api("get", "ticker/bookTicker", data=params)
 
     def futures_liquidation_orders(self, **params):
         """Get all liquidation orders
@@ -6222,7 +6514,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#get-all-liquidation-orders-market_data
 
         """
-        return self._request_futures_api('get', 'ticker/allForceOrders', data=params)
+        return self._request_futures_api("get", "ticker/allForceOrders", data=params)
 
     def futures_open_interest(self, **params):
         """Get present open interest of a specific symbol.
@@ -6230,7 +6522,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#open-interest-market_data
 
         """
-        return self._request_futures_api('get', 'ticker/openInterest', data=params)
+        return self._request_futures_api("get", "ticker/openInterest", data=params)
 
     def futures_open_interest_hist(self, **params):
         """Get open interest statistics of a specific symbol.
@@ -6238,7 +6530,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#open-interest-statistics
 
         """
-        return self._request_futures_data_api('get', 'openInterestHist', data=params)
+        return self._request_futures_data_api("get", "openInterestHist", data=params)
 
     def futures_leverage_bracket(self, **params):
         """Notional and Leverage Brackets
@@ -6246,7 +6538,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#notional-and-leverage-brackets-market_data
 
         """
-        return self._request_futures_api('get', 'leverageBracket', True, data=params)
+        return self._request_futures_api("get", "leverageBracket", True, data=params)
 
     def futures_account_transfer(self, **params):
         """Execute transfer between spot account and futures account.
@@ -6254,7 +6546,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#new-future-account-transfer
 
         """
-        return self._request_margin_api('post', 'futures/transfer', True, data=params)
+        return self._request_margin_api("post", "futures/transfer", True, data=params)
 
     def futures_auto_cancel_all_open_orders(self, **params):
         """
@@ -6280,7 +6572,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_futures_api('post', 'countdownCancelAll', True, data=params)
+        return self._request_futures_api(
+            "post", "countdownCancelAll", True, data=params
+        )
 
     def futures_commission_rate(self, **params):
         """Get commission rate (user data)
@@ -6288,7 +6582,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#user-commission-rate-user_data
 
         """
-        return self._request_futures_coin_api("get", "commissionRate", version=1, signed=True, data=params)
+        return self._request_futures_coin_api(
+            "get", "commissionRate", version=1, signed=True, data=params
+        )
 
     def transfer_history(self, **params):
         """Get future account transaction history list
@@ -6296,7 +6592,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#get-future-account-transaction-history-list-user_data
 
         """
-        return self._request_margin_api('get', 'futures/transfer', True, data=params)
+        return self._request_margin_api("get", "futures/transfer", True, data=params)
 
     def futures_create_order(self, **params):
         """Send in a new order.
@@ -6304,7 +6600,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#new-order-trade
 
         """
-        return self._request_futures_api('post', 'order', True, data=params)
+        return self._request_futures_api("post", "order", True, data=params)
 
     def futures_place_batch_order(self, **params):
         """Send in new orders.
@@ -6313,9 +6609,9 @@ class BinanceRestApiManager(object):
         the url encoding is done on the special query param, batchOrders, in the early stage.
         """
         query_string = urlencode(params)
-        query_string = query_string.replace('%27', '%22')
-        params['batchOrders'] = query_string[12:]
-        return self._request_futures_api('post', 'batchOrders', True, data=params)
+        query_string = query_string.replace("%27", "%22")
+        params["batchOrders"] = query_string[12:]
+        return self._request_futures_api("post", "batchOrders", True, data=params)
 
     def futures_create_algo_order(self, **params):
         """Send in a new algo order (VP, TWAP or CONDITIONAL).
@@ -6349,7 +6645,7 @@ class BinanceRestApiManager(object):
         :type duration: int
 
         """
-        return self._request_futures_api('post', 'algo/orders', True, data=params)
+        return self._request_futures_api("post", "algo/orders", True, data=params)
 
     def futures_cancel_algo_order(self, **params):
         """Cancel an active algo order.
@@ -6360,7 +6656,7 @@ class BinanceRestApiManager(object):
         :type algoId: int
 
         """
-        return self._request_futures_api('delete', 'algo/orders', True, data=params)
+        return self._request_futures_api("delete", "algo/orders", True, data=params)
 
     def futures_get_open_algo_orders(self, **params):
         """Get all open algo orders.
@@ -6368,7 +6664,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#query-current-algo-open-orders-user_data
 
         """
-        return self._request_futures_api('get', 'algo/orders/open', True, data=params)
+        return self._request_futures_api("get", "algo/orders/open", True, data=params)
 
     def futures_get_algo_order_history(self, **params):
         """Get historical algo orders.
@@ -6389,7 +6685,9 @@ class BinanceRestApiManager(object):
         :type pageSize: int
 
         """
-        return self._request_futures_api('get', 'algo/orders/historical', True, data=params)
+        return self._request_futures_api(
+            "get", "algo/orders/historical", True, data=params
+        )
 
     def futures_get_algo_sub_orders(self, **params):
         """Get sub orders of a specific algo order.
@@ -6404,7 +6702,9 @@ class BinanceRestApiManager(object):
         :type pageSize: int
 
         """
-        return self._request_futures_api('get', 'algo/orders/subOrders', True, data=params)
+        return self._request_futures_api(
+            "get", "algo/orders/subOrders", True, data=params
+        )
 
     def futures_get_order(self, **params):
         """
@@ -6413,7 +6713,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#query-order-user_data
 
         """
-        return self._request_futures_api('get', 'order', True, data=params)
+        return self._request_futures_api("get", "order", True, data=params)
 
     def futures_get_open_orders(self, **params):
         """
@@ -6422,7 +6722,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#current-open-orders-user_data
 
         """
-        return self._request_futures_api('get', 'openOrders', True, data=params)
+        return self._request_futures_api("get", "openOrders", True, data=params)
 
     def futures_get_all_orders(self, **params):
         """
@@ -6431,7 +6731,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#all-orders-user_data
 
         """
-        return self._request_futures_api('get', 'allOrders', True, data=params)
+        return self._request_futures_api("get", "allOrders", True, data=params)
 
     def futures_cancel_order(self, **params):
         """
@@ -6440,7 +6740,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#cancel-order-trade
 
         """
-        return self._request_futures_api('delete', 'order', True, data=params)
+        return self._request_futures_api("delete", "order", True, data=params)
 
     def futures_cancel_all_open_orders(self, **params):
         """
@@ -6449,7 +6749,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#cancel-all-open-orders-trade
 
         """
-        return self._request_futures_api('delete', 'allOpenOrders', True, data=params)
+        return self._request_futures_api("delete", "allOpenOrders", True, data=params)
 
     def futures_cancel_orders(self, **params):
         """
@@ -6458,7 +6758,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#cancel-multiple-orders-trade
 
         """
-        return self._request_futures_api('delete', 'batchOrders', True, data=params)
+        return self._request_futures_api("delete", "batchOrders", True, data=params)
 
     def futures_account_balance(self, **params):
         """
@@ -6467,7 +6767,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#future-account-balance-user_data
 
         """
-        return self._request_futures_api('get', 'balance', True, version=2, data=params)
+        return self._request_futures_api("get", "balance", True, version=2, data=params)
 
     def futures_account(self, **params):
         """
@@ -6476,7 +6776,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#account-information-user_data
 
         """
-        return self._request_futures_api('get', 'account', True, version=2, data=params)
+        return self._request_futures_api("get", "account", True, version=2, data=params)
 
     def futures_change_leverage(self, **params):
         """
@@ -6485,7 +6785,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#change-initial-leverage-trade
 
         """
-        return self._request_futures_api('post', 'leverage', True, data=params)
+        return self._request_futures_api("post", "leverage", True, data=params)
 
     def futures_change_margin_type(self, **params):
         """Change the margin type for a symbol
@@ -6493,7 +6793,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#change-margin-type-trade
 
         """
-        return self._request_futures_api('post', 'marginType', True, data=params)
+        return self._request_futures_api("post", "marginType", True, data=params)
 
     def futures_change_position_margin(self, **params):
         """
@@ -6502,7 +6802,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#modify-isolated-position-margin-trade
 
         """
-        return self._request_futures_api('post', 'positionMargin', True, data=params)
+        return self._request_futures_api("post", "positionMargin", True, data=params)
 
     def futures_position_margin_history(self, **params):
         """
@@ -6511,7 +6811,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#get-postion-margin-change-history-trade
 
         """
-        return self._request_futures_api('get', 'positionMargin/history', True, data=params)
+        return self._request_futures_api(
+            "get", "positionMargin/history", True, data=params
+        )
 
     def futures_position_information(self, **params):
         """
@@ -6520,7 +6822,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#position-information-user_data
 
         """
-        return self._request_futures_api('get', 'positionRisk', True, version=2, data=params)
+        return self._request_futures_api(
+            "get", "positionRisk", True, version=2, data=params
+        )
 
     def futures_account_trades(self, **params):
         """
@@ -6529,7 +6833,7 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#account-trade-list-user_data
 
         """
-        return self._request_futures_api('get', 'userTrades', True, data=params)
+        return self._request_futures_api("get", "userTrades", True, data=params)
 
     def futures_income_history(self, **params):
         """
@@ -6538,27 +6842,29 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/futures/en/#get-income-history-user_data
 
         """
-        return self._request_futures_api('get', 'income', True, data=params)
+        return self._request_futures_api("get", "income", True, data=params)
 
     def futures_change_position_mode(self, **params):
         """
         Change position mode for authenticated account
 
         https://binance-docs.github.io/apidocs/futures/en/#change-position-mode-trade
-        
+
         """
-        return self._request_futures_api('post', 'positionSide/dual', True, data=params)
+        return self._request_futures_api("post", "positionSide/dual", True, data=params)
 
     def futures_get_position_mode(self, **params):
         """
         Get position mode for authenticated account
 
         https://binance-docs.github.io/apidocs/futures/en/#get-current-position-mode-user_data
-        
-        """
-        return self._request_futures_api('get', 'positionSide/dual', True, data=params)
 
-    def futures_stream_get_listen_key(self, output="value", throw_exception=True, **kwargs):
+        """
+        return self._request_futures_api("get", "positionSide/dual", True, data=params)
+
+    def futures_stream_get_listen_key(
+        self, output="value", throw_exception=True, **kwargs
+    ):
         """Start a new futures data stream and return the listen key
         If a stream already exists it should return the same key.
         If the stream becomes invalid a new key is returned.
@@ -6583,14 +6889,20 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        res = self._request_futures_api('post', 'listenKey', signed=False, data={},
-                                        throw_exception=throw_exception, **kwargs)
+        res = self._request_futures_api(
+            "post",
+            "listenKey",
+            signed=False,
+            data={},
+            throw_exception=throw_exception,
+            **kwargs,
+        )
         if output == "value":
-            return res['listenKey']
+            return res["listenKey"]
         elif output == "raw_data":
             return res
         else:
-            return res['listenKey']
+            return res["listenKey"]
 
     def futures_stream_keepalive(self, listenKey, throw_exception=True, **kwargs):
         """PING a futures data stream to prevent a timeout.
@@ -6611,11 +6923,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_futures_api('put', 'listenKey', signed=False, data=params,
-                                         throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_futures_api(
+            "put",
+            "listenKey",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     def futures_stream_close(self, listenKey, throw_exception=True, **kwargs):
         """Close out a futures data stream.
@@ -6636,14 +6952,20 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_futures_api('delete', 'listenKey', signed=False, data=params,
-                                         throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_futures_api(
+            "delete",
+            "listenKey",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     # Portfolio Margin API
-    def portfolio_margin_stream_get_listen_key(self, output="value", throw_exception=True, **kwargs):
+    def portfolio_margin_stream_get_listen_key(
+        self, output="value", throw_exception=True, **kwargs
+    ):
         """Start a new Portfolio Margin user data stream and return the listen key.
         If a stream already exists it should return the same key.
         If the stream becomes invalid a new key is returned.
@@ -6668,16 +6990,24 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        res = self._request_papi_api('post', 'listenKey', signed=False, data={},
-                                     throw_exception=throw_exception, **kwargs)
+        res = self._request_papi_api(
+            "post",
+            "listenKey",
+            signed=False,
+            data={},
+            throw_exception=throw_exception,
+            **kwargs,
+        )
         if output == "value":
-            return res['listenKey']
+            return res["listenKey"]
         elif output == "raw_data":
             return res
         else:
-            return res['listenKey']
+            return res["listenKey"]
 
-    def portfolio_margin_stream_keepalive(self, listenKey, throw_exception=True, **kwargs):
+    def portfolio_margin_stream_keepalive(
+        self, listenKey, throw_exception=True, **kwargs
+    ):
         """PING a Portfolio Margin user data stream to prevent a timeout.
 
         https://developers.binance.com/docs/derivatives/portfolio-margin/user-data-streams
@@ -6696,11 +7026,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_papi_api('put', 'listenKey', signed=False, data=params,
-                                      throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_papi_api(
+            "put",
+            "listenKey",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     def portfolio_margin_stream_close(self, listenKey, throw_exception=True, **kwargs):
         """Close out a Portfolio Margin user data stream.
@@ -6721,11 +7055,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_papi_api('delete', 'listenKey', signed=False, data=params,
-                                      throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_papi_api(
+            "delete",
+            "listenKey",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     # COIN Futures API
     def futures_coin_ping(self):
@@ -6894,7 +7232,9 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/delivery/en/#open-interest-statistics-market-data
 
         """
-        return self._request_futures_coin_data_api("get", "openInterestHist", data=params)
+        return self._request_futures_coin_data_api(
+            "get", "openInterestHist", data=params
+        )
 
     def futures_coin_leverage_bracket(self, **params):
         """
@@ -6943,9 +7283,9 @@ class BinanceRestApiManager(object):
         the url encoding is done on the special query param, batchOrders, in the early stage.
         """
         query_string = urlencode(params)
-        query_string = query_string.replace('%27', '%22')
-        params['batchOrders'] = query_string[12:]
-        return self._request_futures_coin_api('post', 'batchOrders', True, data=params)
+        query_string = query_string.replace("%27", "%22")
+        params["batchOrders"] = query_string[12:]
+        return self._request_futures_coin_api("post", "batchOrders", True, data=params)
 
     def futures_coin_get_order(self, **params):
         """
@@ -7105,8 +7445,10 @@ class BinanceRestApiManager(object):
 
         https://binance-docs.github.io/apidocs/delivery/en/#change-position-mode-trade
         """
-        return self._request_futures_coin_api("post", "positionSide/dual", True, data=params)
-    
+        return self._request_futures_coin_api(
+            "post", "positionSide/dual", True, data=params
+        )
+
     def futures_coin_get_position_mode(self, **params):
         """
         Get user's position mode (Hedge Mode or One-way Mode ) on EVERY symbol
@@ -7114,9 +7456,13 @@ class BinanceRestApiManager(object):
         https://binance-docs.github.io/apidocs/delivery/en/#get-current-position-mode-user_data
 
         """
-        return self._request_futures_coin_api("get", "positionSide/dual", True, data=params)
+        return self._request_futures_coin_api(
+            "get", "positionSide/dual", True, data=params
+        )
 
-    def futures_coin_stream_get_listen_key(self, output="value", throw_exception=True, **kwargs):
+    def futures_coin_stream_get_listen_key(
+        self, output="value", throw_exception=True, **kwargs
+    ):
         """Start a new coin futures data stream and return the listen key
         If a stream already exists it should return the same key.
         If the stream becomes invalid a new key is returned.
@@ -7141,14 +7487,20 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        res = self._request_futures_coin_api('post', 'listenKey', signed=False, data={},
-                                             throw_exception=throw_exception, **kwargs)
+        res = self._request_futures_coin_api(
+            "post",
+            "listenKey",
+            signed=False,
+            data={},
+            throw_exception=throw_exception,
+            **kwargs,
+        )
         if output == "value":
-            return res['listenKey']
+            return res["listenKey"]
         elif output == "raw_data":
             return res
         else:
-            return res['listenKey']
+            return res["listenKey"]
 
     def futures_coin_stream_keepalive(self, listenKey, throw_exception=True, **kwargs):
         """PING a coin futures data stream to prevent a timeout.
@@ -7169,11 +7521,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_futures_coin_api('put', 'listenKey', signed=False, data=params,
-                                              throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_futures_coin_api(
+            "put",
+            "listenKey",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     def futures_coin_stream_close(self, listenKey, throw_exception=True, **kwargs):
         """Close out a coin futures data stream.
@@ -7194,11 +7550,15 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        params = {
-            'listenKey': listenKey
-        }
-        return self._request_futures_coin_api('delete', 'listenKey', signed=False, data=params,
-                                              throw_exception=throw_exception, **kwargs)
+        params = {"listenKey": listenKey}
+        return self._request_futures_coin_api(
+            "delete",
+            "listenKey",
+            signed=False,
+            data=params,
+            throw_exception=throw_exception,
+            **kwargs,
+        )
 
     # European Options Market Data endpoints
     # https://developers.binance.com/docs/derivatives/option/market-data
@@ -7209,7 +7569,7 @@ class BinanceRestApiManager(object):
         https://developers.binance.com/docs/derivatives/option/market-data
 
         """
-        return self._request_options_api('get', 'ping')
+        return self._request_options_api("get", "ping")
 
     def options_time(self):
         """Check server time for Options API.
@@ -7217,7 +7577,7 @@ class BinanceRestApiManager(object):
         https://developers.binance.com/docs/derivatives/option/market-data
 
         """
-        return self._request_options_api('get', 'time')
+        return self._request_options_api("get", "time")
 
     def options_exchange_info(self):
         """Get current Options exchange trading rules and symbol information.
@@ -7225,7 +7585,7 @@ class BinanceRestApiManager(object):
         https://developers.binance.com/docs/derivatives/option/market-data/Exchange-Information
 
         """
-        return self._request_options_api('get', 'exchangeInfo')
+        return self._request_options_api("get", "exchangeInfo")
 
     def options_order_book(self, **params):
         """Get the Options order book.
@@ -7238,7 +7598,7 @@ class BinanceRestApiManager(object):
         :type limit: int
 
         """
-        return self._request_options_api('get', 'depth', data=params)
+        return self._request_options_api("get", "depth", data=params)
 
     def options_recent_trades(self, **params):
         """Get recent Options trades.
@@ -7251,7 +7611,7 @@ class BinanceRestApiManager(object):
         :type limit: int
 
         """
-        return self._request_options_api('get', 'trades', data=params)
+        return self._request_options_api("get", "trades", data=params)
 
     def options_block_trades(self, **params):
         """Get recent Options block trades.
@@ -7264,7 +7624,7 @@ class BinanceRestApiManager(object):
         :type limit: int
 
         """
-        return self._request_options_api('get', 'blockTrades', data=params)
+        return self._request_options_api("get", "blockTrades", data=params)
 
     def options_klines(self, **params):
         """Get Options kline/candlestick data.
@@ -7283,7 +7643,7 @@ class BinanceRestApiManager(object):
         :type limit: int
 
         """
-        return self._request_options_api('get', 'klines', data=params)
+        return self._request_options_api("get", "klines", data=params)
 
     def options_mark_price(self, **params):
         """Get Options mark price and greek info.
@@ -7294,7 +7654,7 @@ class BinanceRestApiManager(object):
         :type symbol: str
 
         """
-        return self._request_options_api('get', 'mark', data=params)
+        return self._request_options_api("get", "mark", data=params)
 
     def options_ticker(self, **params):
         """Get 24hr Options ticker price change statistics.
@@ -7305,7 +7665,7 @@ class BinanceRestApiManager(object):
         :type symbol: str
 
         """
-        return self._request_options_api('get', 'ticker', data=params)
+        return self._request_options_api("get", "ticker", data=params)
 
     def options_index_price(self, **params):
         """Get spot index price for option underlying asset.
@@ -7316,7 +7676,7 @@ class BinanceRestApiManager(object):
         :type underlying: str
 
         """
-        return self._request_options_api('get', 'index', data=params)
+        return self._request_options_api("get", "index", data=params)
 
     def options_exercise_history(self, **params):
         """Get historical exercise records.
@@ -7333,7 +7693,7 @@ class BinanceRestApiManager(object):
         :type limit: int
 
         """
-        return self._request_options_api('get', 'exerciseHistory', data=params)
+        return self._request_options_api("get", "exerciseHistory", data=params)
 
     def options_open_interest(self, **params):
         """Get open interest for specific underlying asset on specific expiration date.
@@ -7346,7 +7706,7 @@ class BinanceRestApiManager(object):
         :type expiration: str
 
         """
-        return self._request_options_api('get', 'openInterest', data=params)
+        return self._request_options_api("get", "openInterest", data=params)
 
     def get_all_coins_info(self, **params):
         """
@@ -7423,7 +7783,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'capital/config/getall', True, data=params)
+        return self._request_margin_api(
+            "get", "capital/config/getall", True, data=params
+        )
 
     def get_account_snapshot(self, **params):
         """
@@ -7539,7 +7901,7 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('get', 'accountSnapshot', True, data=params)
+        return self._request_margin_api("get", "accountSnapshot", True, data=params)
 
     def disable_fast_withdraw_switch(self, **params):
         """
@@ -7555,7 +7917,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'disableFastWithdrawSwitch', True, data=params)
+        return self._request_margin_api(
+            "post", "disableFastWithdrawSwitch", True, data=params
+        )
 
     def enable_fast_withdraw_switch(self, **params):
         """
@@ -7571,7 +7935,9 @@ class BinanceRestApiManager(object):
         :raises: BinanceRequestException, BinanceAPIException
 
         """
-        return self._request_margin_api('post', 'enableFastWithdrawSwitch', True, data=params)
+        return self._request_margin_api(
+            "post", "enableFastWithdrawSwitch", True, data=params
+        )
 
     def stop_manager(self):
         """
@@ -7584,5 +7950,7 @@ class BinanceRestApiManager(object):
             if self.session is not None:
                 self.session.close()
         except AttributeError as error_msg:
-            logger.debug(f"BinanceRestApiManager.stop_manager() - AttributeError: {error_msg}")
+            logger.debug(
+                f"BinanceRestApiManager.stop_manager() - AttributeError: {error_msg}"
+            )
         return True

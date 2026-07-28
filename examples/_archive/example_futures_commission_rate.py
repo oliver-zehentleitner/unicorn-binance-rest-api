@@ -42,10 +42,12 @@ import os
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_binance_rest_api")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 api_key = ""
 api_secret = ""
@@ -53,7 +55,6 @@ api_secret = ""
 # To use this library you need a valid UNICORN Binance Suite License: https://technopathy.club/87b0088124a8
 ubra = BinanceRestApiManager(api_key, api_secret, exchange="binance.com-futures")
 
-print(ubra.futures_commission_rate(symbol='BTCUSDT'))
+print(ubra.futures_commission_rate(symbol="BTCUSDT"))
 
 ubra.stop_manager()
-

@@ -42,10 +42,12 @@ import os
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_binance_rest_api")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 # Define API Key and Secret
 API_KEY = ""
@@ -71,31 +73,39 @@ TAKE_PROFIT_GAP_TO_BUY_PRICE_IN_PERCENT = 2
 
 # Create a BinanceRestApiManager instance with the exchange and API credentials
 # To use this library you need a valid UNICORN Binance Suite License: https://technopathy.club/87b0088124a8
-ubra = BinanceRestApiManager(exchange="binance.com-isolated_margin", api_key=API_KEY, api_secret=API_SECRET)
+ubra = BinanceRestApiManager(
+    exchange="binance.com-isolated_margin", api_key=API_KEY, api_secret=API_SECRET
+)
 
 # Buy BTC with a market order using the specified USDT quantity
-buy_order = ubra.create_margin_order(symbol="BTCUSDT",
-                                     isIsolated="TRUE",
-                                     side="BUY",
-                                     type="MARKET",
-                                     quoteOrderQty=BUY_QUANTITY_USDT)
+buy_order = ubra.create_margin_order(
+    symbol="BTCUSDT",
+    isIsolated="TRUE",
+    side="BUY",
+    type="MARKET",
+    quoteOrderQty=BUY_QUANTITY_USDT,
+)
 print(f"Buy Order Result: {buy_order}")
 
 # If the buy order was filled
-if buy_order['status'] == "FILLED":
+if buy_order["status"] == "FILLED":
     # Calculate prices
-    buy_price = float(buy_order['fills'][0]['price'])
-    take_profit_price = buy_price * (100+TAKE_PROFIT_GAP_TO_BUY_PRICE_IN_PERCENT) / 100
-    stop_loss_price = buy_price * (100-STOP_LOSS_GAP_TO_BUY_PRICE_IN_PERCENT) / 100
+    buy_price = float(buy_order["fills"][0]["price"])
+    take_profit_price = (
+        buy_price * (100 + TAKE_PROFIT_GAP_TO_BUY_PRICE_IN_PERCENT) / 100
+    )
+    stop_loss_price = buy_price * (100 - STOP_LOSS_GAP_TO_BUY_PRICE_IN_PERCENT) / 100
     stop_loss_price_trigger = stop_loss_price + STOP_LOSS_TRIGGER_GAP_USDT
 
     # Sell BTC with TakeProfit or StopLoss (oco order)
-    oco_sell_order = ubra.create_margin_oco_order(symbol="BTCUSDT",
-                                                  isIsolated="TRUE",
-                                                  price=round(take_profit_price, ROUND_DECIMAL_PLACES),
-                                                  quantity=buy_order['executedQty'],
-                                                  side="SELL",
-                                                  stopPrice=round(stop_loss_price_trigger, ROUND_DECIMAL_PLACES),
-                                                  stopLimitPrice=round(stop_loss_price, ROUND_DECIMAL_PLACES),
-                                                  stopLimitTimeInForce=STOP_LIMIT_TIME_IN_FORCE)
+    oco_sell_order = ubra.create_margin_oco_order(
+        symbol="BTCUSDT",
+        isIsolated="TRUE",
+        price=round(take_profit_price, ROUND_DECIMAL_PLACES),
+        quantity=buy_order["executedQty"],
+        side="SELL",
+        stopPrice=round(stop_loss_price_trigger, ROUND_DECIMAL_PLACES),
+        stopLimitPrice=round(stop_loss_price, ROUND_DECIMAL_PLACES),
+        stopLimitTimeInForce=STOP_LIMIT_TIME_IN_FORCE,
+    )
     print(f"OCO Order Result: {oco_sell_order}")
