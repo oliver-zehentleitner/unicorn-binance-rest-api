@@ -3,7 +3,8 @@
 ## CI initializes against `binance.us`, not `binance.com`
 
 **Status:** active
-**Confirmed** (commit `050284a`)
+**Evidence:** confirmed
+**Source:** commit `050284a`
 
 `BinanceRestApiManager.__init__()` makes a live `get_server_time()` call against Binance for every exchange. Test classes that need to exercise a `binance.com`-specific endpoint initialize the manager with `exchange="binance.us"` and then manually override the relevant URL constants (e.g. `PAPI_URL`, `OPTIONS_URL`) for the endpoint actually under test, instead of initializing with `exchange="binance.com"` directly.
 
@@ -14,7 +15,8 @@
 ## `colorama.init(wrap=False)`
 
 **Status:** active
-**Confirmed** (commit `f8bb80c`)
+**Evidence:** confirmed
+**Source:** commit `f8bb80c`
 
 `colorama.init()` is called with `wrap=False`.
 

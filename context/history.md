@@ -3,7 +3,8 @@
 ## LUCIT-Systems-and-Development origin
 
 **Status:** superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed
-**Confirmed** (git history)
+**Evidence:** confirmed
+**Source:** git history
 
 The repo moved into the `LUCIT-Systems-and-Development` GitHub org (commit `e8115d3`, 2022-01-02) and was de-branded back out in a batch of commits on 2025-06-22 ("Removing LUCIT"). Residual cleanup continued much later, in April 2026: conda-forge migration and `build_conda.yml` removal (`31004a2`, 2026-04-18), and a hardcoded old-org URL fix in the update-check code (`3e32159`, 2026-04-13 — `get_latest_release_info()` was still querying `LUCIT-Systems-and-Development`'s GitHub API after the org move).
 
@@ -14,7 +15,8 @@ The repo moved into the `LUCIT-Systems-and-Development` GitHub org (commit `e811
 ## The 5-file dependency sync rule caught its own violation
 
 **Status:** active
-**Confirmed** (commit `9599c72`)
+**Evidence:** confirmed
+**Source:** commit `9599c72`
 
 Dependency minimums (in `requirements.txt`, `setup.py`, `pyproject.toml`, `environment.yml`, `meta.yaml`) had drifted independently of each other before this commit — different files disagreed on the actual floor versions, and `ujson` was still listed as a dependency in some of them despite no longer being imported anywhere in the code. Fixed by using `setup.py`'s minimums as the source of truth across all five files and dropping `ujson` entirely.
 

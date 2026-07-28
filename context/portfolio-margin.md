@@ -3,7 +3,8 @@
 ## Deliberately minimal: just enough for UBWA's listenKey needs
 
 **Status:** active
-**Confirmed** (CHANGELOG, 2.11.0.dev entry; issue [#452](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/issues/452))
+**Evidence:** confirmed
+**Source:** CHANGELOG, 2.11.0.dev entry; issue [#452](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/issues/452)
 
 This repo's Portfolio Margin (PAPI) support is scoped to the `portfolio_margin_stream_*` listenKey lifecycle methods — just what `unicorn-binance-websocket-api` needs to open a Portfolio Margin user-data stream (see UBWA's own `context/portfolio-margin.md` for the WS-side design).
 
