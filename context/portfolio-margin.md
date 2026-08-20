@@ -2,6 +2,7 @@
 
 ## Deliberately minimal: just enough for UBWA's listenKey needs
 
+**Type:** decision
 **Status:** active
 **Evidence:** confirmed
 **Source:** CHANGELOG, 2.11.0.dev entry; issue [#452](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/issues/452)

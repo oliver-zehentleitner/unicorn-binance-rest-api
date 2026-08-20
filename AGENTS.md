@@ -190,6 +190,6 @@ ubra_futures = BinanceRestApiManager(exchange="binance.com-futures")
 <!-- keep-the-why:config -->
 - context: `context/`
 - init: complete
-- context-schema: 0.5.1
+- context-schema: 0.8.0
 - capture-confirmation: confirm-when-unsure
 <!-- /keep-the-why:config -->
