@@ -2,6 +2,7 @@
 
 ## CI initializes against `binance.us`, not `binance.com`
 
+**Type:** workaround
 **Status:** active
 **Evidence:** confirmed
 **Source:** commit `050284a`
@@ -14,6 +15,7 @@
 
 ## `colorama.init(wrap=False)`
 
+**Type:** workaround
 **Status:** active
 **Evidence:** confirmed
 **Source:** commit `f8bb80c`
