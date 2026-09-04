@@ -187,9 +187,5 @@ ubra_futures = BinanceRestApiManager(exchange="binance.com-futures")
 - `unicorn-binance-trailing-stop-loss` — for order placement and account queries
 - `unicorn-binance-local-depth-cache` — for initial snapshot fetching
 
-<!-- keep-the-why:config -->
-- context: `context/`
-- init: complete
-- context-schema: 0.9.0
-- capture-confirmation: confirm-when-unsure
-<!-- /keep-the-why:config -->
+Keep the Why's config for this project migrated to .keep-the-why on
+2026-09-04 — requires skill version 0.10.0 or later to read it.
