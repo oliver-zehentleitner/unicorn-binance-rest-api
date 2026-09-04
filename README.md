@@ -11,6 +11,7 @@
 [![codecov](https://codecov.io/gh/oliver-zehentleitner/unicorn-binance-rest-api/graph/badge.svg?token=P7XILPPSLU)](https://codecov.io/gh/oliver-zehentleitner/unicorn-binance-rest-api)
 [![CodeQL](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/codeql-analysis.yml)
 [![Unittests](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/unit-tests.yml)
+[![ktw-lint](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/ktw-lint.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/ktw-lint.yml)
 [![Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-binance-rest-api/actions/workflows/build_wheels.yml)
 [![Conda-Forge Build](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/unicorn-binance-rest-api-feedstock?branchName=main)](https://github.com/conda-forge/unicorn-binance-rest-api-feedstock)
 [![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/)
