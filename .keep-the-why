@@ -6,7 +6,7 @@ README, for what Keep the Why actually is.
 - id: oliver-zehentleitner---unicorn-binance-rest-api
 - context: `context/`
 - init: complete
-- context-schema: 0.14.0
+- context-schema: 0.16.0
 - capture-confirmation: confirm-when-unsure
 - source-reference: never
 <!-- /keep-the-why:config -->
