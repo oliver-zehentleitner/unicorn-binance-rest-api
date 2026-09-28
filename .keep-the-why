@@ -4,9 +4,12 @@ README, for what Keep the Why actually is.
 
 <!-- keep-the-why:config -->
 - id: oliver-zehentleitner---unicorn-binance-rest-api
+- canonical: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+- parent: https://github.com/oliver-zehentleitner/unicorn-binance-suite
+- dashboard-state: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/keep-the-why-dashboard/state.json
 - context: `context/`
 - init: complete
-- context-schema: 0.17.0
+- context-schema: 0.18.0
 - capture-confirmation: automatic
 - source-reference: never
 <!-- /keep-the-why:config -->

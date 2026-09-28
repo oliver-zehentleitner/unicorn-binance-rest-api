@@ -2,6 +2,7 @@
 
 ## CI initializes against `binance.us`, not `binance.com`
 
+**Id:** d4ff6265-1661-4e71-9e26-1048a4088bb0
 **Type:** workaround
 **Status:** active
 **Evidence:** confirmed
@@ -15,6 +16,7 @@
 
 ## `colorama.init(wrap=False)`
 
+**Id:** 153a6b4b-402c-4b16-afb7-dd659bf9f351
 **Type:** workaround
 **Status:** active
 **Evidence:** confirmed
