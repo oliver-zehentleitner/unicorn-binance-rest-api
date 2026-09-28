@@ -2,10 +2,12 @@
 
 ## CI initializes against `binance.us`, not `binance.com`
 
+**Id:** d4ff6265-1661-4e71-9e26-1048a4088bb0
 **Type:** workaround
 **Status:** active
 **Evidence:** confirmed
 **Source:** commit `050284a`
+**See:** https://github.com/oliver-zehentleitner/unicorn-binance-trailing-stop-loss — edbe20a8-50ce-4e7a-9d72-94c80c60838f — as of 2026-09-28
 
 `BinanceRestApiManager.__init__()` makes a live `get_server_time()` call against Binance for every exchange. Test classes that need to exercise a `binance.com`-specific endpoint initialize the manager with `exchange="binance.us"` and then manually override the relevant URL constants (e.g. `PAPI_URL`, `OPTIONS_URL`) for the endpoint actually under test, instead of initializing with `exchange="binance.com"` directly.
 
@@ -15,6 +17,7 @@
 
 ## `colorama.init(wrap=False)`
 
+**Id:** 153a6b4b-402c-4b16-afb7-dd659bf9f351
 **Type:** workaround
 **Status:** active
 **Evidence:** confirmed

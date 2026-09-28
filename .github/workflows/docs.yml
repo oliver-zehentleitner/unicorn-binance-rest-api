@@ -43,14 +43,11 @@ jobs:
         run: test -s docs/index.html
       # Keep the Why dashboard on /keep-the-why-dashboard/: context/ with its Git
       # history, as one static page plus state.json and badge.svg — linked from
-      # the docs index next to the context/ section. Installed from the
-      # keep-the-why repository while the next release is being tested; switch
-      # to `pip install keep-the-why-dashboard` once 0.2.0 is on PyPI.
+      # the docs index next to the context/ section. The released packages from
+      # PyPI; keep-the-why-dashboard pulls the linter it needs.
       - name: Export the Keep the Why dashboard into docs/keep-the-why-dashboard
         run: |
-          python3 -m pip install --quiet \
-            "keep-the-why-lint @ git+https://github.com/oliver-zehentleitner/keep-the-why@main#subdirectory=lint" \
-            "keep-the-why-dashboard @ git+https://github.com/oliver-zehentleitner/keep-the-why@main#subdirectory=dashboard"
+          python3 -m pip install --quiet "keep-the-why-dashboard>=0.2.1"
           ktw-dashboard --export docs/keep-the-why-dashboard .
           test -s docs/keep-the-why-dashboard/index.html
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
