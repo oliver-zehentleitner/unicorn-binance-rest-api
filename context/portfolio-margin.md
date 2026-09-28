@@ -7,6 +7,7 @@
 **Status:** active
 **Evidence:** confirmed
 **Source:** CHANGELOG, 2.11.0.dev entry; issue [#452](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/issues/452)
+**See:** https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api — 2e0e813a-696b-4160-a7a7-93157d71f556 — as of 2026-09-28
 
 This repo's Portfolio Margin (PAPI) support is scoped to the `portfolio_margin_stream_*` listenKey lifecycle methods — just what `unicorn-binance-websocket-api` needs to open a Portfolio Margin user-data stream (see UBWA's own `context/portfolio-margin.md` for the WS-side design).
 
