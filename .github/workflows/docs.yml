@@ -1,0 +1,72 @@
+name: docs
+
+# Builds the Sphinx documentation with the repository's own scripts
+# (dev/sphinx/install_sphinx.sh, dev/sphinx/create_docs.sh — which also
+# renders context/ as "Why this project is built this way"), exports the Keep
+# the Why dashboard next to it, and publishes both to GitHub Pages. Pull requests build only, as a check; a push to master (or
+# a manual run) builds and deploys. Replaces building the docs locally and
+# committing docs/ — Pages must be set to "GitHub Actions" as its source
+# (Settings → Pages → Build and deployment → Source) for the deploy to land.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # the dashboard dates entries by the commit their heading first appeared in
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Install Sphinx and the theme
+        run: bash dev/sphinx/install_sphinx.sh
+      # autodoc imports the package for the API reference; without its
+      # dependencies every module page comes out empty
+      - name: Install the package's own dependencies
+        run: if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
+      - name: Build the docs into docs/
+        run: bash dev/sphinx/create_docs.sh
+      - name: Fail if the build produced no index
+        run: test -s docs/index.html
+      # Keep the Why dashboard on /keep-the-why-dashboard/: context/ with its Git
+      # history, as one static page plus state.json and badge.svg — linked from
+      # the docs index next to the context/ section. Installed from the
+      # keep-the-why repository while the next release is being tested; switch
+      # to `pip install keep-the-why-dashboard` once 0.2.0 is on PyPI.
+      - name: Export the Keep the Why dashboard into docs/keep-the-why-dashboard
+        run: |
+          python3 -m pip install --quiet \
+            "keep-the-why-lint @ git+https://github.com/oliver-zehentleitner/keep-the-why@main#subdirectory=lint" \
+            "keep-the-why-dashboard @ git+https://github.com/oliver-zehentleitner/keep-the-why@main#subdirectory=dashboard"
+          ktw-dashboard --export docs/keep-the-why-dashboard .
+          test -s docs/keep-the-why-dashboard/index.html
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: docs
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
