@@ -9,7 +9,7 @@ README, for what Keep the Why actually is.
 - dashboard-state: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api/keep-the-why-dashboard/state.json
 - context: `context/`
 - init: complete
-- context-schema: 0.18.0
+- context-schema: 0.18.1
 - capture-confirmation: automatic
 - source-reference: never
 <!-- /keep-the-why:config -->
